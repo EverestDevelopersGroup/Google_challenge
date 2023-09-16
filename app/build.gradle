@@ -10,6 +10,7 @@ assert file(project.ext.ASSET_DIR + "/labelmap.txt").exists()
 
 
 
+
 android {
     compileSdk 33
 
