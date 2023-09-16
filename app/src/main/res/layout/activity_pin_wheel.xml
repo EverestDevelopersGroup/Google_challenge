@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fon17"
+    tools:context=".PinWheel"
+    android:padding="16dp">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/pinwheel"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/startfir"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        app:loopCount="1"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+
+    <TextView
+        android:id="@+id/amplituda_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_700"
+        android:layout_below="@id/pinwheel"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textSize="23sp"
+        android:text="0"/>
+
+</RelativeLayout>

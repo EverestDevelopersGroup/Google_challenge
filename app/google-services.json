@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042918243348",
+    "project_id": "samandar-demo",
+    "storage_bucket": "samandar-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042918243348:android:70f9a1b989f916b3187b01",
+        "android_client_info": {
+          "package_name": "com.example.samandar_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042918243348-6gqcnj22t765lf1nbpefg243jb632nas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTcFNb-NQd3wqBbeo_bY16kCwJ3yXElJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042918243348-6gqcnj22t765lf1nbpefg243jb632nas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

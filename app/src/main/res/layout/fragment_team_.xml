@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:background="#88D758"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Team_Fragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:layout_weight="1"
+                app:cardElevation="20dp"
+                android:elevation="20dp"
+                app:cardBackgroundColor="@color/white"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/user_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:fontFamily="@font/font2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+
+                    android:text="Dilbar Shukurullayevna"/>
+
+
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_weight="1"
+                app:cardElevation="20dp"
+                android:elevation="20dp"
+                android:textColor="@color/black"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/user_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:fontFamily="@font/font2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+
+                    android:text="Samandar Khasanov"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_weight="1"
+                app:cardElevation="20dp"
+                android:elevation="20dp"
+                android:textColor="@color/black"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/user_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:fontFamily="@font/font2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+
+                    android:text="Sagdiana Azimova"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_weight="1"
+                app:cardElevation="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="20dp"
+                android:textColor="@color/black"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/user_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:fontFamily="@font/font2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+
+
+                    android:text="Bobur Yo`ldoshev"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

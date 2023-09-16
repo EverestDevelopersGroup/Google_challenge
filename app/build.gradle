@@ -1,0 +1,152 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+assert file(project.ext.ASSET_DIR + "/detect.tflite").exists()
+assert file(project.ext.ASSET_DIR + "/labelmap.txt").exists()
+
+
+
+
+android {
+    compileSdk 33
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+    dependencies {
+        implementation 'org.tensorflow:tensorflow-android:1.6.0'
+    }
+
+    defaultConfig {
+        applicationId "com.example.samandar_demo"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        noCompress "tflite"  // Your model's file extension: "tflite", "lite", etc.
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        mlModelBinding true
+    }
+}
+
+dependencies {
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'androidx.databinding:databinding-compiler-common:4.2.2'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
+    implementation 'androidx.camera:camera-view:1.2.3'
+    implementation 'androidx.camera:camera-lifecycle:1.2.3'
+    //noinspection GradleDependency
+    testImplementation 'junit:junit:4.13.2'
+
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+
+    implementation 'me.spark:submitbutton:1.0.1'
+    implementation 'org.tensorflow:tensorflow-lite:+'
+
+
+
+
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
+
+
+
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+
+
+
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+
+
+
+
+
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.AhmedTeleb96:3d_buttons:1.0.0'
+
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+    implementation 'com.github.AtifSayings:Animatoo:1.0.1'
+
+
+
+    // for mlkit
+
+
+    // for mlkit face detection
+
+
+    // for ml kit custom model
+    // replace with latest version
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    // for camerax
+    def camerax_version = '1.0.0-alpha06'
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+
+    implementation 'org.tensorflow:tensorflow-lite:2.6.0'
+    implementation 'androidx.camera:camera-core:1.2.3'
+    implementation 'androidx.camera:camera-camera2:1.2.3'
+    implementation 'androidx.camera:camera-lifecycle:1.2.3'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.6.0'
+
+
+
+
+
+
+}

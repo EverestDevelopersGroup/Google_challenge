@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88D758"
+    tools:context=".Sigh_Fragment">
+
+
+    <com.ahmedteleb.buttons3d.Button3dCircle
+        android:id="@+id/sham_pufla"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+
+        android:shadowColor="#8BC34A"
+        android:text="Shamni pufla"
+        android:textSize="17sp"
+        app:buttonColor="@color/background_color"
+
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3dCircle
+        android:id="@+id/parrak_aylan"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+
+        android:shadowColor="#8BC34A"
+        android:text="Parrakni aylantir"
+        android:textSize="17sp"
+        app:buttonColor="@color/background_color"
+
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3dCircle
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+
+        android:shadowColor="#8BC34A"
+        android:text="Pufakchani uchir"
+        android:textSize="17sp"
+        app:buttonColor="@color/background_color"
+
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3dCircle
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+
+        android:shadowColor="#8BC34A"
+        android:text="Gulni hidla"
+        android:textSize="17sp"
+        app:buttonColor="@color/background_color"
+
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.911"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3dCircle
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+
+        android:shadowColor="#8BC34A"
+        android:text="Futbol koptogi"
+        android:textSize="17sp"
+        app:buttonColor="@color/background_color"
+
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

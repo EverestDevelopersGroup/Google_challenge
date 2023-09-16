@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#88D758"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Register"
+    android:gravity="center_horizontal">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_20sdp"
+        android:layout_height="@dimen/_210sdp">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/image_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+
+                android:layout_gravity="center"
+
+
+                />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <TextView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Ro`yxatdan o`tish"
+        android:textColor="#FEF84A"
+        android:textSize="@dimen/_22ssp"
+        android:gravity="center"
+        android:scaleX = "1.1"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/viga"
+        android:textStyle="bold"
+        android:letterSpacing="0.03"/>
+
+    <EditText
+        android:layout_width="@dimen/_265sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/forget"
+        android:hint="Ismingiz:"
+        android:textColor="#0d6e6a"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:fontFamily = "@font/viga"
+        android:textColorHint="#8F9498"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_20sdp"/>
+
+    <EditText
+        android:layout_width="@dimen/_265sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/forget"
+        android:hint="Raqamingiz:"
+        android:textColor="#0d6e6a"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:fontFamily = "@font/viga"
+        android:textColorHint="#8F9498"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_20sdp"/>
+
+
+    <EditText
+        android:layout_width="@dimen/_265sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/forget"
+        android:hint="Parolingiz:"
+        android:textColor="#0d6e6a"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:fontFamily = "@font/viga"
+        android:textColorHint="#8F9498"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_20sdp"/>
+
+
+
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/register"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        app:buttonColor="#FFF001"
+        android:shadowColor="#8BC34A"
+        app:shadowEnabled="true"
+
+        android:text="Tasdiqlash"
+        android:textColor = "#9C7500"
+        android:textSize="17sp"
+        android:longClickable="true"
+        android:clickable="true"
+
+        android:fontFamily="@font/font2"
+        android:layout_marginTop="20dp"
+        app:shadowHeight="@dimen/_7sdp"
+        app:cornerRadius="@dimen/_10sdp"
+
+
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
