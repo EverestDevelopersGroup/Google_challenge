@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +61,15 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
+
+
+
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        bottomBar.setVisibility(View.VISIBLE);
         transaction.replace(R.id.framelayout_container, new ChildFragment());
         transaction.commit();
+
 
 
 

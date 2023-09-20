@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.samandar_demo">
+    package="com.example.samandar_demo" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -25,9 +27,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Samandar_Demo"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".MainActivity2"
+            android:name=".Picovoice"
+            android:exported="false" />
+        <activity
+            android:name=".OptionActivity"
+            android:exported="false" />
+        <activity android:name=".Sqlite_KinderGarden.activity.FoodListActivity" />
+        <activity
+            android:name=".Sqlite_KinderGarden.SqlActivity"
             android:exported="false" />
         <activity
             android:name=".Register"
@@ -51,9 +60,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ModelActivity"
-            android:exported="false" />
-        <activity
             android:name=".PinWheel"
             android:exported="false" />
         <activity
@@ -61,7 +67,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -70,8 +76,8 @@
         </activity>
 
         <meta-data
-            android:name="model.tflite"
-            android:value="tongue" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBkBDoE9mtMuI4xw3L1GNt5-7eHzr2C6Og" />
     </application>
 
 </manifest>

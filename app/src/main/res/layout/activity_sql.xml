@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/rang2"
+    android:orientation="vertical"
+    tools:context=".Sqlite_KinderGarden.SqlActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageViewfood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/placeholde" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <Button
+            android:id="@+id/buttonchooseimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:backgroundTint="@color/btnstart"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:text="Rasm yuklang" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonsavefood"
+        android:layout_width="280dp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Ma`lumotlarni saqlash" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonviewfood"
+        android:layout_width="280dp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@color/white"
+        android:layout_height="70dp"
+        android:text="Ma`lumotlar ro`yxatini ko`rish" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <EditText
+                android:id="@+id/editTextbogcha"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Muassasa nomi:" />
+
+            <EditText
+                android:id="@+id/editTextviloyat"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Hudud nomi(bosh harflar bilan)" />
+
+            <EditText
+                android:id="@+id/editTextxizmat"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Taklif etiladigan xizmatlar:" />
+
+            <EditText
+                android:id="@+id/editTextkuntartib"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Kun tartibi:" />
+
+            <EditText
+                android:id="@+id/editTexttil"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Mashg'ulot olib boriladigan til:" />
+
+            <EditText
+                android:id="@+id/editTextratsion"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Ovqatlanish ratsioni:" />
+
+            <EditText
+                android:id="@+id/editTextbolasoni"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Tarbiyalanuvchilar soni:" />
+
+            <EditText
+                android:id="@+id/editTexttolovoy"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="number"
+                android:background="@drawable/edittext_fon"
+                android:hint="Oylik to`lov (so'm):" />
+
+            <EditText
+                android:id="@+id/editTextustunlik"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Ustunlik jihatlari:" />
+
+            <EditText
+                android:id="@+id/editTextbonus"
+                android:layout_width="280dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:layout_height="wrap_content"
+                android:hint="Bonus(mavjud bo'lsa):" />
+
+            <EditText
+                android:id="@+id/editTextxavfsizlik"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:hint="Xavfsizlik xizmati:" />
+
+            <EditText
+                android:id="@+id/editTextraqam"
+                android:layout_width="280dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_fon"
+                android:hint="Bog'lanish(raqam):" />
+
+            <EditText
+                android:id="@+id/editTextqoshimcha"
+                android:layout_width="280dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittext_fon"
+                android:layout_height="wrap_content"
+                android:hint="Qo'shimcha ma'lumotlar:" />
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,14 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#88D758"
     android:layout_height="match_parent"
     tools:context=".ParentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/consultation_list"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Onlayn konsultatsiya xizmati"
+        android:textColor="#81729C"
+        android:textSize="17sp"
+        app:buttonColor="#FFC107"
+
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/experts_list"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Mutaxassis  va o'qituvchilar \nro'yxati"
+        android:textColor="#81729C"
+        android:textSize="17sp"
+        app:buttonColor="#FFC107"
+
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/maktab_list"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Xususiy  maktablar ro`yxati"
+        android:textColor="#81729C"
+
+        android:textSize="17sp"
+        app:buttonColor="#FFC107"
+
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/bogcha_list"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Xususiy bog'chalar  ro`yxati"
+        android:textColor="#81729C"
+
+        android:textSize="17sp"
+        app:buttonColor="#FFC107"
+
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.636"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

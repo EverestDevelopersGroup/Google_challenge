@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orbit"
+    android:orientation="vertical"
+    tools:context=".OptionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img"
+
+
+            />
+
+
+
+
+        <com.ahmedteleb.buttons3d.Button3d
+            android:id="@+id/kids"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            app:buttonColor="#B3EA74"
+            android:shadowColor="#8BC34A"
+            app:shadowEnabled="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+
+            android:text="Bolalar bo'limi"
+            android:textColor = "#1D6E21"
+            android:textSize="15sp"
+            android:longClickable="true"
+            android:clickable="true"
+
+            android:fontFamily="@font/font2"
+
+            app:shadowHeight="12dp"
+            app:cornerRadius="30dp"
+
+
+
+            />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_1"
+
+
+            />
+
+
+
+
+        <com.ahmedteleb.buttons3d.Button3d
+            android:id="@+id/experts"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            app:buttonColor="#B3EA74"
+            android:shadowColor="#8BC34A"
+            app:shadowEnabled="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+
+            android:text="Mutaxassislar bo'limi"
+            android:textColor = "#1D6E21"
+            android:textSize="15sp"
+            android:longClickable="true"
+            android:clickable="true"
+
+            android:fontFamily="@font/font2"
+
+            app:shadowHeight="12dp"
+            app:cornerRadius="30dp"
+
+
+
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_2"
+
+
+            />
+
+
+
+
+        <com.ahmedteleb.buttons3d.Button3d
+            android:id="@+id/parents"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            app:buttonColor="#B3EA74"
+            android:shadowColor="#8BC34A"
+            app:shadowEnabled="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+
+            android:text="Ota-onalar bo'limi"
+            android:textColor = "#1D6E21"
+            android:textSize="15sp"
+            android:paddingHorizontal="20dp"
+            android:longClickable="true"
+            android:clickable="true"
+
+            android:fontFamily="@font/font2"
+
+            app:shadowHeight="12dp"
+            app:cornerRadius="30dp"
+
+
+
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

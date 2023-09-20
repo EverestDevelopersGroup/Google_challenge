@@ -58,6 +58,7 @@
         android:letterSpacing="0.03"/>
 
     <EditText
+        android:id="@+id/name"
         android:layout_width="@dimen/_265sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/forget"
@@ -72,6 +73,7 @@
         android:paddingLeft="@dimen/_20sdp"/>
 
     <EditText
+        android:id="@+id/number"
         android:layout_width="@dimen/_265sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/forget"
@@ -87,6 +89,7 @@
 
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="@dimen/_265sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/forget"

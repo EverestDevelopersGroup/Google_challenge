@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fonnn"
+    android:baselineAligned="false">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="378dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp"
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/frasmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/todo" />
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/fbogcha_name"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+
+                        android:background="@drawable/textview_fon"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/fviloyat"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/fxizmatlar"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/fkuntartib"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/ftili"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/fratsion"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/fbola_soni"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/ftolov_oy"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/fustunlik_jihat"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/fbonus"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/fxavfsizlik"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/fraqam"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/fqoshimca_malumot"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:fontFamily="@font/fonnn"
+                        android:textSize="20sp"
+                        android:background="@drawable/textview_fon"
+                        android:layout_marginBottom="10dp"
+                        />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+</LinearLayout>

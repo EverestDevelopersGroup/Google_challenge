@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#88D758"
     android:layout_height="match_parent"
     tools:context=".ExpertFragment">
 
 
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/bogcha"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Xususiy bog'chalar\n ro`yxatiga qo`shilish"
+        android:textColor="#9C7500"
+        android:textSize="17sp"
+        app:buttonColor="#FFF001"
+
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_rawRes="@raw/loading"
-        android:layout_gravity="center"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
 
 
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/portfolio"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Shaxsiy portfolio yaratish"
+        android:textColor="#9C7500"
+        android:textSize="17sp"
+        app:buttonColor="#FFF001"
+
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
 
-</LinearLayout>
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+    <com.ahmedteleb.buttons3d.Button3d
+        android:id="@+id/maktab"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:clickable="true"
+        android:fontFamily="@font/font2"
+        android:longClickable="true"
+        android:shadowColor="#8BC34A"
+        android:text="Xususiy maktablar ro`yxatiga qo`shilish"
+        android:textColor="#9C7500"
+        android:textSize="17sp"
+        app:buttonColor="#FFF001"
+
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855"
+        app:shadowEnabled="true"
+        app:shadowHeight="@dimen/_7sdp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

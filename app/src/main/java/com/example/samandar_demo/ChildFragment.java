@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 
 import com.example.samandar_demo.Articulation.Artikulatsiya;
+import com.example.samandar_demo.Articulation.VideoActivity;
 import com.example.samandar_demo.Tovushlar.TovushActivity;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.card.MaterialCardView;
@@ -399,7 +400,7 @@ public class ChildFragment extends Fragment {
 
     public void videoo(){
 
-        Intent intent = new Intent(getActivity(), MainActivity2.class);
+        Intent intent = new Intent(getActivity(), VideoActivity.class);
         startActivity(intent);
 
 

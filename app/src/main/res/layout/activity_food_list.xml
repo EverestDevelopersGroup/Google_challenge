@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#83D886"
+    tools:context=".Sqlite_KinderGarden.activity.FoodListActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/nodatatext"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:text="Ma`lumotlar mavjud emas"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

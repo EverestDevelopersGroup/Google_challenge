@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -26,7 +28,8 @@ public class Register extends AppCompatActivity {
     private ShimmerFrameLayout shimmerContainer2;
     Button3d button;
     ImageView view;
-
+    EditText ism , number , password;
+SharedPreferences preferences;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,6 +45,11 @@ public class Register extends AppCompatActivity {
         view = findViewById(R.id.image_register);
         shimmerContainer2 = findViewById(R.id.shimmer_register);
         MaterialCardView cardView = findViewById(R.id.cardview);
+        ism = findViewById(R.id.name);
+        number = findViewById(R.id.number);
+        password = findViewById(R.id.password);
+
+
 
 
 
@@ -53,22 +61,23 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
+               String name = ism.getText().toString();
+               String nomer = number.getText().toString();
+                String pasword = password.getText().toString();
 
 
-                        Intent i = new Intent(Register.this, MainActivity.class);
+                if (name.isEmpty() || nomer.isEmpty() || pasword.isEmpty()){
+
+                    Toast.makeText(Register.this, "Iltimos ma'lumotlarni to'liq kiriting", Toast.LENGTH_SHORT).show();
 
 
-                        startActivity(i);
-                        Animatoo.INSTANCE.animateDiagonal(Register.this);
+                }
+                else {
+                    Intent intent = new Intent(Register.this , MainActivity.class);
 
-                        finish();
-
-
-                    }
-                }, 400);
+                    startActivity(intent);
+                    Animatoo.INSTANCE.animateSwipeLeft(Register.this);
+                }
 
 
             }
