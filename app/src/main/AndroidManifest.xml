@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.samandar_demo" >
+    package="com.example.samandar_demo">
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -27,7 +30,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Samandar_Demo"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".Succes"
+            android:exported="false" />
         <activity
             android:name=".Picovoice"
             android:exported="false" />
@@ -51,11 +57,11 @@
             android:name=".Tovushlar.TovushActivity"
             android:exported="false" />
         <activity
-            android:name=".Articulation.VideoActivity"
+            android:name=".Articulation.Videoactivity"
             android:exported="false" />
         <activity
             android:name=".Articulation.Artikulatsiya"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -67,7 +73,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

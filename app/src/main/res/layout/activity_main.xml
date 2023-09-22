@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#549CD5"
     tools:context=".MainActivity">
 
 
@@ -12,6 +13,7 @@
         android:id="@+id/layout_top"
         android:layout_width="match_parent"
         android:layout_height="73dp"
+        android:gravity="center"
         android:background="@drawable/layout_top"
         android:orientation="horizontal"
 
@@ -57,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomBar"
+
         android:layout_below="@+id/layout_top"
 
         />
@@ -64,23 +67,40 @@
 
     <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        app:backgroundColor="#39ff14"
-        app:iconSize="30dp"
-        android:visibility="gone"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="10dp"
+        android:scrollIndicators="top"
+        android:visibility="visible"
+        app:backgroundColor="#549CD5"
 
 
+        app:textSize="10sp"
+
+        app:iconTint="#FFEB3B"
+
+
+
+
+
+
+        app:cornerRadius="10dp"
+
+        app:iconSize="20dp"
         app:iconTintActive="#FFEB3B"
+        app:indicatorColor="#D38A85"
 
-        app:itemFontFamily="@font/latoregular"
+
+        app:indicatorRadius="14dp"
+        app:itemFontFamily="@font/fonnn"
         app:menu="@menu/menu"
-        app:textColor="@color/background_color"
-
-
-        />
+        app:textColor="@color/black" />
 
 
 

@@ -9,6 +9,7 @@
     tools:context=".ExpertFragment">
 
 
+
     <com.ahmedteleb.buttons3d.Button3d
         android:id="@+id/bogcha"
         android:layout_width="350dp"
@@ -25,8 +26,6 @@
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shadowEnabled="true"

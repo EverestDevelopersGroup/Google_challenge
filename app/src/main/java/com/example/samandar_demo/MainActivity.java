@@ -84,10 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction1 = manager1.beginTransaction();
                 transaction1.replace(R.id.framelayout_container, new ChildFragment());
                 transaction1.commit();
-                bottomBar.setBarBackgroundColor(Color.parseColor("#39ff14"));
-                getWindow().setNavigationBarColor(Color.parseColor("#39ff14"));
-                getWindow().setStatusBarColor(Color.parseColor("#39ff14"));
-                toolbar.setBackgroundColor(Color.parseColor("#39ff14"));
+
 
 
 

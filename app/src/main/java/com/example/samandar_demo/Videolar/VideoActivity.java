@@ -32,7 +32,7 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_camera);
 
-        videoView = findViewById(R.id.videoview);
+        videoView = findViewById(R.id.videoView);
         surfaceView = findViewById(R.id.surface_view);
 
         // Kamera va videoga huquq berishni tekshirish

@@ -16,8 +16,12 @@ import android.widget.Toast;
 
 
 import com.example.samandar_demo.Articulation.Artikulatsiya;
-import com.example.samandar_demo.Articulation.VideoActivity;
+import com.example.samandar_demo.Articulation.Videoactivity;
 import com.example.samandar_demo.Tovushlar.TovushActivity;
+import com.example.samandar_demo.Videolar.ArtikulatsionFragment;
+import com.example.samandar_demo.Videolar.BarmoqFragment;
+import com.example.samandar_demo.Videolar.MimikaFragment;
+import com.example.samandar_demo.Videolar.TovushFragment;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Callback;
@@ -44,6 +48,10 @@ public class ChildFragment extends Fragment {
 
 
         img1 = view.findViewById(R.id.child1);
+        img3 = view.findViewById(R.id.child3);
+
+        img4 = view.findViewById(R.id.child4);
+        img5 = view.findViewById(R.id.child5);
         bottomBar = view.findViewById(R.id.bottomBar);
         layout = view.findViewById(R.id.layout_top);
 
@@ -95,6 +103,70 @@ public class ChildFragment extends Fragment {
 
 
 
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArtikulatsionFragment fragment = new ArtikulatsionFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+
+                        .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+        img3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TovushFragment fragment = new TovushFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+
+                        .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+        img4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BarmoqFragment fragment = new BarmoqFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+
+                        .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+        img5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MimikaFragment fragment = new MimikaFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+
+                        .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+            }
+        });
+
+
+
+
 
 
 
@@ -125,42 +197,42 @@ public class ChildFragment extends Fragment {
         bola9 = view.findViewById(R.id.shim9);
         bola10 = view.findViewById(R.id.shim10);
 
-        img1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                articulation();
-            }
-        });
-
-   img3.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View v) {
-           tovushlar();
-       }
-   });
-
-
-        img4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               barmoqlar();
-            }
-        });
-
-
-        img5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              mimika();
-            }
-        });
-
-        img6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                videoo();
-            }
-        });
+//        img1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                articulation();
+//            }
+//        });
+//
+//   img3.setOnClickListener(new View.OnClickListener() {
+//       @Override
+//       public void onClick(View v) {
+//           tovushlar();
+//       }
+//   });
+//
+//
+//        img4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               barmoqlar();
+//            }
+//        });
+//
+//
+//        img5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//              mimika();
+//            }
+//        });
+//
+//        img6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                videoo();
+//            }
+//        });
 
 
 
@@ -400,7 +472,7 @@ public class ChildFragment extends Fragment {
 
     public void videoo(){
 
-        Intent intent = new Intent(getActivity(), VideoActivity.class);
+        Intent intent = new Intent(getActivity(), Videoactivity.class);
         startActivity(intent);
 
 
