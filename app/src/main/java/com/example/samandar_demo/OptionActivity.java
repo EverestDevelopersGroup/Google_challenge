@@ -28,9 +28,7 @@ public class OptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_option);
 
 
-        kids = findViewById(R.id.kids);
-        experts = findViewById(R.id.experts);
-        parents = findViewById(R.id.parents);
+
 
 
 

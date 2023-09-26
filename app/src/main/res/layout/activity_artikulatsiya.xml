@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
+    android:background = "#587BF9"
     tools:context=".Articulation.Artikulatsiya">
 
-    <TextureView
-        android:id="@+id/texture_view"
-        android:layout_width="300dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_height="300dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="300dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_height="300dp"
-        android:visibility="visible" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        />
+
 
 </LinearLayout>

@@ -3,56 +3,59 @@ package com.example.samandar_demo.Tovushlar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.samandar_demo.Articulation.VideoAdapter;
+
+import com.example.samandar_demo.Articulation.VideoItem;
 import com.example.samandar_demo.R;
 
 import java.util.List;
 
-public class TovushAdapter  extends RecyclerView.Adapter<TovushAdapter.VideoViewHolder>{
+public class TovushAdapter extends RecyclerView.Adapter<TovushAdapter.VideoViewHolder> {
 
-
-    private List<String> videoUrls;
-    private TovushAdapter.OnItemClickListener listener;
-
+    private List<VideoItem> videoList;
+    private OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
 
-    public TovushAdapter(List<String> videoUrls, TovushActivity listener) {
-        this.videoUrls = videoUrls;
-        this.listener = (TovushAdapter.OnItemClickListener) listener;
+    public TovushAdapter(List<VideoItem> videoList, OnItemClickListener listener) {
+        this.videoList = videoList;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
-    public TovushAdapter.VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_video, parent, false);
         return new VideoViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TovushAdapter.VideoViewHolder holder, int position) {
-        holder.bind(position);
+    public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
+        holder.bind(videoList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return videoUrls.size();
+        return videoList.size();
     }
 
-    public String getItem(int position) {
-        return videoUrls.get(position);
+    public VideoItem getItem(int position) {
+        return videoList.get(position);
     }
 
     class VideoViewHolder extends RecyclerView.ViewHolder {
 
+        private TextView videoNameTextView;
+
         VideoViewHolder(@NonNull View itemView) {
             super(itemView);
+            videoNameTextView = itemView.findViewById(R.id.text_mashq);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -66,11 +69,8 @@ public class TovushAdapter  extends RecyclerView.Adapter<TovushAdapter.VideoView
             });
         }
 
-        void bind(int position) {
-            // Har bir elementni o'rnating, masalan, boshqa ma'lumotlarni
-            // TextView orqali o'rnating (agar kerak bo'lsa).
+        void bind(VideoItem videoItem) {
+            videoNameTextView.setText(videoItem.getName());
         }
     }
 }
-
-

@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Logo Smart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="sovgani_oling">Awesome!\nChoose any box from the boxes to claim your prize!!!</string>
+    <string name="Royxatdan_otish">Registration</string>
+    <string name="Raqamingiz">Your number:</string>
+
+
+    <string name="description_info">Information</string>
+    <string name="request_permission">You need camera permission.</string>
+    <string name="camera_error">This device does not support Camera2 API.</string>
+    <string name="todo">TODO</string>
+    <string name="ma_lumotlar_mavjud_emas">Data not available</string>
+    <string name="logo_smart">Logo Smart</string>
+    <string name="bolalar_bo_limi">Children\'s category</string>
+    <string name="mutaxassislar_bo_limi">Specialists category</string>
+    <string name="ota_onalar_bo_limi">Parents category</string>
+    <string name="ro_yxatdan_o_tish">Registration</string>
+    <string name="ismingiz">Your name:</string>
+    <string name="raqamingiz">Your number:</string>
+    <string name="parolingiz">Your password:</string>
+    <string name="tasdiqlash">Confirm</string>
+    <string name="SplashScreen_name">LOGO SMART</string>
+    <string name="rasm_yuklang">Upload a picture</string>
+    <string name="ma_lumotlarni_saqlash">Data storage</string>
+    <string name="ma_lumotlar_ro_yxatini_ko_rish">View the list of data</string>
+    <string name="muassasa_nomi">Name of the institution:</string>
+    <string name="hudud_nomi_bosh_harflar_bilan">Region name (in capital letters)</string>
+    <string name="taklif_etiladigan_xizmatlar">Services offered:</string>
+    <string name="kun_tartibi">Agenda:</string>
+    <string name="mashg_ulot_olib_boriladigan_til">The language of training:</string>
+    <string name="ovqatlanish_ratsioni">Diet:</string>
+    <string name="tarbiyalanuvchilar_soni">Number of kids:</string>
+    <string name="oylik_to_lov_so_m">Monthly payment (soum):</string>
+    <string name="ustunlik_jihatlari">Advantages:</string>
+    <string name="bonus_mavjud_bo_lsa">Bonus (if any):</string>
+    <string name="xavfsizlik_xizmati">Security service:</string>
+    <string name="bog_lanish_raqam">Contact (number):</string>
+    <string name="qo_shimcha_ma_lumotlar">Additional information:</string>
+    <string name="tanlang">Choose:</string>
+    <string name="bog_lanish">Support</string>
+    <string name="sozlamalar">Settings</string>
+    <string name="ilova_yangiliklari">App news</string>
+    <string name="bizning_jamoa">Our team</string>
+    <string name="dilbar_shukurullayevna_n_ndoctor_of_philosophy_specialist_of_social_media_marketing_n_nbog_lanish_998901234567_n_telegram_anonym_user">Dilbar Shukurullayevna\n \nDoctor of Philosophy, Specialist of Social media marketing!👩‍💻\n \nBog`lanish: +998901234567\n Telegram: @Anonym_user</string>
+    <string name="boglanish_manager">Contact</string>
+    <string name="artikulatsion_gimnastika">Articulation gymnastics</string>
+    <string name="nafas_mashqlari">Breathing exercises</string>
+    <string name="tovushlar_talaffuzini_rivojlantirish">Development of pronunciation of sounds</string>
+    <string name="barmoqlar_neyrografiya_mashqlari">Finger neurography exercises</string>
+    <string name="yuz_mimikasini_rivojlantirish">Development of facial expressions</string>
+    <string name="neyro_nrivojlantiruvchi_nbadantarbiya">Neuro \ndevelopmental \neducation</string>
+    <string name="daktil_alifbosi_va_imo_ishoralar">Dactyl alphabet \n gestures</string>
+    <string name="fonematik_idrok">Phonemic perception</string>
+    <string name="tafakkurni_rivojlantirish">Development of thinking</string>
+    <string name="diqqatni_rivojlantirish">Developing attention</string>
+    <string name="xususiy_bog_chalar_n_ro_yxatiga_qo_shilish">Join the list of private gardens\n</string>
+    <string name="shaxsiy_portfolio_yaratish">Creating a personal portfolio</string>
+    <string name="xususiy_maktablar_ro_yxatiga_qo_shilish">Join the list of private schools</string>
+    <string name="onlayn_konsultatsiya_xizmati">Onlayn konsultatsiya xizmati</string>
+    <string name="mutaxassis_va_o_qituvchilar_nro_yxati">List of specialists and teachers</string>
+    <string name="xususiy_maktablar_ro_yxati">List of private schools</string>
+    <string name="xususiy_bog_chalar_ro_yxati">List of private kindergartens</string>
+    <string name="shamni_pufla">Blow candle</string>
+    <string name="parrakni_aylantir">Turn the hair over</string>
+    <string name="pufakchani_uchir">Pop the bubble</string>
+    <string name="gulni_hidla">Gulni hidla</string>
+    <string name="futbol_koptogi">Futbol koptogi</string>
+    <string name="dilbar_shukurullayevna">Dilbar Shukurullayevna</string>
+    <string name="samandar_khasanov">Samandar Khasanov</string>
+    <string name="sagdiana_azimova">Sagdiana Azimova</string>
+    <string name="bobur_yo_ldoshev">Bobur Yo`ldoshev</string>
+</resources>

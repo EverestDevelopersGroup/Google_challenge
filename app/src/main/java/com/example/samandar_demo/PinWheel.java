@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -31,6 +33,17 @@ public class PinWheel extends AppCompatActivity {
     private GifImageView candleImageView;
     private boolean isCandleOn = true;
     TextView amplituda_result;
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ChildFragment mainFragment = new ChildFragment(); // MainFragment ning o'rniga yangi fragment
+        FragmentTransaction transaction = fragmentManager.beginTransaction() .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.replace(R.id.framelayout_container, mainFragment); // fragment_container ID sini o'zgartiring
+        transaction.addToBackStack(null); // Fragment o'zgarishlarini yo'zish
+        transaction.commit();
+    }
 
 
 
@@ -147,13 +160,13 @@ public class PinWheel extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == RECORD_AUDIO_PERMISSION_CODE) {
-            if (grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startBlowingDetection();
             } else {
                 Toast.makeText(this, "Ovozni aniqlash uchun mikrofon ruxsati zarur!", Toast.LENGTH_SHORT).show();
-
-
             }
         }
     }
+
+
 }

@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Tanlang:"
+        android:text="@string/tanlang"
         android:textColor="@color/black"
         android:fontFamily="@font/latoregular"
         android:layout_marginTop="5dp"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bog'lanish"
+            android:text="@string/bog_lanish"
             android:layout_gravity="center"
             android:fontFamily="@font/latoregular"
             android:textColor="@color/black"
@@ -79,7 +79,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sozlamalar"
+            android:text="@string/sozlamalar"
             android:layout_gravity="center"
             android:fontFamily="@font/latoregular"
             android:textColor="@color/black"
@@ -104,7 +104,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ilova yangiliklari"
+            android:text="@string/ilova_yangiliklari"
             android:fontFamily="@font/latoregular"
             android:layout_gravity="center"
             android:textColor="@color/black"
@@ -129,7 +129,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bizning jamoa"
+            android:text="@string/bizning_jamoa"
             android:fontFamily="@font/latoregular"
             android:textColor="@color/black"
             android:layout_gravity="center"

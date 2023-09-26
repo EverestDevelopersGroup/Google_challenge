@@ -1,86 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#88D758"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".ExpertFragment">
 
 
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/bogcha"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Xususiy bog'chalar\n ro`yxatiga qo`shilish"
-        android:textColor="#9C7500"
-        android:textSize="17sp"
-        app:buttonColor="#FFF001"
-
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
 
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/portfolio"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Shaxsiy portfolio yaratish"
-        android:textColor="#9C7500"
-        android:textSize="17sp"
-        app:buttonColor="#FFF001"
 
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
 
 
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/maktab_add"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/maktab"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Xususiy maktablar ro`yxatiga qo`shilish"
-        android:textColor="#9C7500"
-        android:textSize="17sp"
-        app:buttonColor="#FFF001"
-
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="24dp"
 
 
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
+                >
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/fonnn"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#587BF9"
+                    android:text="Xususiy maktablar ro`yxatiga a'zo bo'lish"
+                    />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/bogcha_add"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="24dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+
+                app:cardElevation="24dp"
+                android:layout_marginTop="30dp"
+
+                >
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/fonnn"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#587BF9"
+                    android:text="Xususiy bog'chalar ro'yxatiga a'zo bo'lish"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/portfolio_add"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+
+                app:cardCornerRadius="24dp"
+                app:cardElevation="24dp"
+                android:layout_marginTop="30dp"
+
+                >
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/fonnn"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#587BF9"
+                    android:text="Mutaxassis portfoliosini yaratish"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/markaz_add"
+                android:layout_width="350dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:layout_height="100dp"
+
+                app:cardCornerRadius="24dp"
+                app:cardElevation="24dp"
+                android:layout_marginTop="30dp"
+
+                >
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/fonnn"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#587BF9"
+                    android:text="O`quv markazlari"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/bogcha"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/xususiy_bog_chalar_n_ro_yxatiga_qo_shilish"-->
+<!--        android:textColor="#9C7500"-->
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFF001"-->
+
+<!--        app:cornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/portfolio"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/shaxsiy_portfolio_yaratish"-->
+<!--        android:textColor="#9C7500"-->
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFF001"-->
+
+<!--        app:cornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.491"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.154"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/maktab"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/xususiy_maktablar_ro_yxatiga_qo_shilish"-->
+<!--        android:textColor="#9C7500"-->
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFF001"-->
+
+<!--        app:cornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.508"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.855"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+
+</LinearLayout>

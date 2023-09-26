@@ -60,7 +60,7 @@ public class Gift_Fragment extends Fragment {
                 });
 
                 // "Cancel" tugmasi bosilganda
-                dialog.setNegativeButton("hozir emas", new View.OnClickListener() {
+                dialog.setNegativeButton("keyinroq", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         // Toast oynani chiqaring

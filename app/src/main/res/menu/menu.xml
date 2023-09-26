@@ -10,8 +10,8 @@
 
     <item android:id="@+id/child"
         android:title="Bolalar"
-        android:icon="@drawable/img_16"
-        android:iconTint="@color/purple_500"
+        android:icon="@drawable/img_27"
+
 
 
 
@@ -22,8 +22,8 @@
 
     <item android:id="@+id/parent"
         android:title="Ota onalar"
-        android:icon="@drawable/img_18"
-        android:iconTint="@color/purple_500"
+        android:icon="@drawable/img_38"
+
 
 
 
@@ -34,8 +34,8 @@
     </item>
     <item android:id="@+id/expert"
         android:title="Mutaxassislar"
-        android:icon="@drawable/img_17"
-        android:iconTint="@color/purple_500"
+        android:icon="@drawable/img_39"
+
 
 
         >

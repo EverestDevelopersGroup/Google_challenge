@@ -48,7 +48,7 @@
             android:backgroundTint="@color/btnstart"
             android:textColor="@color/white"
             android:layout_marginLeft="10dp"
-            android:text="Rasm yuklang" />
+            android:text="@string/rasm_yuklang" />
 
 
     </LinearLayout>
@@ -61,7 +61,7 @@
         android:backgroundTint="@color/purple_200"
         android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:text="Ma`lumotlarni saqlash" />
+        android:text="@string/ma_lumotlarni_saqlash" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonviewfood"
@@ -70,7 +70,7 @@
         android:backgroundTint="#FF9800"
         android:textColor="@color/white"
         android:layout_height="70dp"
-        android:text="Ma`lumotlar ro`yxatini ko`rish" />
+        android:text="@string/ma_lumotlar_ro_yxatini_ko_rish" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -91,7 +91,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Muassasa nomi:" />
+                android:hint="@string/muassasa_nomi" />
 
             <EditText
                 android:id="@+id/editTextviloyat"
@@ -100,7 +100,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Hudud nomi(bosh harflar bilan)" />
+                android:hint="@string/hudud_nomi_bosh_harflar_bilan" />
 
             <EditText
                 android:id="@+id/editTextxizmat"
@@ -109,7 +109,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Taklif etiladigan xizmatlar:" />
+                android:hint="@string/taklif_etiladigan_xizmatlar" />
 
             <EditText
                 android:id="@+id/editTextkuntartib"
@@ -118,7 +118,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Kun tartibi:" />
+                android:hint="@string/kun_tartibi" />
 
             <EditText
                 android:id="@+id/editTexttil"
@@ -127,7 +127,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Mashg'ulot olib boriladigan til:" />
+                android:hint="@string/mashg_ulot_olib_boriladigan_til" />
 
             <EditText
                 android:id="@+id/editTextratsion"
@@ -136,7 +136,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Ovqatlanish ratsioni:" />
+                android:hint="@string/ovqatlanish_ratsioni" />
 
             <EditText
                 android:id="@+id/editTextbolasoni"
@@ -145,7 +145,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Tarbiyalanuvchilar soni:" />
+                android:hint="@string/tarbiyalanuvchilar_soni" />
 
             <EditText
                 android:id="@+id/editTexttolovoy"
@@ -155,7 +155,7 @@
                 android:layout_marginBottom="5dp"
                 android:inputType="number"
                 android:background="@drawable/edittext_fon"
-                android:hint="Oylik to`lov (so'm):" />
+                android:hint="@string/oylik_to_lov_so_m" />
 
             <EditText
                 android:id="@+id/editTextustunlik"
@@ -164,7 +164,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Ustunlik jihatlari:" />
+                android:hint="@string/ustunlik_jihatlari" />
 
             <EditText
                 android:id="@+id/editTextbonus"
@@ -173,7 +173,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
                 android:layout_height="wrap_content"
-                android:hint="Bonus(mavjud bo'lsa):" />
+                android:hint="@string/bonus_mavjud_bo_lsa" />
 
             <EditText
                 android:id="@+id/editTextxavfsizlik"
@@ -182,7 +182,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
-                android:hint="Xavfsizlik xizmati:" />
+                android:hint="@string/xavfsizlik_xizmati" />
 
             <EditText
                 android:id="@+id/editTextraqam"
@@ -191,7 +191,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_fon"
-                android:hint="Bog'lanish(raqam):" />
+                android:hint="@string/bog_lanish_raqam" />
 
             <EditText
                 android:id="@+id/editTextqoshimcha"
@@ -200,7 +200,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_fon"
                 android:layout_height="wrap_content"
-                android:hint="Qo'shimcha ma'lumotlar:" />
+                android:hint="@string/qo_shimcha_ma_lumotlar" />
 
 
 

@@ -10,8 +10,7 @@
         android:topRightRadius="50dp"
         android:bottomRightRadius="50dp"
         android:bottomLeftRadius="50dp" />
-    <solid
-        android:color="#FFFFFF"/>
+
 
     <size
         android:width="360dp"

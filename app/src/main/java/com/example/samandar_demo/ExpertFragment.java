@@ -12,11 +12,12 @@ import android.view.ViewGroup;
 
 import com.ahmedteleb.buttons3d.Button3d;
 import com.example.samandar_demo.Sqlite_KinderGarden.SqlActivity;
+import com.google.android.material.card.MaterialCardView;
 
 
 public class ExpertFragment extends Fragment {
 
-   Button3d portfoilo , bogcha , maktab;
+   MaterialCardView portfoilo , bogcha , maktab;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -24,9 +25,9 @@ public class ExpertFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_expert, container, false);
 
 
-        portfoilo = view.findViewById(R.id.portfolio);
-        bogcha = view.findViewById(R.id.bogcha);
-        maktab = view.findViewById(R.id.maktab);
+        portfoilo = view.findViewById(R.id.portfolio_add);
+        bogcha = view.findViewById(R.id.bogcha_add);
+        maktab = view.findViewById(R.id.maktab_add);
 
         bogcha.setOnClickListener(new View.OnClickListener() {
             @Override

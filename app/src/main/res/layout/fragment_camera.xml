@@ -4,23 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rasm3"
-    android:orientation="vertical"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img_8"
     android:alpha="0.6"
-    tools:context=".Articulation.Videoactivity">
+    android:orientation="vertical"
+    tools:context=".Articulation.VideoActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_250sdp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+
+
         android:orientation="vertical">
 
+
         <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="310dp"
+            android:layout_height="310dp"
             android:background="@drawable/oval_shape"
             android:gravity="center"
             android:orientation="vertical">
@@ -28,21 +32,26 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                app:cardCornerRadius="36dp">
 
                 <VideoView
                     android:id="@+id/videoView"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:layout_gravity="center"/>
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
 
-                <!-- Progress barni qo'shing -->
                 <ProgressBar
                     android:id="@+id/progressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="visible" />
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+
+
+                <!-- Progress barni qo'shing -->
+
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -50,56 +59,77 @@
     </LinearLayout>
 
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_400sdp"
-        android:layout_gravity="center"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:layout_weight="1"
+
+        >
+
+
 
 
 
         <LinearLayout
-            android:layout_width="332dp"
-            android:layout_height="336dp"
-            android:background="@drawable/oval_camera"
+            android:layout_width="310dp"
+            android:layout_height="310dp"
+            android:background="@drawable/oval_shape"
             android:gravity="center"
-            android:layout_marginBottom="80dp"
+
             android:orientation="vertical">
 
 
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/face_view"
-                android:layout_width="310dp"
-                android:layout_height="315dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
 
-                app:cardCornerRadius="42dp"
-                app:cardElevation="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.853">
+                app:cardCornerRadius="36dp"
+
+               >
 
 
-                <SurfaceView
-                    android:id="@+id/surface_view"
-                    android:layout_width="310dp"
-                    android:layout_height="315dp"
-                    android:scaleY="1.5"
 
 
-                    />
+
+
+                <org.opencv.android.JavaCamera2View
+                    android:id="@+id/camera_view"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:visibility="visible"
+                    opencv:camera_id="front" />
+
+
+
+
+
+
+
+
+
             </com.google.android.material.card.MaterialCardView>
 
 
 
         </LinearLayout>
+
+
+
+
+
+
+
+
     </LinearLayout>
+
+
 
 
 

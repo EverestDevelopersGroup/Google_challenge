@@ -54,7 +54,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="Dilbar Shukurullayevna"/>
+                    android:text="@string/dilbar_shukurullayevna"/>
 
 
 
@@ -92,7 +92,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="Samandar Khasanov"/>
+                    android:text="@string/samandar_khasanov"/>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -125,7 +125,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="Sagdiana Azimova"/>
+                    android:text="@string/sagdiana_azimova"/>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -160,7 +160,7 @@
                     android:textSize="18sp"
 
 
-                    android:text="Bobur Yo`ldoshev"/>
+                    android:text="@string/bobur_yo_ldoshev"/>
 
             </com.google.android.material.card.MaterialCardView>
 

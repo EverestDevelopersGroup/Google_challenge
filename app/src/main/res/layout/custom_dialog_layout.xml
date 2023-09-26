@@ -35,7 +35,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:layout_marginTop="50dp"
-        android:text="Dilbar Shukurullayevna\n \nDoctor of Philosophy, Specialist of Social media marketing!👩‍💻\n \nBog`lanish: +998901234567\n Telegram: @Anonym_user"/>
+        android:text="@string/dilbar_shukurullayevna_n_ndoctor_of_philosophy_specialist_of_social_media_marketing_n_nbog_lanish_998901234567_n_telegram_anonym_user"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_okay"
@@ -48,7 +48,7 @@
         android:textSize="12sp"
         app:cornerRadius="30dp"
         android:backgroundTint="#39ff14"
-        android:text="Bog'lanish"/>
+        android:text="@string/boglanish_manager"/>
 
 
 

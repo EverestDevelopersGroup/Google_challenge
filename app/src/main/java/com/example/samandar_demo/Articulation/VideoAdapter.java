@@ -3,25 +3,27 @@ package com.example.samandar_demo.Articulation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.List;
+
 
 import com.example.samandar_demo.R;
 
+import java.util.List;
+
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
-    private List<String> videoUrls;
+    private List<VideoItem> videoList;
     private OnItemClickListener listener;
-
 
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
 
-    public VideoAdapter(List<String> videoUrls, OnItemClickListener listener) {
-        this.videoUrls = videoUrls;
+    public VideoAdapter(List<VideoItem> videoList, OnItemClickListener listener) {
+        this.videoList = videoList;
         this.listener = listener;
     }
 
@@ -34,22 +36,25 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     @Override
     public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
-        holder.bind(position);
+        holder.bind(videoList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return videoUrls.size();
+        return videoList.size();
     }
 
-    public String getItem(int position) {
-        return videoUrls.get(position);
+    public VideoItem getItem(int position) {
+        return videoList.get(position);
     }
 
     class VideoViewHolder extends RecyclerView.ViewHolder {
 
+        private TextView videoNameTextView;
+
         VideoViewHolder(@NonNull View itemView) {
             super(itemView);
+            videoNameTextView = itemView.findViewById(R.id.text_mashq);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -63,9 +68,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             });
         }
 
-        void bind(int position) {
-            // Har bir elementni o'rnating, masalan, boshqa ma'lumotlarni
-            // TextView orqali o'rnating (agar kerak bo'lsa).
+        void bind(VideoItem videoItem) {
+            videoNameTextView.setText(videoItem.getName());
         }
     }
 }

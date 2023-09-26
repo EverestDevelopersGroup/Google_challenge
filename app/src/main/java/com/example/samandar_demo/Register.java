@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.ahmedteleb.buttons3d.Button3d;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.samandar_demo.Articulation.VideoActivity;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Callback;
@@ -44,7 +45,7 @@ SharedPreferences preferences;
         button = findViewById(R.id.register);
         view = findViewById(R.id.image_register);
         shimmerContainer2 = findViewById(R.id.shimmer_register);
-        MaterialCardView cardView = findViewById(R.id.cardview);
+
         ism = findViewById(R.id.name);
         number = findViewById(R.id.number);
         password = findViewById(R.id.password);
@@ -77,6 +78,7 @@ SharedPreferences preferences;
 
                     startActivity(intent);
                     Animatoo.INSTANCE.animateSwipeLeft(Register.this);
+                    finish();
                 }
 
 
@@ -87,7 +89,7 @@ SharedPreferences preferences;
         startShimmer(); // Shimmer effektini boshlash
 
         Picasso.get()
-                .load("https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/img_9.png?alt=media&token=70fe7693-8fda-408d-8725-4aad3f2876ec")
+                .load("https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/img_15.png?alt=media&token=24413f6c-f125-4048-9fd9-f693bcd7e085")
                 .placeholder(R.drawable.loading)
                 .into(view, new Callback() {
                     @Override
@@ -107,7 +109,8 @@ SharedPreferences preferences;
         shimmerContainer2.startShimmer();
     }
 
-//    private void stopShimmer() {
+
+    //    private void stopShimmer() {
 //        shimmerContainer2.stopShimmer();
 //        shimmerContainer2.setVisibility(View.GONE);
 //    }

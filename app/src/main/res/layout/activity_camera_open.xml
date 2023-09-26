@@ -8,6 +8,7 @@
   >
 
 
+
     <ImageView
         android:id="@+id/blurImageView"
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:scaleType="centerCrop"
 
 
-        android:src="@drawable/background_gifts"
+        android:src="@drawable/img_8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -172,31 +173,12 @@
     </GridLayout>
 
 
-    <!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/animationView2"-->
-<!--        android:layout_width="@dimen/_250sdp"-->
-<!--        android:layout_height="@dimen/_150sdp"-->
-<!--        app:lottie_rawRes="@raw/animation_gift"-->
-<!--        android:layout_marginTop="@dimen/_20sdp"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:lottie_loop="true"/>-->
 
 
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textSize="@dimen/_30ssp"-->
-<!--        android:fontFamily="@font/font2"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:gravity="center"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:layout_marginTop="@dimen/_60sdp"-->
-<!--        android:layout_marginBottom="@dimen/_20sdp"-->
 
 
-<!--        android:text="Tabriklaymiz!!!"/>-->
+
 
 
 

@@ -1,115 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#88D758"
+    android:background="@color/background_color"
     android:layout_height="match_parent"
     tools:context=".ParentFragment">
 
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/consultation_list"
-        android:layout_width="350dp"
-        android:layout_height="120dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Onlayn konsultatsiya xizmati"
-        android:textColor="#81729C"
-        android:textSize="17sp"
-        app:buttonColor="#FFC107"
 
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
 
 
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/portfoilo_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+
+            app:cardCornerRadius="24dp"
+            app:cardElevation="24dp"
 
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/experts_list"
-        android:layout_width="350dp"
-        android:layout_height="120dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Mutaxassis  va o'qituvchilar \nro'yxati"
-        android:textColor="#81729C"
-        android:textSize="17sp"
-        app:buttonColor="#FFC107"
-
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/fonnn"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#587BF9"
+                android:text="Mutaxassislar va o'qituvchilar ro`yxati"
+                />
 
 
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
-
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/maktab_list"
-        android:layout_width="350dp"
-        android:layout_height="120dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Xususiy  maktablar ro`yxati"
-        android:textColor="#81729C"
-
-        android:textSize="17sp"
-        app:buttonColor="#FFC107"
-
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        </com.google.android.material.card.MaterialCardView>
 
 
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/xususiy_markaz_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="24dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            app:cardElevation="24dp"
+            android:layout_marginTop="30dp"
 
-    <com.ahmedteleb.buttons3d.Button3d
-        android:id="@+id/bogcha_list"
-        android:layout_width="350dp"
-        android:layout_height="120dp"
-        android:clickable="true"
-        android:fontFamily="@font/font2"
-        android:longClickable="true"
-        android:shadowColor="#8BC34A"
-        android:text="Xususiy bog'chalar  ro`yxati"
-        android:textColor="#81729C"
+            >
 
-        android:textSize="17sp"
-        app:buttonColor="#FFC107"
-
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/fonnn"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#587BF9"
+                android:text="Xususiy o`quv markazlar"
+                />
 
 
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636"
-        app:shadowEnabled="true"
-        app:shadowHeight="@dimen/_7sdp" />
+        </com.google.android.material.card.MaterialCardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bogcha_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="24dp"
+            android:layout_marginTop="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/fonnn"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#587BF9"
+                android:text="Xususiy bog`chalar ro`yxati"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/maktab_list"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="24dp"
+            android:layout_marginTop="30dp"
+
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/fonnn"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#587BF9"
+                android:text="Xususiy maktablar ro`yxati"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/consultation_list"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/onlayn_konsultatsiya_xizmati"-->
+<!--        android:textColor="#81729C"-->
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFC107"-->
+
+<!--        app:cornerRadius="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.508"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.376"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/experts_list"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/mutaxassis_va_o_qituvchilar_nro_yxati"-->
+<!--        android:textColor="#81729C"-->
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFC107"-->
+
+<!--        app:cornerRadius="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.508"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.108"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/maktab_list"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/xususiy_maktablar_ro_yxati"-->
+<!--        android:textColor="#81729C"-->
+
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFC107"-->
+
+<!--        app:cornerRadius="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.508"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.898"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+<!--    <com.ahmedteleb.buttons3d.Button3d-->
+<!--        android:id="@+id/bogcha_list"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:clickable="true"-->
+<!--        android:fontFamily="@font/font2"-->
+<!--        android:longClickable="true"-->
+<!--        android:shadowColor="#8BC34A"-->
+<!--        android:text="@string/xususiy_bog_chalar_ro_yxati"-->
+<!--        android:textColor="#81729C"-->
+
+<!--        android:textSize="17sp"-->
+<!--        app:buttonColor="#FFC107"-->
+
+<!--        app:cornerRadius="40dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+
+<!--        app:layout_constraintHorizontal_bias="0.508"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.636"-->
+<!--        app:shadowEnabled="true"-->
+<!--        app:shadowHeight="@dimen/_7sdp" />-->
+
+
+</LinearLayout>

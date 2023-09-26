@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
                 FragmentManager manager1 = getSupportFragmentManager();
                 FragmentTransaction transaction1 = manager1.beginTransaction();
-                transaction1.replace(R.id.framelayout_container, new ExpertFragment());
+                transaction1.replace(R.id.framelayout_container, new ParentFragment());
                 transaction1.commit();
 
 
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
                 FragmentManager manager1 = getSupportFragmentManager();
                 FragmentTransaction transaction1 = manager1.beginTransaction();
-                transaction1.replace(R.id.framelayout_container, new ParentFragment());
+                transaction1.replace(R.id.framelayout_container, new ExpertFragment());
                 transaction1.commit();
 
 

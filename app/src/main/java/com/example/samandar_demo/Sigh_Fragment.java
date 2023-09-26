@@ -19,7 +19,7 @@ import com.ahmedteleb.buttons3d.Button3dCircle;
 
 public class Sigh_Fragment extends Fragment {
 
-    Button3dCircle sham , parrak;
+    ImageView sham , parrak;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
