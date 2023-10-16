@@ -1,4 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <string name="app_name">Logo Smart</string>
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -72,23 +75,24 @@
     <string name="sagdiana_azimova">Sagdiana Azimova</string>
     <string name="bobur_yo_ldoshev">Bobur Yo`ldoshev</string>
     <string name="tilni_o_zgartirish" translatable="false">Tilni o`zgartirish</string>
-    <string name="to" translatable="false">TODO</string>
-    <string name="qani_boshladikmi" translatable="false">Qani boshladikmi</string>
-    <string name="tabriklaymiz" translatable="false">Tabriklaymiz!</string>
-    <string name="mutaxassis_portfoilosini_yaratish" translatable="false">Mutaxassis portfoilosini yaratish</string>
-    <string name="xususiy_maktab_qo_shish" translatable="false">Xususiy maktab qo`shish</string>
-    <string name="xususiy_bog_cha_qo_shish" translatable="false">Xususiy bog`cha qo`shish</string>
-    <string name="o_quv_markaz_qo_shish" translatable="false">O`quv markaz qo`shish</string>
-    <string name="bog_cha_nomi_bosh_harflarda" translatable="false">Bog\'cha nomi(Bosh harflarda):</string>
-    <string name="hudud_nomini_kiriting" translatable="false">Hudud nomini kiriting:</string>
-    <string name="mashg_ulotlar_olib_boriladigan_til" translatable="false">Mashg`ulotlar olib boriladigan til:</string>
-    <string name="ma_lumotlarni_yangilash" translatable="false">Ma`lumotlarni yangilash</string>
-    <string name="bolalar">Bolalar</string>
-    <string name="ota_onalar">Ota onalar</string>
-    <string name="mutaxassislar">Mutaxassislar</string>
+    <string name="to">TODO</string>
+    <string name="qani_boshladikmi">Qani boshladikmi</string>
+    <string name="tabriklaymiz" >Tabriklaymiz!</string>
+    <string name="mutaxassis_portfoilosini_yaratish" >Mutaxassis portfoilosini yaratish</string>
+    <string name="xususiy_maktab_qo_shish">Xususiy maktab qo`shish</string>
+    <string name="xususiy_bog_cha_qo_shish">Xususiy bog`cha qo`shish</string>
+    <string name="o_quv_markaz_qo_shish">O`quv markaz qo`shish</string>
+    <string name="bog_cha_nomi_bosh_harflarda" >Bog\'cha nomi(Bosh harflarda):</string>
+    <string name="hudud_nomini_kiriting" >Hudud nomini kiriting:</string>
+    <string name="mashg_ulotlar_olib_boriladigan_til" >Mashg`ulotlar olib boriladigan til:</string>
+    <string name="ma_lumotlarni_yangilash" >Ma`lumotlarni yangilash</string>
     <string name="list_mutaxasis">Mutaxassislar va o\'qituvchilar ro`yxati</string>
     <string name="oquvmarkaz_list">Xususiy o`quv markazlar</string>
     <string name="bogcha_list">Xususiy bog`chalar ro`yxati</string>
     <string name="maktab_list">Xususiy maktablar ro`yxati</string>
-    <string name="numpy_image">Numpy Image</string>
+    <string name="bolalar">Bolalar</string>
+    <string name="ota_onalar">Ota onalar</string>
+    <string name="mutaxassislar">Mutaxassislar</string>
+
+
 </resources>

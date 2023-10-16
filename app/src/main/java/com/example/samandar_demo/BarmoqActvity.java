@@ -1,15 +1,14 @@
 package com.example.samandar_demo;
 
-import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.samandar_demo.Articulation.VideoActivity;
 import com.example.samandar_demo.Articulation.VideoItem;
-import com.example.samandar_demo.R;
+
 
 import java.util.ArrayList;
 import java.util.List;

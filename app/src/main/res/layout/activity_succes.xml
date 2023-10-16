@@ -39,8 +39,7 @@
                 android:textColor="#4CAF50"
                 android:layout_marginTop="@dimen/_60sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:text="Tabriklaymiz!"
-                android:layout_below="@id/animationView2"/> <!-- Stack TextView below animationView2 -->
+                android:text="@string/tabriklaymiz" /> <!-- Stack TextView below animationView2 -->
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/animationView"
@@ -49,8 +48,7 @@
                 app:lottie_rawRes="@raw/celebrate"
                 app:lottie_autoPlay="true"
                 android:layout_gravity="center"
-                app:lottie_loop="true"
-                android:layout_below="@id/animationView2"/> <!-- Stack animationView below animationView2 -->
+                app:lottie_loop="true" /> <!-- Stack animationView below animationView2 -->
         </LinearLayout>
 
 

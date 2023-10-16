@@ -1,24 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LanguageActivity">
-
-
-    <Button
-        android:id="@+id/changeMyLang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tilni_o_zgartirish"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
 
 
 
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/uzb"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/uzb"
+                android:layout_gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:text="Uzbek"
+                android:fontFamily="@font/fonnn"
+                android:textStyle="bold"
+                android:textColor="#587BF9"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/usa"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+
+
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/us"
+                android:layout_gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:fontFamily="@font/fonnn"
+                android:textStyle="bold"
+                android:textColor="#587BF9"
+                android:text="English"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/china"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+
+            android:layout_marginTop="20dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/china"
+                android:layout_gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:text="Chinese"
+                android:fontFamily="@font/fonnn"
+                android:textStyle="bold"
+                android:textColor="#587BF9"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/kazak"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/canada"
+                android:layout_gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:text="Canadian"
+                android:fontFamily="@font/fonnn"
+                android:textStyle="bold"
+                android:textColor="#587BF9"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/russia"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/russia"
+                android:layout_gravity="center"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"
+
+
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:text="Russian"
+                android:fontFamily="@font/fonnn"
+                android:textStyle="bold"
+                android:textColor="#587BF9"
+                android:layout_marginRight="8dp"
+
+                />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/next"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="#587BF9"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="40dp"
+
+
+            >
+
+
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fonnn"
+                android:text="Saqlash"
+
+
+                />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

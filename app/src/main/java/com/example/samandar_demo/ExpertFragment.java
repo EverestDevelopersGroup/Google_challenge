@@ -25,7 +25,7 @@ public class ExpertFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_expert, container, false);
 
 
-        portfoilo = view.findViewById(R.id.portfolio_add);
+        portfoilo = view.findViewById(R.id.portfoilo_add);
         bogcha = view.findViewById(R.id.bogcha_add);
         maktab = view.findViewById(R.id.maktab_add);
 

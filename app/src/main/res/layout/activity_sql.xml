@@ -67,6 +67,7 @@
         android:id="@+id/buttonviewfood"
         android:layout_width="280dp"
         app:cornerRadius="10dp"
+        android:visibility="gone"
         android:backgroundTint="#FF9800"
         android:textColor="@color/white"
         android:layout_height="70dp"

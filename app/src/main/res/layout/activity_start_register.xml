@@ -51,7 +51,7 @@
         android:layout_gravity="center"
         app:shadowEnabled="true"
 
-        android:text="Qani boshladikmi"
+        android:text="@string/qani_boshladikmi"
         android:textColor = "@color/white"
         android:textSize="17sp"
         android:longClickable="true"
@@ -63,8 +63,7 @@
         app:cornerRadius="@dimen/_10sdp"
 
 
-
-        />
+        android:focusable="true" />
 
 
 

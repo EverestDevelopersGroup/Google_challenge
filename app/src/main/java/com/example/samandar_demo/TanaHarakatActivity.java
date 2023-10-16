@@ -30,8 +30,9 @@ public class TanaHarakatActivity extends AppCompatActivity implements HarakatAda
         // Ma'lumotlarni yaratish
         List<VideoItem> videoList = new ArrayList<>();
 
-        videoList.add(new VideoItem("Tana1", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Femotsiyalar_RkdGkuj8.mp4?alt=media&token=0289faa1-6355-4c22-9b9d-cd5151032dbe"));
-        videoList.add(new VideoItem("Tana2", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftabassum_INiHCfbk.mp4?alt=media&token=93b4cc1f-cd71-43b9-babf-fabc81953c3a"));
+        videoList.add(new VideoItem("Badantarbiya1", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-1_DX2EaY4c.mp4?alt=media&token=cac3e69a-5004-4229-b4bd-88a7b1d51183"));
+        videoList.add(new VideoItem("Badantarbiya2", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-2_hZQ1sYJ5.mp4?alt=media&token=400f5c31-f186-4543-99e2-d91d26b4c433"));
+        videoList.add(new VideoItem("Badantarbiya3", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-3_DTIRP6C6.mp4?alt=media&token=8ec843b6-25f2-4546-befe-0da7ddf2a7aa"));
         // URL manzili
         // Boshqa URL manzili
 
@@ -44,7 +45,7 @@ public class TanaHarakatActivity extends AppCompatActivity implements HarakatAda
     @Override
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
-        Intent intent = new Intent(this, VideoActivity.class);
+        Intent intent = new Intent(this, HarakatVideoActivity.class);
         VideoItem videoItem = adapter.getItem(position);
         intent.putExtra("videoName", videoItem.getName());
         intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili

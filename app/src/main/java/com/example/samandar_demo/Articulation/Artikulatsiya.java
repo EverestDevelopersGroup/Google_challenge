@@ -20,12 +20,12 @@ public class Artikulatsiya extends AppCompatActivity implements VideoAdapter.OnI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tovush);
+        setContentView(R.layout.activity_artikulatsiya);
 
-        recyclerView = findViewById(R.id.recyclerView_tovush);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Ma'lumotlarni yaratish
+
         List<VideoItem> videoList = new ArrayList<>();
         videoList.add(new VideoItem("Otcha", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftil2_7m6GMB1R.mp4?alt=media&token=e51efdf9-6f5a-48c1-b963-e96f7ed9a9e3"));
         videoList.add(new VideoItem("Murabbo", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftil4_tUwd4LR3.mp4?alt=media&token=83eb74cd-097a-4b32-9c8e-1b65542fd80c"));

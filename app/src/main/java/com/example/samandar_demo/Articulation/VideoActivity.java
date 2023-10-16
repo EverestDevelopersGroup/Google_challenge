@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -47,6 +48,7 @@ public class VideoActivity extends CameraActivity {
     }
 
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,16 +65,20 @@ public class VideoActivity extends CameraActivity {
         progressBar = findViewById(R.id.progressBar);
 
 
-            String videoName = getIntent().getStringExtra("videoName");
-            String videoUrl = getIntent().getStringExtra("videoUrl");
+        String videoName = getIntent().getStringExtra("videoName");
+        String videoUrl = getIntent().getStringExtra("videoUrl");
 
-            setTitle(videoName); // Activity sarlavhasini o'zgartirish
+        setTitle(videoName); // Activity sarlavhasini o'zgartirish
 
 
         String videoPath = videoUrl;
 
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
+        videoView.setBackgroundColor(Color.TRANSPARENT);
+        videoView.setZOrderOnTop(true);
+
+        videoView.setZOrderMediaOverlay(true);
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(Uri.parse(videoPath));
 
@@ -88,10 +94,11 @@ public class VideoActivity extends CameraActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
+                        mediaPlayer.start();
                         Intent intent = new Intent(VideoActivity.this, Succes.class);
                         startActivity(intent);
                         Animatoo.INSTANCE.animateDiagonal(VideoActivity.this);
-                        mediaPlayer.start();
+
                         finish();
 
                     }
@@ -157,3 +164,4 @@ public class VideoActivity extends CameraActivity {
         }
     }
 }
+

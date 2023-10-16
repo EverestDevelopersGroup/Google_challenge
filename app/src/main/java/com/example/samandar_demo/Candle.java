@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -35,7 +36,7 @@ public class Candle extends AppCompatActivity {
     private static final int AMPLITUDE_9_THRESHOLD = 3000;
     private static final int AMPLITUDE_10_THRESHOLD = 2500;
     //    private static final int AMPLITUDE_11_THRESHOLD = 10000;
-    private static final int AMPLITUDE_off_THRESHOLD = 4700;
+    private static final int AMPLITUDE_off_THRESHOLD = 2700;
 
     private AudioRecord audioRecord;
     private int bufferSize;
@@ -126,7 +127,10 @@ public class Candle extends AppCompatActivity {
                                 } else if (amplitude > AMPLITUDE_10_THRESHOLD) {
                                     flickerCandle();}
                                 else if (amplitude > AMPLITUDE_off_THRESHOLD) {
-                                    extinguishCandle();}
+                                    extinguishCandle();
+                                    Intent intent = new Intent(Candle.this , Succes.class);
+                                    startActivity(intent);
+                                }
 
                                 else {
                                     burnCandle();

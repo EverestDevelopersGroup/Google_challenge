@@ -1,12 +1,17 @@
 package com.example.samandar_demo;
 
+
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,6 +24,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
+
+import org.opencv.core.Mat;
+import org.opencv.core.Point;
+import org.opencv.core.Scalar;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.videoio.VideoCapture;
 
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
@@ -26,13 +39,16 @@ import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
     SmoothBottomBar bottomBar;
     LinearLayout toolbar;
     TextView tool_text;
     ImageView bottomsheet;
+
+
+
+
+
+
 
 
 
@@ -51,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
         tool_text = findViewById(R.id.camera_open);
         bottomBar = findViewById(R.id.bottomBar);
         toolbar = findViewById(R.id.layout_top);
+
+
+
+
+
 
 //
 //        tool_text.setOnClickListener(new View.OnClickListener() {
@@ -136,6 +157,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     }
 
 
@@ -150,10 +174,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.bottom_sheet);
 
-        LinearLayout support = dialog.findViewById(R.id.layoutEdit);
-        LinearLayout settings = dialog.findViewById(R.id.layoutShare);
-        LinearLayout news_app = dialog.findViewById(R.id.layoutUpload);
-        LinearLayout team_app = dialog.findViewById(R.id.layoutPrint);
+        LinearLayout support = (LinearLayout) dialog.findViewById(R.id.layoutEdit);
+        LinearLayout settings = (LinearLayout) dialog.findViewById(R.id.layoutShare);
+        LinearLayout news_app = (LinearLayout) dialog.findViewById(R.id.layoutUpload);
+        LinearLayout team_app = (LinearLayout) dialog.findViewById(R.id.layoutPrint);
 
 
         support.setOnClickListener(new View.OnClickListener() {
@@ -219,5 +243,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+
     }
 

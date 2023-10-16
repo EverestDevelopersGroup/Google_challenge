@@ -23,13 +23,14 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:clickable="true"
+
             android:foreground="?selectableItemBackground"
 
             app:cardCornerRadius="24dp"
             app:cardElevation="24dp"
 
 
-            >
+            tools:targetApi="p">
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
@@ -38,7 +39,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#587BF9"
-                android:text="Mutaxassislar va o'qituvchilar ro`yxati"
+                android:text="@string/list_mutaxasis"
                 />
 
 
@@ -65,7 +66,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#587BF9"
-                android:text="Xususiy o`quv markazlar"
+                android:text="@string/oquvmarkaz_list"
                 />
 
 
@@ -93,7 +94,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#587BF9"
-                android:text="Xususiy bog`chalar ro`yxati"
+                android:text="@string/bogcha_list"
                 />
 
 
@@ -121,7 +122,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#587BF9"
-                android:text="Xususiy maktablar ro`yxati"
+                android:text="@string/maktab_list"
                 />
 
 

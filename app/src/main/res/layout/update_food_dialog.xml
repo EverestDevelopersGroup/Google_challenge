@@ -37,7 +37,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Bog'cha nomi(Bosh harflarda):" />
+                android:hint="@string/bog_cha_nomi_bosh_harflarda" />
 
 
             <EditText
@@ -48,7 +48,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Hudud nomini kiriting:" />
+                android:hint="@string/hudud_nomini_kiriting" />
 
             <EditText
                 android:id="@+id/xizmatlar"
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Taklif etiladigan xizmatlar" />
+                android:hint="@string/taklif_etiladigan_xizmatlar" />
 
 
             <EditText
@@ -69,7 +69,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Kun tartibi:" />
+                android:hint="@string/kun_tartibi" />
 
 
             <EditText
@@ -80,7 +80,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Mashg`ulotlar olib boriladigan til:" />
+                android:hint="@string/mashg_ulotlar_olib_boriladigan_til" />
 
 
             <EditText
@@ -91,7 +91,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="7dp"
                 android:gravity="center"
-                android:hint="Ovqatlanish ratsioni:" />
+                android:hint="@string/ovqatlanish_ratsioni" />
 
 
             <EditText
@@ -102,7 +102,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Tarbiyalanuvchilar soni:" />
+                android:hint="@string/tarbiyalanuvchilar_soni" />
 
 
             <EditText
@@ -113,7 +113,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginBottom="7dp"
                 android:layout_height="wrap_content"
-                android:hint="Oylik to`lov:" />
+                android:hint="@string/oylik_to_lov_so_m" />
 
 
             <EditText
@@ -124,7 +124,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Ustunlik jihatlari:" />
+                android:hint="@string/ustunlik_jihatlari" />
 
 
             <EditText
@@ -135,7 +135,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Bonuslar(agar mavjud bo`lsa):" />
+                android:hint="@string/bonus_mavjud_bo_lsa" />
 
 
             <EditText
@@ -146,7 +146,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Xavfsizlik xizmati" />
+                android:hint="@string/xavfsizlik_xizmati" />
 
 
             <EditText
@@ -157,7 +157,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Bog'lanish (raqam):" />
+                android:hint="@string/bog_lanish" />
 
 
             <EditText
@@ -168,7 +168,7 @@
                 android:layout_marginBottom="7dp"
                 android:background="@drawable/edittext_fon"
                 android:gravity="center"
-                android:hint="Qo`shimcha ma`lumotlar:" />
+                android:hint="@string/qo_shimcha_ma_lumotlar" />
 
         </LinearLayout>
 
@@ -185,7 +185,7 @@
         android:backgroundTint="@color/bgcolor"
 
         android:layout_marginTop="20dp"
-        android:text="Ma`lumotlarni yangilash" />
+        android:text="@string/ma_lumotlarni_yangilash" />
 
 
 </LinearLayout>

@@ -1,10 +1,14 @@
 package com.example.samandar_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,7 +29,7 @@ import com.squareup.picasso.Picasso;
 
 public class Register extends AppCompatActivity {
 
-
+    private static final int PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE = 1001;
     private ShimmerFrameLayout shimmerContainer2;
     Button3d button;
     ImageView view;
@@ -50,9 +54,22 @@ SharedPreferences preferences;
         number = findViewById(R.id.number);
         password = findViewById(R.id.password);
 
+        ism.requestFocus();
+        number.requestFocus();
+        password.requestFocus();
 
 
 
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO)
+                        != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA, android.Manifest.permission.RECORD_AUDIO},
+                    PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE);
+        } else {
+            Toast.makeText(this, "Ruxsatlar olindi", Toast.LENGTH_SHORT).show();
+        }
 
 
 
