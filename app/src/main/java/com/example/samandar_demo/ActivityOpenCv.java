@@ -1,167 +1,174 @@
 package com.example.samandar_demo;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Build;
+
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import org.opencv.android.OpenCVLoader;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.android.Utils;
 
 import java.io.IOException;
 
+import android.media.MediaRecorder;
+
+import android.widget.Button;
 
 
-import android.Manifest;
-import android.content.Intent;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-import androidx.annotation.Nullable;
 
-import androidx.documentfile.provider.DocumentFile;
-
-
-import android.net.Uri;
-
-import java.io.OutputStream;
 
 public class ActivityOpenCv extends AppCompatActivity {
 
-    static {
-        if (!OpenCVLoader.initDebug()) {
-            // OpenCV initialization failed.
-        }
-    }
+    private MediaRecorder mediaRecorder;
+    private Button recordButton;
+    private TextView resultTextView;
+    private boolean isRecording = false;
 
-    private static final int REQUEST_PERMISSION = 100;
-    private static final int PICK_DESTINATION_REQUEST_CODE = 101;
-    private String userDefinedPath = Environment.getExternalStorageDirectory().getPath(); // Default to external storage
-    private StringBuilder numpyArray;
+
+    private static final int PERMISSION_REQUEST_CODE = 100;
+    private static final String AUDIO_FILE_PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audio.3gp";
+    private static final String API_KEY = "29c9b786-3b20-4d2a-a1b0-e5df8a51fadd:1ac6a5cb-2a24-4052-a2a1-05913898a757"; // API kaliti
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_cv);
 
-        // Check and request runtime permissions for external storage
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_PERMISSION);
-            } else {
-                processImage();
-            }
+        recordButton = findViewById(R.id.record_button);
+        resultTextView = findViewById(R.id.result_text_view);
+        mediaRecorder = new MediaRecorder();
+
+        if (checkPermissions()) {
+            setupRecorder();
         } else {
-            processImage();
+            requestPermissions();
         }
-    }
 
-    private void processImage() {
-        int drawableResourceId = R.drawable.kazak;
-        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), drawableResourceId);
-        Mat imageMat = new Mat(imageBitmap.getHeight(), imageBitmap.getWidth(), CvType.CV_8UC4);
-        Utils.bitmapToMat(imageBitmap, imageMat);
-
-        numpyArray = new StringBuilder("");
-
-        for (int i = 0; i < imageMat.rows(); i++) {
-            numpyArray.append("");
-            for (int j = 0; j < imageMat.cols(); j++) {
-                numpyArray.append("");
-                for (int k = 0; k < imageMat.channels(); k++) {
-                    numpyArray.append(imageMat.get(i, j)[0]);
-                    if (k < imageMat.channels() - 1) {
-                        numpyArray.append(", ");
-                    }
-                }
-                numpyArray.append("");
-                if (j < imageMat.cols() - 1) {
-                    numpyArray.append("\n ");
-                }
-            }
-            numpyArray.append("");
-            if (i < imageMat.rows() - 1) {
-                numpyArray.append("\n");
+        recordButton.setOnClickListener(view -> {
+            if (!isRecording) {
+                startRecording();
+                isRecording = true;
+                recordButton.setText("Stop Recording");
             } else {
-                numpyArray.append("\n");
+                stopRecording();
+                isRecording = false;
+                recordButton.setText("Start Recording");
+                sendAudioToAPI();
             }
-        }
-
-        // Request user-defined destination path
-        openDocumentTree();
+        });
     }
 
+    private boolean checkPermissions() {
+        int audioPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
+        int storagePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        return audioPermission == PackageManager.PERMISSION_GRANTED && storagePermission == PackageManager.PERMISSION_GRANTED;
+    }
 
-    private void openDocumentTree() {
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-        startActivityForResult(intent, PICK_DESTINATION_REQUEST_CODE);
+    private void requestPermissions() {
+        String[] permissions = {Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_CODE);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_DESTINATION_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
-            Uri treeUri = data.getData();
-            DocumentFile pickedDir = DocumentFile.fromTreeUri(this, treeUri);
-
-            if (pickedDir != null) {
-                String fileName = "matrix.txt";
-                saveMatrixToTxtFile(pickedDir, fileName, numpyArray.toString());
-            } else {
-                showToast("Failed to access the selected directory");
-            }
-        }
-    }
-
-
-
-    private void saveMatrixToTxtFile(DocumentFile pickedDir, String fileName, String data) {
-        DocumentFile file = pickedDir.createFile("text/plain", fileName);
-        if (file != null) {
-            try {
-                OutputStream outputStream = getContentResolver().openOutputStream(file.getUri());
-                assert outputStream != null;
-                outputStream.write(data.getBytes());
-                outputStream.close();
-                showToast("File saved in the specified location");
-            } catch (IOException e) {
-                e.printStackTrace();
-                showToast("Failed to save file in the specified location");
-            }
-        } else {
-            showToast("Failed to create the file in the specified location");
-        }
-    }
-
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_PERMISSION) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                processImage();
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                setupRecorder();
             } else {
-                showToast("Permission denied. Cannot proceed.");
-
-//                Toast.makeText(this, "This is macbook pro 13", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Permission denied. You can't record audio without permissions.", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    private void setupRecorder() {
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        mediaRecorder.setOutputFile(AUDIO_FILE_PATH);
+    }
+
+    private void startRecording() {
+        try {
+            mediaRecorder.prepare();
+            mediaRecorder.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void stopRecording() {
+        mediaRecorder.stop();
+        mediaRecorder.reset();
+    }
+
+    private void sendAudioToAPI() {
+        try {
+            URL url = new URL("https://studio.mohir.ai/api/v1/stt");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Authorization", API_KEY);
+            connection.setRequestProperty("Content-Type", "multipart/form-data");
+            connection.setDoOutput(true);
+
+            DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
+            FileInputStream fileInputStream = new FileInputStream(new File(AUDIO_FILE_PATH));
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            outputStream.flush();
+            outputStream.close();
+            fileInputStream.close();
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                // Serverdan kelgan ma'lumotni o'qish
+                // Natija server tomonidan qaytarilgan matn bo'ladi
+                InputStream inputStream = connection.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder result = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    result.append(line);
+                }
+                showResult(result.toString());
+            } else {
+                System.out.println("HTTP Error: " + responseCode);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showResult(String result) {
+        resultTextView.setText(result);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (isRecording) {
+            stopRecording();
+        }
+        mediaRecorder.release();
     }
 }
-

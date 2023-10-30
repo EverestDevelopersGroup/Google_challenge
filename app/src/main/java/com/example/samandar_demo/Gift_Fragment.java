@@ -1,7 +1,7 @@
 package com.example.samandar_demo;
 
 import static androidx.appcompat.content.res.AppCompatResources.getDrawable;
-import static androidx.camera.core.impl.utils.ContextUtil.getApplicationContext;
+
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;

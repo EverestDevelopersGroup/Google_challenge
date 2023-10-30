@@ -47,7 +47,7 @@ public class LanguageActivity extends AppCompatActivity {
         oldinga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LanguageActivity.this , ActivityOpenCv.class);
+                Intent intent = new Intent(LanguageActivity.this , VideoFrame.class);
                 startActivity(intent);
             }
         });

@@ -41,12 +41,10 @@ public class VideoActivity extends CameraActivity {
     Timer timer;
     MediaPlayer mediaPlayer;
     ProgressBar progressBar;
-
     @Override
     protected List<? extends CameraBridgeViewBase> getCameraViewList() {
         return Collections.singletonList(cameraBridgeViewBase);
     }
-
 
 
     @SuppressLint("MissingInflatedId")
@@ -147,9 +145,11 @@ public class VideoActivity extends CameraActivity {
 
 
     void getPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{Manifest.permission.CAMERA}, 101);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[]{Manifest.permission.CAMERA}, 101);
+                }
             }
         }
     }

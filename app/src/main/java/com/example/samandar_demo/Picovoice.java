@@ -1,133 +1,67 @@
 package com.example.samandar_demo;
-
-
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import java.io.File;
 
 public class Picovoice extends AppCompatActivity {
 
-    // buttons for all the types of the vibration effects
-    Button bNormalVibration, bClickVibration, bDoubleClickVibration, bTickVibration, bHeavyClickVibration;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private String folderName = "Samandar";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picovoice);
 
-        // get the VIBRATOR_SERVICE system service
-        final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-        // register all of the buttons with their IDs
-        bNormalVibration = findViewById(R.id.normalVibrationButton);
-        bClickVibration = findViewById(R.id.clickVibrationButton);
-        bDoubleClickVibration = findViewById(R.id.doubleClickVibrationButton);
-        bTickVibration = findViewById(R.id.tickVibrationButton);
-        bHeavyClickVibration = findViewById(R.id.heavyClickVibrationButton);
-
-        // handle normal vibration button
-        bNormalVibration.setOnClickListener(new View.OnClickListener() {
+        Button createFolderButton = findViewById(R.id.createFolderButton);
+        createFolderButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect1;
-
-                // this is the only type of the vibration which requires system version Oreo (API 26)
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-
-                    // this effect creates the vibration of default amplitude for 1000ms(1 sec)
-                    vibrationEffect1 = VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-                    vibrator.vibrate(vibrationEffect1);
-                }
+            public void onClick(View view) {
+                checkPermissionsAndCreateFolder();
             }
         });
+    }
 
-        // handle click vibration button
-        bClickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    private void checkPermissionsAndCreateFolder() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
+        } else {
+            createFolder();
+        }
+    }
 
-                // this type of vibration requires API 29
-                final VibrationEffect vibrationEffect2;
-
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_CLICK
-                    vibrationEffect2 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect2);
-                }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_EXTERNAL_STORAGE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                createFolder();
+            } else {
+                Toast.makeText(this, "Yozish ruxsatini bermadingiz.", Toast.LENGTH_SHORT).show();
             }
-        });
+        }
+    }
 
-        // handle double click vibration button
-        bDoubleClickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    private void createFolder() {
+        File folder = new File(getExternalFilesDir(null), folderName);
 
-                final VibrationEffect vibrationEffect3;
-
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_DOUBLE_CLICK
-                    vibrationEffect3 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect3);
-                }
+        if (!folder.exists()) {
+            if (folder.mkdir()) {
+                Toast.makeText(this, "Samandar nomli papka muvaffaqiyatli yaratildi.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Xatolik: Samandar nomli papka yaratilmadi.", Toast.LENGTH_SHORT).show();
             }
-        });
-
-        // handle tick effect vibration button
-        bTickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect4;
-
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_TICK
-                    vibrationEffect4 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect4);
-                }
-            }
-        });
-
-        // handle heavy click vibration button
-        bHeavyClickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect5;
-
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_HEAVY_CLICK
-                    vibrationEffect5 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect5);
-                }
-            }
-        });
+        } else {
+            Toast.makeText(this, "Samandar nomli papka allaqachon mavjud.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
