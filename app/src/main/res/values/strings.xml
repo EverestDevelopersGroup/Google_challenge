@@ -91,4 +91,6 @@
     <string name="bogcha_list">Xususiy bog`chalar ro`yxati</string>
     <string name="maktab_list">Xususiy maktablar ro`yxati</string>
     <string name="numpy_image">Numpy Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

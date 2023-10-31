@@ -22,7 +22,7 @@
                 android:id="@+id/animationView2"
                 android:layout_width="@dimen/_250sdp"
                 android:layout_height="@dimen/_150sdp"
-                app:lottie_rawRes="@raw/animation_gift"
+                app:lottie_rawRes="@raw/failvoice"
                 android:layout_marginTop="@dimen/_20sdp"
                 app:lottie_autoPlay="true"
 
@@ -45,7 +45,7 @@
                 android:id="@+id/animationView"
                 android:layout_width="@dimen/_300sdp"
                 android:layout_height="@dimen/_250sdp"
-                app:lottie_rawRes="@raw/celebrate"
+                app:lottie_rawRes="@raw/network"
                 app:lottie_autoPlay="true"
                 android:layout_gravity="center"
                 app:lottie_loop="true" /> <!-- Stack animationView below animationView2 -->

@@ -10,15 +10,11 @@
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-
-
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
-
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
@@ -34,10 +30,16 @@
         android:icon="@drawable/img_15"
         android:label="@string/app_name"
         android:roundIcon="@drawable/img_15"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Samandar_Demo"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".VideoLesson.Lessons"
+            android:exported="false" />
+        <activity
+            android:name=".VideoLesson.VideoLessonActivity"
+            android:exported="false" />
         <activity
             android:name=".VideoFrame"
             android:exported="false" />
@@ -96,7 +98,10 @@
             android:exported="false" />
         <activity
             android:name=".Candle"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Candle"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".LanguageActivity"
             android:exported="true">

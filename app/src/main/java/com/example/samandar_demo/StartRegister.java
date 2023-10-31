@@ -24,7 +24,7 @@ public class StartRegister extends AppCompatActivity {
         boshlash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartRegister.this , VideoFrame.class);
+                Intent intent = new Intent(StartRegister.this , Register.class);
                 startActivity(intent);
                 Animatoo.INSTANCE.animateSlideDown(StartRegister.this);
             }

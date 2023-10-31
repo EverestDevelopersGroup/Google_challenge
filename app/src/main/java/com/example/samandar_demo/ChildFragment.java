@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.example.samandar_demo.Articulation.Artikulatsiya;
 import com.example.samandar_demo.Tovushlar.TovushActivity;
+import com.example.samandar_demo.VideoLesson.Lessons;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Callback;
@@ -77,6 +78,21 @@ public class ChildFragment extends Fragment {
 
 
 
+
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Sigh_Fragment fragment = new Sigh_Fragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+
+                        .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+            }
+        });
 
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,6 +183,13 @@ public class ChildFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 badantarbiya();
+            }
+        });
+
+        img7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                courses();
             }
         });
 
@@ -413,6 +436,18 @@ public class ChildFragment extends Fragment {
 
 
     }
+
+    public void courses(){
+
+        Intent intent = new Intent(getActivity(), Lessons.class);
+        startActivity(intent);
+
+
+
+
+
+    }
+
 
 
 

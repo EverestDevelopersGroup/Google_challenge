@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background = "#718DEF"
+    >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:background = "@drawable/item_lessons"
+        >
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/text_mashq"
+                android:layout_width="310dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity = "center"
+
+                android:text="Filcha"
+
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/fonnn"
+                android:textSize="18sp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

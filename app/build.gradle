@@ -138,6 +138,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
     debugImplementation "com.github.chuckerteam.chucker:library:4.0.0"
     releaseImplementation "com.github.chuckerteam.chucker:library-no-op:4.0.0"
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
     // for camerax
     def camerax_version = '1.0.0-alpha06'
     implementation "androidx.camera:camera-core:${camerax_version}"

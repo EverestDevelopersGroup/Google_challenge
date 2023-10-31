@@ -128,8 +128,7 @@ public class Candle extends AppCompatActivity {
                                     flickerCandle();}
                                 else if (amplitude > AMPLITUDE_off_THRESHOLD) {
                                     extinguishCandle();
-                                    Intent intent = new Intent(Candle.this , Succes.class);
-                                    startActivity(intent);
+
                                 }
 
                                 else {

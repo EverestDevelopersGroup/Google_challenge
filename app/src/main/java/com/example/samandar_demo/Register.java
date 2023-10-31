@@ -1,15 +1,19 @@
 package com.example.samandar_demo;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -29,13 +33,14 @@ import com.squareup.picasso.Picasso;
 
 public class Register extends AppCompatActivity {
 
-    private static final int PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE = 1001;
+    private static final int PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE_AND_NOTIFICATION = 1001;
     private ShimmerFrameLayout shimmerContainer2;
     Button3d button;
     ImageView view;
     EditText ism , number , password;
 SharedPreferences preferences;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,17 +64,34 @@ SharedPreferences preferences;
         password.requestFocus();
 
 
-
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO)
+                        != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA, android.Manifest.permission.RECORD_AUDIO},
-                    PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE);
+                    new String[]{
+                            Manifest.permission.CAMERA,
+                            Manifest.permission.RECORD_AUDIO,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    },
+                    PERMISSIONS_REQUEST_CAMERA_AND_MICROPHONE_AND_NOTIFICATION);
         } else {
-            Toast.makeText(this, "Ruxsatlar olindi", Toast.LENGTH_SHORT).show();
+            // Ruxsatlar olinishi mumkin
+            Toast.makeText(this, "Ruxsatlar olinishi mumkin", Toast.LENGTH_SHORT).show();
         }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "My Notification Channel";
+            String description = "Description of My Notification Channel";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("channel_id", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
 
 
 

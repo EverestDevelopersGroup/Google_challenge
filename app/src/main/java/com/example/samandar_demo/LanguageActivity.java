@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.samandar_demo.Articulation.VideoActivity;
 import com.example.samandar_demo.R;
+import com.example.samandar_demo.VideoLesson.Lessons;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.Locale;
@@ -47,7 +48,7 @@ public class LanguageActivity extends AppCompatActivity {
         oldinga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LanguageActivity.this , VideoFrame.class);
+                Intent intent = new Intent(LanguageActivity.this , SplashScreen.class);
                 startActivity(intent);
             }
         });

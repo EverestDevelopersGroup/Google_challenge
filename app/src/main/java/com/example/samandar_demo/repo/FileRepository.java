@@ -46,7 +46,7 @@ public class FileRepository {
                         System.out.println("DATA : "+response.body().toString());
 
                     }else  {
-                       listener.loadError("Hatolik Bo`ldi Status Code :" +response.code());
+                       listener.loadError("Please check your internet connection and try again." );
                     }
                 }
 
