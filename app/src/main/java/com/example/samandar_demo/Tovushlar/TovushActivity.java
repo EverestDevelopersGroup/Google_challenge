@@ -44,7 +44,7 @@ public class TovushActivity extends AppCompatActivity implements TovushAdapter.O
     @Override
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
-        Intent intent = new Intent(this, VideoActivity.class);
+        Intent intent = new Intent(this, TovushVideoActivity.class);
         VideoItem videoItem = adapter.getItem(position);
         intent.putExtra("videoName", videoItem.getName());
         intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili

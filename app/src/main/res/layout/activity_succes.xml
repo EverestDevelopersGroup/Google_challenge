@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/gift_container"
+    tools:context=".Activities.Succes">
 
-    tools:context=".Succes">
-
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
 
 
@@ -22,10 +26,9 @@
                 android:id="@+id/animationView2"
                 android:layout_width="@dimen/_250sdp"
                 android:layout_height="@dimen/_150sdp"
-                app:lottie_rawRes="@raw/failvoice"
+                app:lottie_rawRes="@raw/like"
                 android:layout_marginTop="@dimen/_20sdp"
                 app:lottie_autoPlay="true"
-
                 android:layout_gravity="center"
                 app:lottie_loop="true"/>
 
@@ -36,16 +39,16 @@
                 android:fontFamily="@font/font2"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#4CAF50"
+                android:textColor="@color/teal_200"
                 android:layout_marginTop="@dimen/_60sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:text="@string/tabriklaymiz" /> <!-- Stack TextView below animationView2 -->
+                android:text="  " /> <!-- Stack TextView below animationView2 -->
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/animationView"
                 android:layout_width="@dimen/_300sdp"
                 android:layout_height="@dimen/_250sdp"
-                app:lottie_rawRes="@raw/network"
+                app:lottie_rawRes="@raw/celebrate"
                 app:lottie_autoPlay="true"
                 android:layout_gravity="center"
                 app:lottie_loop="true" /> <!-- Stack animationView below animationView2 -->

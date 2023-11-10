@@ -51,7 +51,7 @@
     <string name="barmoqlar_neyrografiya_mashqlari">Finger neurography exercises</string>
     <string name="yuz_mimikasini_rivojlantirish">Development of facial expressions</string>
     <string name="neyro_nrivojlantiruvchi_nbadantarbiya">Neuro \ndevelopmental \neducation</string>
-    <string name="daktil_alifbosi_va_imo_ishoralar">Dactyl alphabet \n gestures</string>
+    <string name="daktil_alifbosi_va_imo_ishoralar">Video\n lessons</string>
     <string name="fonematik_idrok">Phonemic perception</string>
     <string name="tafakkurni_rivojlantirish">Development of thinking</string>
     <string name="diqqatni_rivojlantirish">Developing attention</string>
@@ -73,7 +73,7 @@
     <string name="bobur_yo_ldoshev">Bobur Yo`ldoshev</string>
     <string name="to" >TODO</string>
     <string name="qani_boshladikmi" >shall we begin</string>
-    <string name="tabriklaymiz">Wrong. Please try again!</string>
+    <string name="tabriklaymiz">Congratulations!</string>
     <string name="mutaxassis_portfoilosini_yaratish">Create a professional portfolio</string>
     <string name="xususiy_maktab_qo_shish" >Add a private school</string>
     <string name="xususiy_bog_cha_qo_shish" >Add a private garden</string>

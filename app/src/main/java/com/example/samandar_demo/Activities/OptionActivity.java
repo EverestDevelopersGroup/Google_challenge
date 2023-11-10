@@ -1,8 +1,6 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +11,7 @@ import android.view.WindowManager;
 
 import com.ahmedteleb.buttons3d.Button3d;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.samandar_demo.R;
 
 public class OptionActivity extends AppCompatActivity {
 

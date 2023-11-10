@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 
 
@@ -24,15 +24,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-import com.chaquo.python.Python;
-import com.chaquo.python.android.AndroidPlatform;
-
-import org.opencv.core.Mat;
-import org.opencv.core.Point;
-import org.opencv.core.Scalar;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.videoio.VideoCapture;
-
+import com.example.samandar_demo.ChildFragment;
+import com.example.samandar_demo.ExpertFragment;
+import com.example.samandar_demo.LanguageFragment;
+import com.example.samandar_demo.ParentFragment;
+import com.example.samandar_demo.R;
+import com.example.samandar_demo.SettingsFragment;
+import com.example.samandar_demo.Team_Fragment;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;

@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.samandar_demo.R;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreen extends AppCompatActivity {

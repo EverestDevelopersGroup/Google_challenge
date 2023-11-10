@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.ahmedteleb.buttons3d.Button3d;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.samandar_demo.R;
 
 public class StartRegister extends AppCompatActivity {
 

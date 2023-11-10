@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ahmedteleb.buttons3d.Button3d;
+import com.example.samandar_demo.Activities.LanguageActivity;
 
 
 public class SettingsFragment extends Fragment {

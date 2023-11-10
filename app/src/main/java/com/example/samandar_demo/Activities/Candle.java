@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.samandar_demo.R;
 
 import java.util.Random;
 
@@ -39,23 +41,13 @@ public class Candle extends AppCompatActivity {
     private static final int AMPLITUDE_off_THRESHOLD = 2700;
 
     private AudioRecord audioRecord;
+    private Thread thread;
     private int bufferSize;
 
     private ImageView candleImageView;
     private boolean isCandleOn = true;
 
 
-    @Override
-    public void onBackPressed() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        ChildFragment mainFragment = new ChildFragment(); // MainFragment ning o'rniga yangi fragment
-        FragmentTransaction transaction = fragmentManager.beginTransaction() .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-
-        transaction.replace(R.id.framelayout_container, mainFragment); // fragment_container ID sini o'zgartiring
-        transaction.addToBackStack(null); // Fragment o'zgarishlarini yo'zish
-        transaction.commit();
-    }
 
 
 
@@ -92,7 +84,7 @@ public class Candle extends AppCompatActivity {
     }
 
     private void startBlowingDetection() {
-        new Thread(new Runnable() {
+        thread=new Thread(new Runnable() {
             @Override
             public void run() {
                 short[] audioBuffer = new short[bufferSize];
@@ -139,7 +131,8 @@ public class Candle extends AppCompatActivity {
                     }
                 }
             }
-        }).start();
+        });
+        thread.start();
     }
 
     private double calculateAmplitude(short[] audioBuffer, int numRead) {
@@ -162,46 +155,20 @@ public class Candle extends AppCompatActivity {
     }
 
     private void flickerCandle() {
-        // Create random flickering effect by toggling between lit and extinguished state
         Random random = new Random();
         int randomNumber = random.nextInt(100);
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_10a);
 
-        }
         if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_9a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_8a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_7a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_6a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_5a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_4a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_3a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_2a);
-        }
-        if (randomNumber > 70) {
-            candleImageView.setImageResource(R.drawable.candle_1a);
+            int randomImageIndex = random.nextInt(10) + 1; // 1 to 10 inclusive
+            int resourceId = getResources().getIdentifier("candle_" + randomImageIndex + "a", "drawable", getPackageName());
+            candleImageView.setImageResource(resourceId);
         } else {
             candleImageView.setImageResource(R.drawable.candle_11);
         }
 
-
         isCandleOn = true;
     }
+
 
     private void burnCandle() {
         if (!isCandleOn) {
@@ -217,13 +184,14 @@ public class Candle extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         if (audioRecord != null) {
             audioRecord.stop();
             audioRecord.release();
             audioRecord = null;
         }
+        super.onDestroy();
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

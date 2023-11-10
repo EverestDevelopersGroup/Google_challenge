@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:background = "#587BF9"
-    tools:context=".BarmoqActvity">
+    tools:context=".Activities.BarmoqActvity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_barmoq"

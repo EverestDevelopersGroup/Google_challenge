@@ -22,7 +22,7 @@ public class Lessons extends AppCompatActivity implements LessonAdapter.OnItemCl
 
     private RecyclerView recyclerView;
     private LessonAdapter adapter;
-    private TextView allcourse;
+//    private TextView allcourse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,17 +30,17 @@ public class Lessons extends AppCompatActivity implements LessonAdapter.OnItemCl
         setContentView(R.layout.activity_lessons);
 
         recyclerView = findViewById(R.id.recyclerView_lesson);
-        allcourse = findViewById(R.id.allcourses);
+//        allcourse = findViewById(R.id.allcourses);
 
 
-        allcourse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(Lessons.this, "Sizda premium obuna mavjud emas", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+//        allcourse.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Toast.makeText(Lessons.this, "Sizda premium obuna mavjud emas", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -51,10 +51,10 @@ public class Lessons extends AppCompatActivity implements LessonAdapter.OnItemCl
         videoList.add(new LessonItem("3-dars. Ravon gapirish uchun tildagi muammolar ", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fopa3.mp4?alt=media&token=65e61ccd-0e4e-4554-b155-7715b99124e8&_gl=1*iz1fgm*_ga*MTU1ODY0MDAzNS4xNjk4NzM3MDYz*_ga_CW55HF8NVT*MTY5ODc0NzcxNS4zLjEuMTY5ODc0ODczNy4zOS4wLjA."));
         videoList.add(new LessonItem("4-dars. 'R' tovushini talaffuz jarayoni ", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fopa4.mp4?alt=media&token=997f6b0a-f934-438a-ba95-988e6d5af579&_gl=1*s60n9b*_ga*MTU1ODY0MDAzNS4xNjk4NzM3MDYz*_ga_CW55HF8NVT*MTY5ODc0NzcxNS4zLjEuMTY5ODc0ODc1NS4yMS4wLjA."));
         videoList.add(new LessonItem("5-dars. Uy sharoitida nutq rivojlanishi", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fopa5.mp4?alt=media&token=9b1a84b1-eb8d-42ca-9321-9da698c0660b&_gl=1*d4alae*_ga*MTU1ODY0MDAzNS4xNjk4NzM3MDYz*_ga_CW55HF8NVT*MTY5ODc1MTk4My40LjEuMTY5ODc1MjAwOC4zNS4wLjA."));
-        videoList.add(new LessonItem("6-dars" , ""));
-        videoList.add(new LessonItem("7-dars" , ""));
-        videoList.add(new LessonItem("8-dars" , ""));
-        videoList.add(new LessonItem("9-dars" , ""));
+//        videoList.add(new LessonItem("6-dars" , ""));
+//        videoList.add(new LessonItem("7-dars" , ""));
+//        videoList.add(new LessonItem("8-dars" , ""));
+//        videoList.add(new LessonItem("9-dars" , ""));
         // URL manzili
         // Boshqa URL manzili
 

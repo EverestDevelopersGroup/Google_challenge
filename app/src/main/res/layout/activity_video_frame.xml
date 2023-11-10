@@ -5,47 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".VideoFrame">
+    tools:context=".Activities.VideoFrame">
 
 
-
-
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_centerHorizontal="true" />
-
-
-    <Button
-        android:id="@+id/recordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/surfaceView"
-        android:layout_centerHorizontal="true"
-
-        android:text="Record" />
-
-
-    <Button
-        android:id="@+id/showfolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/recordButton"
-        android:layout_centerHorizontal="true"
-
-        android:text="showfolder" />
-
-
-
-    <TextView
-        android:id="@+id/result_txt"
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/celebrate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showfolder"
-
-
+        android:layout_height="match_parent"
         />
+
+
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Music"
+        android:layout_centerInParent="true" />
+
+
+
 
 
 </RelativeLayout>

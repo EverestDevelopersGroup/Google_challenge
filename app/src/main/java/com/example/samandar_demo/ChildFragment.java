@@ -11,11 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.example.samandar_demo.Activities.BarmoqActvity;
+import com.example.samandar_demo.Activities.MimikaActivity;
+import com.example.samandar_demo.Activities.TanaHarakatActivity;
 import com.example.samandar_demo.Articulation.Artikulatsiya;
 import com.example.samandar_demo.Tovushlar.TovushActivity;
-import com.example.samandar_demo.VideoLesson.Lessons;
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import me.ibrahimsn.lib.SmoothBottomBar;
@@ -47,6 +49,7 @@ public class ChildFragment extends Fragment {
         img4 = view.findViewById(R.id.child4);
         img5 = view.findViewById(R.id.child5);
         img6 = view.findViewById(R.id.child6);
+        img7 = view.findViewById(R.id.child7);
         bottomBar = view.findViewById(R.id.bottomBar);
         layout = view.findViewById(R.id.layout_top);
 
@@ -94,10 +97,10 @@ public class ChildFragment extends Fragment {
             }
         });
 
-        img2.setOnClickListener(new View.OnClickListener() {
+        img7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Sigh_Fragment fragment = new Sigh_Fragment();
+                Lesson_teachers fragment = new Lesson_teachers();
 
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
@@ -108,6 +111,7 @@ public class ChildFragment extends Fragment {
 
             }
         });
+
 
 
 //        gift.setOnClickListener(new View.OnClickListener() {
@@ -186,12 +190,12 @@ public class ChildFragment extends Fragment {
             }
         });
 
-        img7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                courses();
-            }
-        });
+//        img7.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                courses();
+//            }
+//        });
 
 
 
@@ -437,16 +441,16 @@ public class ChildFragment extends Fragment {
 
     }
 
-    public void courses(){
-
-        Intent intent = new Intent(getActivity(), Lessons.class);
-        startActivity(intent);
-
-
-
-
-
-    }
+//    public void courses(){
+//
+//        Intent intent = new Intent(getActivity(), Lessons.class);
+//        startActivity(intent);
+//
+//
+//
+//
+//
+//    }
 
 
 

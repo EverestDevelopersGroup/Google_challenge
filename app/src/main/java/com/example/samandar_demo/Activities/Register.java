@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +15,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -24,9 +23,8 @@ import android.widget.Toast;
 
 import com.ahmedteleb.buttons3d.Button3d;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
-import com.example.samandar_demo.Articulation.VideoActivity;
+import com.example.samandar_demo.R;
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background = "#587BF9"
+    android:background="#587BF9"
     tools:context=".VideoLesson.Lessons">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -14,26 +13,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         android:scrollbars="vertical"
         android:scrollbarSize="5dp"
-        android:scrollbarThumbVertical="@android:color/darker_gray"
-        />
+        android:scrollbarThumbVertical="@android:color/darker_gray" />
 
-    <TextView
-        android:id="@+id/allcourses"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/lato_black"
-        android:text="Barcha kurslarni ko`rish.."
-        />
-
-
+<!--    <TextView-->
+<!--        android:id="@+id/allcourses"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20sp"-->
+<!--        android:fontFamily="@font/lato_black"-->
+<!--        android:text="Barcha kurslarni ko`rish.." />-->
 
 </LinearLayout>

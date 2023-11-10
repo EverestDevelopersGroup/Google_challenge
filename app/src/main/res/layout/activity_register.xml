@@ -6,7 +6,7 @@
     android:background="#587BF9"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".Register"
+    tools:context=".Activities.Register"
     android:gravity="center_horizontal">
 
 

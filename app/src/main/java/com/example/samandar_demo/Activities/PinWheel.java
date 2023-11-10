@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.samandar_demo.ChildFragment;
+import com.example.samandar_demo.R;
 
 import pl.droidsonroids.gif.GifImageView;
 

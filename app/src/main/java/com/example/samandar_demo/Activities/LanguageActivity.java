@@ -1,19 +1,15 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.samandar_demo.Articulation.VideoActivity;
 import com.example.samandar_demo.R;
-import com.example.samandar_demo.VideoLesson.Lessons;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.Locale;
@@ -48,7 +44,7 @@ public class LanguageActivity extends AppCompatActivity {
         oldinga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LanguageActivity.this , SplashScreen.class);
+                Intent intent = new Intent(LanguageActivity.this , MainActivity.class);
                 startActivity(intent);
             }
         });

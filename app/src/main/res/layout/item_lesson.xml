@@ -22,18 +22,13 @@
 
 
 
-
-
-
-
-
-
             <TextView
                 android:id="@+id/text_mashq"
-                android:layout_width="310dp"
-                android:layout_height="match_parent"
+                android:layout_width="260dp"
+                android:layout_height="130dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
+
                 android:gravity = "center"
 
                 android:text="Filcha"
@@ -44,6 +39,19 @@
                 android:textSize="18sp"/>
 
 
+        <TextView
+            android:id="@+id/premium_lesson"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+
+            android:textColor="@color/white"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="@drawable/bepul_fon"
+            android:text="Bepul darsliklar"
+            />
 
 
 

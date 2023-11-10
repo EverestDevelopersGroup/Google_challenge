@@ -1,29 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5970EF"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    tools:context=".ActivityOpenCv">
+    tools:context=".Activities.ActivityOpenCv">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/StartRecord"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_41"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:text="Start Record"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+       />
+
+
 
     <TextView
-        android:id="@+id/result_text_view"
-        android:layout_width="wrap_content"
+        android:id="@+id/responseData"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Result will be shown here"
-        android:textSize="18sp"
+        android:text="Natija:"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="100dp"
 
-    <Button
-        android:id="@+id/record_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Recording"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartRecord" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/startstop"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Boshlandi.."-->
+<!--        android:textSize="24sp"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/loading"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+
 
 </LinearLayout>

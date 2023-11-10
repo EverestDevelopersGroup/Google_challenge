@@ -1,63 +1,18 @@
 package com.example.samandar_demo.VideoLesson;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.hardware.Camera;
-import android.media.CamcorderProfile;
 import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Base64;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.samandar_demo.R;
-import com.example.samandar_demo.Succes;
-import com.example.samandar_demo.api.RepositoryService;
-import com.example.samandar_demo.repo.FileRepository;
-import com.example.samandar_demo.response.FileResponse;
-
-
-import org.opencv.android.CameraActivity;
-import org.opencv.android.CameraBridgeViewBase;
-import org.opencv.android.OpenCVLoader;
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import cc.cloudist.acplibrary.ACProgressConstant;
-import cc.cloudist.acplibrary.ACProgressCustom;
-import cc.cloudist.acplibrary.ACProgressPie;
 
 public class VideoLessonActivity extends AppCompatActivity  {
 

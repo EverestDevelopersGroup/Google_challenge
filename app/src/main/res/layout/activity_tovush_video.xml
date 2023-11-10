@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+
+    tools:context=".Tovushlar.TovushVideoActivity">
+
+
+    <!--    <nl.dionsegijn.konfetti.KonfettiView-->
+    <!--        android:id="@+id/play"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        />-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/oval_camera"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="36dp">
+
+                    <VideoView
+                        android:id="@+id/videoView_tovush"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_articulation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/startmashq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iltimos videodars tugashini kuting."
+            android:gravity="center"
+            android:textStyle="italic"
+            android:fontFamily="@font/fonnn"
+            android:textColor="@color/bordercolor"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+
+
+
+            <TextView
+                android:id="@+id/responseData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Natija:"
+                android:textSize="24sp"
+
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StartRecord" />
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/startstop"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:text="Boshlandi.."-->
+            <!--        android:textSize="24sp"-->
+            <!--        android:gravity="center"-->
+            <!--        android:textColor="@color/white"-->
+            <!--        android:textStyle="bold"-->
+            <!--        />-->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:background="@drawable/oval_camera"
+                android:src="@drawable/loading"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal" />
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/StartRecord"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img_41"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:text="Start Record"
+                android:layout_marginTop="50dp"
+
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

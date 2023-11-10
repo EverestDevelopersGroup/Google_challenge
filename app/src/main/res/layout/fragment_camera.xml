@@ -1,178 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/img_8"
-    android:alpha="0.6"
-    android:orientation="vertical"
-    tools:context=".Articulation.VideoActivity">
+    android:background="@color/white"
+
+    tools:context=".Activities.VideoFrame">
+
+
+<!--    <nl.dionsegijn.konfetti.KonfettiView-->
+<!--        android:id="@+id/play"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
+
+
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <LinearLayout
-            android:layout_width="310dp"
-            android:layout_height="310dp"
-            android:background="@drawable/oval_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="36dp">
+            <LinearLayout
+                android:layout_width="310dp"
+                android:layout_height="310dp"
+                android:background="@drawable/oval_camera"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <VideoView
-                    android:id="@+id/videoView"
-                    android:layout_width="300dp"
-                    android:layout_height="300dp"
-                    android:layout_centerInParent="true"
-                    android:visibility="visible" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="36dp">
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_articulation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/startmashq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mashq bajarish boshlanmagan"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:fontFamily="@font/fonnn"
+            android:textColor="@color/bordercolor"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/colorful_linear"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:background="@drawable/oval_shape"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/face_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_centerInParent="true"
-                    android:visibility="invisible" />
+                    app:cardCornerRadius="36dp">
+                    <LinearLayout
 
-
-                <!-- Progress barni qo'shing -->
-
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="1"
-
-        >
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/oval_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <SurfaceView
+                            android:id="@+id/surfaceView"
+                            android:layout_width="310dp"
+                            android:layout_height="310dp"
+                            android:rotation="90"
+                            android:layout_centerHorizontal="true" />
+                    </LinearLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </LinearLayout>
 
 
 
 
 
-        <LinearLayout
-            android:layout_width="310dp"
-            android:layout_height="310dp"
-            android:background="@drawable/oval_shape"
-            android:gravity="center"
+                <com.ahmedteleb.buttons3d.Button3d
+                    android:id="@+id/btnplay"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    app:buttonColor="#5FC663"
+                    android:shadowColor="#8BC34A"
+                    app:shadowEnabled="true"
+                    android:text="Mashqni boshladik"
+                    android:textColor = "@color/white"
+                    android:textSize="12sp"
+                    android:longClickable="true"
+                    android:clickable="true"
 
-            android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/font2"
 
-
-
-            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-                android:id="@+id/face_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_gravity="center"
-
-                app:cardCornerRadius="36dp"
-
-                >
+                    app:shadowHeight="@dimen/_7sdp"
+                    app:cornerRadius="@dimen/_10sdp"
 
 
 
+                    />
 
 
-
-
-
-                <LinearLayout
-                    android:layout_width="310dp"
-                    android:layout_height="310dp"
-                    android:background="@drawable/oval_shape"
-                    android:gravity="center"
-
-                    android:orientation="vertical">
-
-
-
-
-                    <SurfaceView
-                        android:id="@+id/surfaceView"
-                        android:layout_width="310dp"
-                        android:layout_height="310dp"
-                        android:rotation="90"
-                        android:layout_centerHorizontal="true" />
-
-
-
-
-
-
-
-
-
-
-
-
-                </LinearLayout>
-
-
-
-
-
-
-
-            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
 
 
         </LinearLayout>
-        <Button
-        android:id="@+id/recordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/surfaceView"
-            android:textColor="@color/white"
-            android:backgroundTint="#0F8014"
-        android:layout_centerHorizontal="true"
-
-        android:text="Boshladikmi?" />
-        <TextView
-            android:id="@+id/result_txt"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:text="Iltimos kuting.."
-            android:gravity="center"
-            android:textSize="18sp"
-            android:fontFamily="@font/lato_bold"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@+id/showfolder"
-
-
-            />
-
-
-
-
     </LinearLayout>
-
-
-</LinearLayout>
-
+</FrameLayout>

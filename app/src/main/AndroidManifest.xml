@@ -23,7 +23,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.chaquo.python.android.PyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -35,51 +34,54 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Tovushlar.TovushVideoActivity"
+            android:exported="false" />
+        <activity
             android:name=".VideoLesson.Lessons"
             android:exported="false" />
         <activity
             android:name=".VideoLesson.VideoLessonActivity"
             android:exported="false" />
         <activity
-            android:name=".VideoFrame"
+            android:name=".Activities.VideoFrame"
             android:exported="false" />
         <activity
-            android:name=".ActivityOpenCv"
+            android:name=".Activities.ActivityOpenCv"
             android:exported="false" />
         <activity
-            android:name=".HarakatVideoActivity"
+            android:name=".Activities.HarakatVideoActivity"
             android:exported="false" />
         <activity
-            android:name=".StartRegister"
+            android:name=".Activities.StartRegister"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activities.SplashScreen"
             android:exported="false" />
         <activity
-            android:name=".TanaHarakatActivity"
+            android:name=".Activities.TanaHarakatActivity"
             android:exported="false" />
         <activity
-            android:name=".Succes"
+            android:name=".Activities.Succes"
             android:exported="false" />
         <activity
-            android:name=".Picovoice"
+            android:name=".Activities.Picovoice"
             android:exported="false" />
         <activity
-            android:name=".OptionActivity"
+            android:name=".Activities.OptionActivity"
             android:exported="false" />
         <activity android:name=".Sqlite_KinderGarden.activity.FoodListActivity" />
         <activity
             android:name=".Sqlite_KinderGarden.SqlActivity"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".Activities.Register"
             android:exported="false"
             android:windowSoftInputMode="adjustNothing" />
         <activity
-            android:name=".MimikaActivity"
+            android:name=".Activities.MimikaActivity"
             android:exported="false" />
         <activity
-            android:name=".BarmoqActvity"
+            android:name=".Activities.BarmoqActvity"
             android:exported="false" />
         <activity
             android:name=".Tovushlar.TovushActivity"
@@ -91,19 +93,18 @@
             android:name=".Articulation.VideoActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".PinWheel"
+            android:name=".Activities.PinWheel"
             android:exported="false" />
         <activity
-            android:name=".Candle"
+            android:name=".Activities.Candle"
             android:exported="false"
-            android:theme="@style/Candle"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/Candle" />
         <activity
-            android:name=".LanguageActivity"
+            android:name=".Activities.LanguageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Activities;
 
 
 import android.content.Intent;
@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.samandar_demo.Articulation.VideoActivity;
 import com.example.samandar_demo.Articulation.VideoItem;
+import com.example.samandar_demo.BarmoqAdapter;
+import com.example.samandar_demo.R;
 
 
 import java.util.ArrayList;

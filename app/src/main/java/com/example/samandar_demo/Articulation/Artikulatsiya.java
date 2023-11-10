@@ -1,6 +1,5 @@
 package com.example.samandar_demo.Articulation;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.samandar_demo.R;
+import com.example.samandar_demo.Activities.VideoFrame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +46,7 @@ public class Artikulatsiya extends AppCompatActivity implements VideoAdapter.OnI
     @Override
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
-        Intent intent = new Intent(this, VideoActivity.class);
+        Intent intent = new Intent(this, VideoFrame.class);
         VideoItem videoItem = adapter.getItem(position);
         intent.putExtra("videoName", videoItem.getName());
         intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili

@@ -4,17 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.ahmedteleb.buttons3d.Button3dCircle;
-
+import com.example.samandar_demo.Activities.Candle;
+import com.example.samandar_demo.Activities.PinWheel;
 
 
 public class Sigh_Fragment extends Fragment {
