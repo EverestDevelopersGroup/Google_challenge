@@ -1,15 +1,15 @@
 package com.example.samandar_demo.VideoLesson;
 
 public class LessonItem {
-    private String name;
+    private int name;
     private String resourceId;
 
-    public LessonItem(String name, String resourceId) {
+    public LessonItem(int name, String resourceId) {
         this.name = name;
         this.resourceId = resourceId;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 

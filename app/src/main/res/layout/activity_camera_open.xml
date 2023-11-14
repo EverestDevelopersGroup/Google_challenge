@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fontFamily="@font/font2"
+        android:fontFamily="@font/asosiy_fon"
         android:gravity="center"
         android:text="@string/sovgani_oling"
 

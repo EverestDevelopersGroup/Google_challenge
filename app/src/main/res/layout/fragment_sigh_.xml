@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".Sigh_Fragment">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+
         >
 
 
@@ -27,54 +26,171 @@
 
 
     <LinearLayout
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="40dp"
+
 
 
         >
 
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:id="@+id/sham_pufla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineAmbientShadowColor="#020202"
+            android:outlineSpotShadowColor="#020202"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#FFE0B2"
+            app:cardElevation="30dp"
+            tools:targetApi="p">
 
-            android:src="@drawable/img_21"
-            />
-        <ImageView
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:textSize="26sp"
+                android:fontFamily="@font/asosiy_fon"
+                android:textColor="@color/black"
+                android:text="@string/shamni_pufla"
+                />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/parrak_aylan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineAmbientShadowColor="#020202"
+            android:outlineSpotShadowColor="#020202"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#FFB6B1"
+            app:cardElevation="30dp"
+            tools:targetApi="p">
 
-            android:src="@drawable/img_22"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/asosiy_fon"
+                android:textColor="@color/black"
+                android:text="@string/parrakni_aylantir"
+                />
 
-        <ImageView
-            android:id="@+id/pufak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:src="@drawable/img_23"
-            />
 
-        <ImageView
-            android:id="@+id/futbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:src="@drawable/img_24"
-            />
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/gul_hidla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:src="@drawable/img_25"
-            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineAmbientShadowColor="#020202"
+            android:outlineSpotShadowColor="#020202"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            app:cardBackgroundColor="#C9E1E4"
+            app:cardElevation="30dp"
+            tools:targetApi="p">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/asosiy_fon"
+                android:textColor="@color/black"
+                android:text="@string/pufakchani_uchir"
+                />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:layout_gravity="center"
+            android:outlineAmbientShadowColor="#020202"
+            android:outlineSpotShadowColor="#020202"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            app:cardBackgroundColor="#AFD2A7"
+            app:cardElevation="30dp"
+            tools:targetApi="p">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/asosiy_fon"
+                android:textColor="@color/black"
+                android:text="@string/futbol_koptogi"
+                />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:outlineAmbientShadowColor="#020202"
+            android:outlineSpotShadowColor="#020202"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            app:cardBackgroundColor="#F4B2FF"
+            app:cardElevation="30dp"
+            tools:targetApi="p">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/asosiy_fon"
+                android:textColor="@color/black"
+                android:text="@string/gulni_hidla"
+                />
+
+
+
+
+        </androidx.cardview.widget.CardView>
 
 
 

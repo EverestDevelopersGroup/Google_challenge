@@ -27,13 +27,13 @@
             android:src="@drawable/shahnoza_logoped"
             />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/fonnn"
-            android:text="Shahnoza Tohtiyarova \n Logoped , Defektolog"/>
+            android:text="@string/shahnoza_tohtiyarova_n_logoped_defektolog"/>
 
     </LinearLayout>
 
@@ -58,13 +58,13 @@
             android:src="@drawable/nodiralogo" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:fontFamily="@font/fonnn"
-            android:text="Nodira Aripova - Defektolog\n Logoped, Psixolog!"/>
+            android:text="@string/nodira_aripova_defektolog_n_logoped_psixolog"/>
 
     </LinearLayout>
 

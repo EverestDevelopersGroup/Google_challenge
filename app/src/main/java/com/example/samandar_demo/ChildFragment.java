@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.samandar_demo.Activities.BarmoqActvity;
+import com.example.samandar_demo.Barmoqlar.BarmoqActvity;
 import com.example.samandar_demo.Activities.MimikaActivity;
 import com.example.samandar_demo.Activities.TanaHarakatActivity;
 import com.example.samandar_demo.Articulation.Artikulatsiya;
@@ -216,7 +216,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -233,7 +233,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -249,7 +249,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -265,7 +265,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
         Picasso.get()
@@ -280,7 +280,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -296,12 +296,12 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
         Picasso.get()
-                .load("https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/img_6.png?alt=media&token=4b4809fd-a61b-4cf6-a09e-88c5fb05b0db")                .placeholder(R.drawable.loading)
+                .load("https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/video-lesson.png?alt=media&token=acfd3047-f21e-47ab-b6f6-bb56283b3c05")                .placeholder(R.drawable.loading)
                 .into(img7, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -312,7 +312,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -328,7 +328,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -344,7 +344,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -361,7 +361,7 @@ public class ChildFragment extends Fragment {
 
                     @Override
                     public void onError(Exception e) {
-                        Toast.makeText(getActivity(), "Rasm yuklanishda xatolik", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),  R.string.xato_yuklash_rasm, Toast.LENGTH_SHORT).show();
                     }
                 });
 //

@@ -62,7 +62,9 @@
             android:exported="false" />
         <activity
             android:name=".Activities.Succes"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Activities.MainActivity"
+            />
         <activity
             android:name=".Activities.Picovoice"
             android:exported="false" />
@@ -81,7 +83,7 @@
             android:name=".Activities.MimikaActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.BarmoqActvity"
+            android:name=".Barmoqlar.BarmoqActvity"
             android:exported="false" />
         <activity
             android:name=".Tovushlar.TovushActivity"

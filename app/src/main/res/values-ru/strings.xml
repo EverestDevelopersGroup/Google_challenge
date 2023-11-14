@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">Logo Smart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="sovgani_oling">Потрясающе!\nВыберите любую коробку из коробок, чтобы получить свой приз!!!</string>
+    <string name="Royxatdan_otish">Регистрация</string>
+    <string name="Raqamingiz">Твой номер</string>
+
+
+
+    <string name="lessons1">Урок 1. Произнесение звука «С»</string>
+    <string name="lessons2">Урок 2. Советы по беглой речи</string>
+    <string name="lessons3">Урок 3. Языковые проблемы с возможностью свободно говорить</string>
+    <string name="lessons4">Урок 4. Процесс произнесения звука «Р» </string>
+    <string name="lessons5">Урок 5. Развитие речи в домашних условиях.</string>
+
+    <string name="Founder">Дильбар Шукуруллаевна\n\nДоктор философских наук,\nЛогопед\nСпециалист по маркетингу в социальных сетях!👩‍💻</string>
+    <string name="android">Хасанов Самандар Менеджер проектов \Мобильный разработчик</string>
+    <string name="AI">Атамуратов Эгамберган \n AI-программист</string>
+    <string name="Backend">Нигматов Исламходжа\nГенеральный директор и\nBackend веб-разработчик</string>
+    <string name="logoped">Шодмонова Фаёза – логопед</string>
+
+
+
+    <string name="asosiy_bolimga">Хотите перейти в основной раздел?</string>
+
+    <string name="kameraga_qarab_mashq">Начните упражнение лицом к камере.</string>
+    <string name="mashqlar_dialog">Этот раздел находится в разработке. Хотите выполнить еще одно упражнение?</string>
+    <string name="fragmentlar_dialog">На данном участке ведутся технические работы</string>
+    <string name="kerakli_bolim">Выберите нужный раздел</string>
+    <string name="diqqat">Внимание!</string>
+    <string name="ha">Да</string>
+    <string name="yoq">Нет</string>
+    <string name="mashqi">упражнение</string>
+    <string name="yuz_mimika">Выражения лица</string>
+    <string name="tabassum">Улыбка</string>
+    <string name="lablar">Губы</string>
+    <string name="dars_1">Урок 1. Физическая культура</string>
+    <string name="dars_2">Урок 2. Физическая культура</string>
+    <string name="dars_3">3-dars. Badantarbiya</string>
+    <string name="otcha">Лошадь</string>
+    <string name="murabbo">Варенье</string>
+    <string name="quymoq">Чугун</string>
+    <string name="futbol">Футбол</string>
+    <string name="soatcha">Ежечасно</string>
+
+    <string name="kozaynak">Очки</string>
+    <string name="kapalak">Бабочка</string>
+    <string name="baliqcha">Рыба</string>
+    <string name="panjara">решетка</string>
+    <string name="argimchoq">Аргимчак</string>
+    <string name="unlilar">Пение гласных</string>
+    <string name="m_harf">Буква М</string>
+    <string name="maxsus_sozlar">Специальные слова</string>
+
+    <string name="xato_yuklash_rasm">Ошибка загрузки изображения.</string>
+
+
+    <string name="uzr">Приносим свои извинения за доставленные неудобства.</string>
+
+    <string name="agree">Я согласен с Условиями использования</string>
+    <string name="not_agree">Я не согласен с условиями использования</string>
+
+
+
+    <string name="description_info">Информация</string>
+    <string name="request_permission">Sizga kamera ruxsati kerak.</string>
+    <string name="camera_error">Это устройство не поддерживает API Camera2.</string>
+    <string name="todo">TODO</string>
+
+    <string name="ma_lumotlar_mavjud_emas">Данные недоступны</string>
+    <string name="logo_smart">Logo Smart</string>
+    <string name="bolalar_bo_limi">Детское отделение</string>
+    <string name="mutaxassislar_bo_limi">Отдел специалистов</string>
+    <string name="ota_onalar_bo_limi">Родительский отдел</string>
+    <string name="ro_yxatdan_o_tish">Регистрация</string>
+    <string name="ismingiz">Ваше имя:</string>
+    <string name="raqamingiz">Твой номер:</string>
+    <string name="parolingiz">Ваш пароль:</string>
+    <string name="tasdiqlash">Подтверждение</string>
+    <string name="SplashScreen_name">LOGO SMART</string>
+    <string name="rasm_yuklang">Загрузить изображение</string>
+    <string name="ma_lumotlarni_saqlash">Ma`lumotlarni saqlash</string>
+    <string name="ma_lumotlar_ro_yxatini_ko_rish">Ma`lumotlar ro`yxatini ko`rish</string>
+    <string name="muassasa_nomi">Muassasa nomi:</string>
+    <string name="hudud_nomi_bosh_harflar_bilan">Hudud nomi(bosh harflar bilan)</string>
+    <string name="taklif_etiladigan_xizmatlar">Taklif etiladigan xizmatlar:</string>
+    <string name="kun_tartibi">Kun tartibi:</string>
+    <string name="mashg_ulot_olib_boriladigan_til">Mashg\'ulot olib boriladigan til:</string>
+    <string name="ovqatlanish_ratsioni">Ovqatlanish ratsioni:</string>
+    <string name="tarbiyalanuvchilar_soni">Tarbiyalanuvchilar soni:</string>
+    <string name="oylik_to_lov_so_m">Oylik to`lov (so\'m):</string>
+    <string name="ustunlik_jihatlari">Ustunlik jihatlari:</string>
+    <string name="bonus_mavjud_bo_lsa">Bonus(mavjud bo\'lsa):</string>
+    <string name="xavfsizlik_xizmati">Xavfsizlik xizmati:</string>
+    <string name="bog_lanish_raqam">Bog\'lanish(raqam):</string>
+    <string name="qo_shimcha_ma_lumotlar">Qo\'shimcha ma\'lumotlar:</string>
+    <string name="tanlang">Выбирать:</string>
+    <string name="bog_lanish">Связь</string>
+    <string name="sozlamalar">Настройки</string>
+    <string name="ilova_yangiliklari">Новости приложения</string>
+    <string name="bizning_jamoa">Наша команда</string>
+    <string name="boglanish_manager">Связь</string>
+    <string name="artikulatsion_gimnastika">Артикуляционная гимнастика</string>
+    <string name="nafas_mashqlari">Дыхательные упражнения</string>
+    <string name="tovushlar_talaffuzini_rivojlantirish">Развитие произношения звуков</string>
+    <string name="barmoqlar_neyrografiya_mashqlari">Упражнения для нейрографики пальцев.</string>
+    <string name="yuz_mimikasini_rivojlantirish">Развитие мимики лица</string>
+    <string name="neyro_nrivojlantiruvchi_nbadantarbiya">Нейро\nразвитие\образование</string>
+    <string name="daktil_alifbosi_va_imo_ishoralar">Видеоуроки</string>
+    <string name="fonematik_idrok">Фонематическое восприятие</string>
+    <string name="tafakkurni_rivojlantirish">Развитие мышления</string>
+    <string name="diqqatni_rivojlantirish">Развитие внимания</string>
+    <string name="xususiy_bog_chalar_n_ro_yxatiga_qo_shilish">Присоединяйтесь к списку частных садов\n</string>
+    <string name="shaxsiy_portfolio_yaratish">Создание личного портфолио</string>
+    <string name="xususiy_maktablar_ro_yxatiga_qo_shilish">Присоединяйтесь к списку частных школ</string>
+    <string name="onlayn_konsultatsiya_xizmati">Служба онлайн-консультаций</string>
+    <string name="mutaxassis_va_o_qituvchilar_nro_yxati">Список специалистов и преподавателей</string>
+    <string name="xususiy_maktablar_ro_yxati">Список частных школ</string>
+    <string name="xususiy_bog_chalar_ro_yxati">Список частных детских садов</string>
+    <string name="shamni_pufla">Задуть свечу</string>
+    <string name="parrakni_aylantir">Переверните волосы</string>
+    <string name="pufakchani_uchir">Лопай пузырь</string>
+    <string name="gulni_hidla">Запах цветка</string>
+    <string name="futbol_koptogi">Футбольный мяч</string>
+    <string name="egambergan">Атамуратов Эгамберган </string>
+    <string name="samandar">Самандар Хасанов</string>
+    <string name="fayoza">Шодмонова Фаёза</string>
+    <string name="islomxoja">Нигматов Исламходжа</string>
+    <string name="tilni_o_zgartirish" >Изменить язык</string>
+    <string name="to">TODO</string>
+    <string name="qani_boshladikmi">С чего мы начали?</string>
+    <string name="tabriklaymiz" >Разочарование! Пожалуйста, попробуйте еще раз.</string>
+    <string name="mutaxassis_portfoilosini_yaratish" >Создание экспертного портфолио</string>
+    <string name="xususiy_maktab_qo_shish">Добавить частную школу</string>
+    <string name="xususiy_bog_cha_qo_shish">Добавить частный сад</string>
+    <string name="o_quv_markaz_qo_shish">Добавить образовательный центр</string>
+    <string name="bog_cha_nomi_bosh_harflarda" >Bog\'cha nomi(Bosh harflarda):</string>
+    <string name="hudud_nomini_kiriting" >Hudud nomini kiriting:</string>
+    <string name="mashg_ulotlar_olib_boriladigan_til" >Mashg`ulotlar olib boriladigan til:</string>
+    <string name="ma_lumotlarni_yangilash" >Ma`lumotlarni yangilash</string>
+    <string name="list_mutaxasis">Список экспертов и преподавателей</string>
+    <string name="oquvmarkaz_list">Частные образовательные центры</string>
+    <string name="bogcha_list">Список частных детских садов</string>
+    <string name="maktab_list">Список частных школ</string>
+    <string name="bolalar">Дети</string>
+    <string name="ota_onalar">Родители</string>
+    <string name="mutaxassislar">Специалисты</string>
+    <string name="numpy_image">Незаметное изображение</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uzbek">Узбекский</string>
+    <string name="russian">Русский</string>
+    <string name="saqlash">Сохранять</string>
+    <string name="english">Английский</string>
+    <string name="natija">Результат:</string>
+    <string name="mashqni_boshladik">Начинать</string>
+    <string name="mashq_bajarish_boshlanmagan">Упражнение не началось</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Шахноза Тохтиярова Логопед, дефектолог</string>
+    <string name="nodira_aripova_defektolog_n_logoped_psixolog">Нодира Арипова - Дефектолог Логопед, Психолог!</string>
+    <string name="bepul_darsliklar">Бесплатные учебники</string>
+
+
+</resources>

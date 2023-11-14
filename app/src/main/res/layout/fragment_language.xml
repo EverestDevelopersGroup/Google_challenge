@@ -7,20 +7,14 @@
     tools:context=".LanguageFragment">
 
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_margin="16dp"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="8dp"
-        android:background="@drawable/gradient_card">
-
-        <!-- CardView ichidagi ma'lumotlarni joylash uchun Layoutni qo'shing -->
-
-    </androidx.cardview.widget.CardView>
-
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/animation_gift"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        app:lottie_loop="true" />
 
 
 </FrameLayout>

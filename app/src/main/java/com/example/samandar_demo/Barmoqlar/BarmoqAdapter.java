@@ -1,4 +1,4 @@
-package com.example.samandar_demo;
+package com.example.samandar_demo.Barmoqlar;
 
 import android.view.LayoutInflater;
 import android.view.View;

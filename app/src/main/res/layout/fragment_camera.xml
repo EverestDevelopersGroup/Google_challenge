@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-
     tools:context=".Activities.VideoFrame">
+
 
 
 <!--    <nl.dionsegijn.konfetti.KonfettiView-->
@@ -34,8 +34,8 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="310dp"
-                android:layout_height="310dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:background="@drawable/oval_camera"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -43,12 +43,12 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="36dp">
+                    app:cardCornerRadius="34dp">
 
                     <VideoView
                         android:id="@+id/videoView"
-                        android:layout_width="300dp"
-                        android:layout_height="300dp"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
                         android:layout_centerInParent="true"
                         android:visibility="visible" />
 
@@ -63,13 +63,15 @@
             </LinearLayout>
         </LinearLayout>
 
+
         <TextView
             android:id="@+id/startmashq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mashq bajarish boshlanmagan"
+            android:text="@string/mashq_bajarish_boshlanmagan"
             android:gravity="center"
             android:textStyle="italic"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/fonnn"
             android:textColor="@color/bordercolor"
             android:layout_weight="1" />
@@ -104,6 +106,8 @@
                             android:id="@+id/surfaceView"
                             android:layout_width="310dp"
                             android:layout_height="310dp"
+                            android:scaleX="1.4"
+
                             android:rotation="90"
                             android:layout_centerHorizontal="true" />
                     </LinearLayout>
@@ -114,14 +118,19 @@
 
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
                 <com.ahmedteleb.buttons3d.Button3d
                     android:id="@+id/btnplay"
-                    android:layout_width="200dp"
+                    android:layout_width="170dp"
                     android:layout_height="50dp"
-                    app:buttonColor="#5FC663"
-                    android:shadowColor="#8BC34A"
+                    app:buttonColor="#FF0000"
+                    android:shadowColor="#FF0000"
                     app:shadowEnabled="true"
-                    android:text="Mashqni boshladik"
+                    android:text="@string/mashqni_boshladik"
                     android:textColor = "@color/white"
                     android:textSize="12sp"
                     android:longClickable="true"
@@ -129,6 +138,7 @@
 
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/font2"
+                    android:layout_marginLeft="120dp"
 
                     app:shadowHeight="@dimen/_7sdp"
                     app:cornerRadius="@dimen/_10sdp"
@@ -136,6 +146,19 @@
 
 
                     />
+
+                <ImageView
+                    android:id="@+id/restart_articulation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/restart"
+
+                    />
+
+            </LinearLayout>
+
 
 
 

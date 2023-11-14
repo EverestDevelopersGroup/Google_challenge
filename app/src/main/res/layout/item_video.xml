@@ -68,7 +68,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text=" mashqi"
+                android:text="@string/mashqi"
 
                 android:gravity = "center"
                 android:textColor="@color/white"

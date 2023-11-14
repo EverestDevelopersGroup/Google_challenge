@@ -27,11 +27,13 @@ import android.widget.TextView;
 import com.example.samandar_demo.ChildFragment;
 import com.example.samandar_demo.ExpertFragment;
 import com.example.samandar_demo.LanguageFragment;
+import com.example.samandar_demo.NewsFragment;
 import com.example.samandar_demo.ParentFragment;
 import com.example.samandar_demo.R;
 import com.example.samandar_demo.SettingsFragment;
 import com.example.samandar_demo.Team_Fragment;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout toolbar;
     TextView tool_text;
     ImageView bottomsheet;
+    CircleImageView user_data;
 
 
 
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         tool_text = findViewById(R.id.camera_open);
         bottomBar = findViewById(R.id.bottomBar);
         toolbar = findViewById(R.id.layout_top);
+        user_data = findViewById(R.id.user_profile);
 
 
 
@@ -155,10 +159,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        user_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this , ActivityOpenCv.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
     }
+
 
 
 
@@ -213,6 +226,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 dialog.dismiss();
+                FragmentManager manager1 = getSupportFragmentManager();
+                FragmentTransaction transaction1 = manager1.beginTransaction();
+                transaction1.replace(R.id.framelayout_container, new NewsFragment());
+                transaction1.addToBackStack(null);
+                transaction1.commit();
+
 
 
             }

@@ -7,22 +7,14 @@
     tools:context=".NewsFragment">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
         android:layout_gravity="center"
-        android:outlineAmbientShadowColor="#951943"
-        android:outlineSpotShadowColor="#7A0F34"
-        app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="@color/button3d_color_asbestos"
-        app:cardElevation="20dp"
-        tools:targetApi="p">
-
-
-
-
-    </androidx.cardview.widget.CardView>
-
+        app:lottie_loop="true" />
 
 
 

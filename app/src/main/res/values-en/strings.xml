@@ -7,6 +7,66 @@
     <string name="Raqamingiz">Your number:</string>
 
 
+
+    <string name="lessons1">Lesson 1. Pronouncing the "S" sound</string>
+    <string name="lessons2">Lesson 2. Tips for speaking fluently</string>
+    <string name="lessons3">Lesson 3. Language problems to speak fluently</string>
+    <string name="lessons4">Lesson 4. The process of pronouncing the "R" sound </string>
+    <string name="lessons5">Lesson 5. Speech development at home</string>
+
+    <string name="Founder">Dilbar Shukurullayevna\n \nDoctor of Philosophy,\n Speech therapist\n Social Media Marketing Specialist!👩‍💻</string>
+    <string name="android">Khasanov Samandar Project manager \Mobile developer</string>
+    <string name="AI">Atamuratov Egambergan \n AI programmer</string>
+    <string name="Backend">Nig\'matov Islamkhoja \nCEO manager and\nBackend web developer</string>
+    <string name="logoped">Shodmonova Fayoza is a speech therapist</string>
+
+
+
+
+
+    <string name="asosiy_bolimga">Do you want to go to the main section?</string>
+    <string name="kameraga_qarab_mashq">Start the exercise facing the camera</string>
+
+    <string name="mashqlar_dialog">This section is a work in progress. Do you want to do another exercise?</string>
+    <string name="fragmentlar_dialog">Technical works are being carried out in this section</string>
+    <string name="kerakli_bolim">Select the desired section</string>
+    <string name="diqqat">Attention!</string>
+    <string name="ha">Yes</string>
+    <string name="yoq">No</string>
+    <string name="mashqi">exercise</string>
+    <string name="yuz_mimika">Facial expressions</string>
+    <string name="tabassum">A smile</string>
+    <string name="lablar">Lips</string>
+    <string name="dars_1">Lesson 1. Physical education</string>
+    <string name="dars_2">Lesson 2. Physical education</string>
+    <string name="dars_3">Lesson 3. Physical education</string>
+    <string name="otcha">Horse</string>
+    <string name="murabbo">Jam</string>
+    <string name="quymoq">sweet</string>
+    <string name="futbol">Football</string>
+    <string name="soatcha">Hourly</string>
+
+    <string name="kozaynak">Glasses</string>
+    <string name="kapalak">Butterfly</string>
+    <string name="baliqcha">Fish</string>
+    <string name="panjara">Grid</string>
+    <string name="argimchoq">Flip-flop</string>
+    <string name="unlilar">Singing vowels</string>
+    <string name="m_harf">The letter M</string>
+    <string name="maxsus_sozlar">Special words</string>
+
+    <string name="xato_yuklash_rasm">Error loading image</string>
+
+
+    <string name="uzr">We apologize for the inconvenience.</string>
+
+
+    <string name="agree">I agree to the terms of use</string>
+    <string name="not_agree">I do not agree to the terms of use</string>
+
+
+
+
     <string name="description_info">Information</string>
     <string name="request_permission">You need camera permission.</string>
     <string name="camera_error">This device does not support Camera2 API.</string>
@@ -43,7 +103,6 @@
     <string name="sozlamalar">Settings</string>
     <string name="ilova_yangiliklari">App news</string>
     <string name="bizning_jamoa">Our team</string>
-    <string name="dilbar_shukurullayevna_n_ndoctor_of_philosophy_specialist_of_social_media_marketing_n_nbog_lanish_998901234567_n_telegram_anonym_user">Dilbar Shukurullayevna\n \nDoctor of Philosophy, Specialist of Social media marketing!👩‍💻\n \nBog`lanish: +998901234567\n Telegram: @Anonym_user</string>
     <string name="boglanish_manager">Contact</string>
     <string name="artikulatsion_gimnastika">Articulation gymnastics</string>
     <string name="nafas_mashqlari">Breathing exercises</string>
@@ -67,10 +126,10 @@
     <string name="pufakchani_uchir">Pop the bubble</string>
     <string name="gulni_hidla">Smell the flower</string>
     <string name="futbol_koptogi">Soccer ball</string>
-    <string name="dilbar_shukurullayevna">Dilbar Shukurullayevna</string>
-    <string name="samandar_khasanov">Samandar Khasanov</string>
-    <string name="sagdiana_azimova">Sagdiana Azimova</string>
-    <string name="bobur_yo_ldoshev">Bobur Yo`ldoshev</string>
+    <string name="egambergan">Atamuratov Egambergan</string>
+    <string name="samandar">Samandar Khasanov</string>
+    <string name="fayoza">Shodmonova Fayoza</string>
+    <string name="islomxoja">Nigmatov Islamkhoja</string>
     <string name="to" >TODO</string>
     <string name="qani_boshladikmi" >shall we begin</string>
     <string name="tabriklaymiz">Congratulations!</string>
@@ -89,4 +148,17 @@
     <string name="oquvmarkaz_list">Private educational centers</string>
     <string name="bogcha_list">List of private kindergardens</string>
     <string name="maktab_list">List of private schools</string>
+    <string name="numpy_image">Numpy Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uzbek">Uzbek</string>
+    <string name="russian">Russian</string>
+    <string name="saqlash">Save</string>
+    <string name="english">English</string>
+    <string name="natija">Natija:</string>
+    <string name="mashqni_boshladik">Start</string>
+    <string name="mashq_bajarish_boshlanmagan">Please wait for the video to end!\n Then click the button below to start the exercise.</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shahnoza Tohtiyarova \n Logoped , Defektolog</string>
+    <string name="nodira_aripova_defektolog_n_logoped_psixolog">Nodira Aripova - Defektolog\n Logoped, Psixolog!</string>
+    <string name="bepul_darsliklar">Free lessons</string>
 </resources>

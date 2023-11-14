@@ -100,6 +100,39 @@
         android:paddingLeft="@dimen/_20sdp"/>
 
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+
+    <CheckBox
+        android:id="@+id/agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Men maxfiylik shartlariga rozi emasman."
+
+        />
+
+</LinearLayout>
+
+
+
+
 
     <com.ahmedteleb.buttons3d.Button3d
         android:id="@+id/register"
@@ -108,6 +141,7 @@
         app:buttonColor="#FFFFFF"
         android:shadowColor="#8BC34A"
         app:shadowEnabled="true"
+        android:enabled="false"
 
         android:text="@string/tasdiqlash"
         android:textColor = "@color/black"
@@ -116,7 +150,7 @@
         android:clickable="true"
 
         android:fontFamily="@font/font2"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         app:shadowHeight="@dimen/_7sdp"
         app:cornerRadius="@dimen/_10sdp"
 

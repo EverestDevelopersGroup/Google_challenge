@@ -9,21 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.samandar_demo.Articulation.VideoItem;
 import com.example.samandar_demo.R;
 
 import java.util.List;
 
 public class TovushAdapter extends RecyclerView.Adapter<TovushAdapter.VideoViewHolder> {
 
-    private List<VideoItem> videoList;
+    private List<TovushItem> videoList;
     private OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
 
-    public TovushAdapter(List<VideoItem> videoList, OnItemClickListener listener) {
+    public TovushAdapter(List<TovushItem> videoList, OnItemClickListener listener) {
         this.videoList = videoList;
         this.listener = listener;
     }
@@ -45,7 +44,7 @@ public class TovushAdapter extends RecyclerView.Adapter<TovushAdapter.VideoViewH
         return videoList.size();
     }
 
-    public VideoItem getItem(int position) {
+    public TovushItem getItem(int position) {
         return videoList.get(position);
     }
 
@@ -69,7 +68,7 @@ public class TovushAdapter extends RecyclerView.Adapter<TovushAdapter.VideoViewH
             });
         }
 
-        void bind(VideoItem videoItem) {
+        void bind(TovushItem videoItem) {
             videoNameTextView.setText(videoItem.getName());
         }
     }

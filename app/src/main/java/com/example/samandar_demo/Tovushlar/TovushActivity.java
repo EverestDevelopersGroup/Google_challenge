@@ -28,13 +28,14 @@ public class TovushActivity extends AppCompatActivity implements TovushAdapter.O
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Ma'lumotlarni yaratish
-        List<VideoItem> videoList = new ArrayList<>();
+        List<TovushItem> videoList = new ArrayList<>();
 
-        videoList.add(new VideoItem("Unlilarni kuylash", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Funlilar_bw5tNfxA.mp4?alt=media&token=9329e513-8868-4194-b1bf-d8fbf5d77deb"));
-        videoList.add(new VideoItem("M harfi", "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftovush2_GFTERAy9.mp4?alt=media&token=3ca1c647-62d6-4ac1-8321-4e7e0daf0839"));
+        videoList.add(new TovushItem(R.string.unlilar, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Funlilar_bw5tNfxA.mp4?alt=media&token=9329e513-8868-4194-b1bf-d8fbf5d77deb"));
+        videoList.add(new TovushItem(R.string.m_harf, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftovush2_GFTERAy9.mp4?alt=media&token=3ca1c647-62d6-4ac1-8321-4e7e0daf0839"));
+        videoList.add(new TovushItem(R.string.maxsus_sozlar , "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fsozlarr.mp4?alt=media&token=136f05a6-98c2-4ba4-b7af-3edbe5869e54"));
         // URL manzili
         // Boshqa URL manzili
-
+//  unli tovushlar  i, e, a, o, u, o`
         // Boshqa video manzillarini qo'shish...
 
         adapter = new TovushAdapter(videoList, this);
@@ -45,9 +46,21 @@ public class TovushActivity extends AppCompatActivity implements TovushAdapter.O
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
         Intent intent = new Intent(this, TovushVideoActivity.class);
-        VideoItem videoItem = adapter.getItem(position);
+        TovushItem videoItem = adapter.getItem(position);
         intent.putExtra("videoName", videoItem.getName());
-        intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili
+        intent.putExtra("videoUrl", videoItem.getResourceId());
+
+        if (position == 0){
+            intent.putExtra("Unlilar" , " Ushbu so`zlarni mikrofonni bosgan holda alohida 1martadan ayting:\n E`lon , Alo , Olim , Uzum , O`rdak  , Ilon ");
+        }
+       if (position == 1){
+            intent.putExtra("M" , " Ushbu so`zlarni mikrofonni bosgan holda alohida 1martadan ayting:\n Malina , Muz , Mashina , Maymun");
+        }
+       if (position == 2){
+            intent.putExtra("R" , "Ushbu so`zlarni mikrofonni bosgan holda alohida 1martadan ayting:\n Randa ,Ramda , Arra , Qor , Sariq , Rano , Kaptar , Xayr , Sayr, Burgut");
+        }
+
+        // URL manzili
         startActivity(intent);
     }
 }

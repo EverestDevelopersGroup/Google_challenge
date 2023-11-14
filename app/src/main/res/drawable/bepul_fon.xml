@@ -18,5 +18,7 @@
     <gradient android:startColor="#00b09b"
         android:endColor="#96c93d"
 
-        ></gradient>
+        >
+
+    </gradient>
 </shape>

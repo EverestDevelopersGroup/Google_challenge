@@ -7,7 +7,62 @@
 
     <string name="sovgani_oling">Ajoyib!\nMukofotni olish uchun qutilardan istalgan qutini tanlang!!!</string>
     <string name="Royxatdan_otish">Ro`yxatdan o`tish</string>
-    <string name="Raqamingiz">Ro`yxatdan o`tish</string>
+    <string name="Raqamingiz">Raqamingiz</string>
+    <string name="asosiy_bolimga">Asosiy bo`limga o`tishni xohlaysizmi?</string>
+
+
+
+
+    <string name="lessons1">1-dars. "S" tovushini talaffuz qilish</string>
+    <string name="lessons2">2-dars. Nutq ravon bo`lishi uchun maslahatlar</string>
+    <string name="lessons3">3-dars. Ravon gapirish uchun tildagi muammolar</string>
+    <string name="lessons4">4-dars. "R" tovushini talaffuz jarayoni </string>
+    <string name="lessons5">5-dars. Uy sharoitida nutq rivojlanishi</string>
+
+    <string name="Founder">Dilbar Shukurullayevna\n \nFalsafa fanlari doktori,\n Logoped \nIjtimoiy media marketingi mutaxassisi!👩‍💻</string>
+    <string name="android">Khasanov Samandar Loyiha menejeri \Mobil dasturchi</string>
+    <string name="AI">Atamuratov Egambergan \n AI dasturchi</string>
+    <string name="Backend">Nig\'matov Islomxo’ja \n CEO menejer va\nBackend web dasturchi</string>
+    <string name="logoped">Shodmonova Fayoza\n Nutq terapevti</string>
+
+
+
+    <string name="mashqlar_dialog">Ushbu bo`lim ustida ish olib borilmoqda.Boshqa mashqni bajarishni xohlaysizmi?</string>
+    <string name="fragmentlar_dialog">Ushbu bo`limda texnik ishlar olib borilmoqda</string>
+    <string name="kerakli_bolim">Kerakli bo`limni tanlang</string>
+    <string name="diqqat">Diqqat!</string>
+    <string name="ha">Ha</string>
+    <string name="yoq">Yo`q</string>
+    <string name="mashqi">mashqi</string>
+    <string name="yuz_mimika">Yuz mimikasi</string>
+    <string name="tabassum">Tabassum</string>
+    <string name="lablar">Lablar</string>
+    <string name="dars_1">1-dars. Badantarbiya</string>
+    <string name="dars_2">2-dars. Badantarbiya</string>
+    <string name="dars_3">3-dars. Badantarbiya</string>
+    <string name="otcha">Otcha</string>
+    <string name="murabbo">Murabbo</string>
+    <string name="quymoq">Quymoq</string>
+    <string name="futbol">Futbol</string>
+    <string name="soatcha">Soatcha</string>
+
+    <string name="kozaynak">Ko\'zoynakcha</string>
+    <string name="kapalak">Kapalakcha</string>
+    <string name="baliqcha">Baliqcha</string>
+    <string name="panjara">Panjara</string>
+    <string name="argimchoq">Arg\'imchoq</string>
+    <string name="unlilar">Unlilarni kuylash</string>
+    <string name="m_harf">M harfi</string>
+    <string name="maxsus_sozlar">Maxus so`zlar</string>
+
+    <string name="xato_yuklash_rasm">Rasm yuklanishda xatolik</string>
+
+
+    <string name="uzr">Noqulayliklar uchun uzr so`raymiz.</string>
+    <string name="kameraga_qarab_mashq">Kameraga qarab mashqni boshlang</string>
+
+    <string name="agree">Men foydalanish shartlariga roziman</string>
+    <string name="not_agree">Men foydalanish shartlariga rozi emasman</string>
 
 
     <string name="description_info">Ma`lumot</string>
@@ -46,7 +101,6 @@
     <string name="sozlamalar">Sozlamalar</string>
     <string name="ilova_yangiliklari">Ilova yangiliklari</string>
     <string name="bizning_jamoa">Bizning jamoa</string>
-    <string name="dilbar_shukurullayevna_n_ndoctor_of_philosophy_specialist_of_social_media_marketing_n_nbog_lanish_998901234567_n_telegram_anonym_user">Dilbar Shukurullayevna\n \nDoctor of Philosophy, Specialist of Social media marketing!👩‍💻\n \nBog`lanish: +998901234567\n Telegram: @Anonym_user</string>
     <string name="boglanish_manager">Bog\'lanish</string>
     <string name="artikulatsion_gimnastika">Artikulatsion gimnastika</string>
     <string name="nafas_mashqlari">Nafas mashqlari</string>
@@ -70,10 +124,10 @@
     <string name="pufakchani_uchir">Pufakchani uchir</string>
     <string name="gulni_hidla">Gulni hidla</string>
     <string name="futbol_koptogi">Futbol koptogi</string>
-    <string name="dilbar_shukurullayevna">Dilbar Shukurullayevna</string>
-    <string name="samandar_khasanov">Samandar Khasanov</string>
-    <string name="sagdiana_azimova">Sagdiana Azimova</string>
-    <string name="bobur_yo_ldoshev">Bobur Yo`ldoshev</string>
+    <string name="egambergan">Atamuratov Egambergan </string>
+    <string name="samandar">Hasanov Samandar</string>
+    <string name="fayoza">Shodmonova Fayoza</string>
+    <string name="islomxoja">Nig\'matov Islomxo`ja</string>
     <string name="tilni_o_zgartirish" translatable="false">Tilni o`zgartirish</string>
     <string name="to">TODO</string>
     <string name="qani_boshladikmi">Qani boshladikmi</string>
@@ -93,6 +147,19 @@
     <string name="bolalar">Bolalar</string>
     <string name="ota_onalar">Ota onalar</string>
     <string name="mutaxassislar">Mutaxassislar</string>
+    <string name="numpy_image">Numpy Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uzbek">o`zbekcha</string>
+    <string name="russian">Ruscha</string>
+    <string name="saqlash">Saqlash</string>
+    <string name="english">Inglizcha</string>
+    <string name="natija">Natija:</string>
+    <string name="mashqni_boshladik">Boshladik</string>
+    <string name="mashq_bajarish_boshlanmagan">Iltimos video tugashini kuting!\n So`ngra pastdagi tugmani bosib mashq bajarishni boshlang</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shahnoza Tohtiyarova \n Logoped , Defektolog</string>
+    <string name="nodira_aripova_defektolog_n_logoped_psixolog">Nodira Aripova - Defektolog\n Logoped, Psixolog!</string>
+    <string name="bepul_darsliklar">Bepul darsliklar</string>
 
 
 </resources>

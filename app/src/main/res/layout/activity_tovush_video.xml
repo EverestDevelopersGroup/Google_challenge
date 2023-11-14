@@ -7,7 +7,6 @@
     android:orientation="vertical"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-
     tools:context=".Tovushlar.TovushVideoActivity">
 
 
@@ -34,6 +33,14 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/restart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/restart"
+                android:layout_marginLeft="160dp"
+                />
+
             <LinearLayout
                 android:layout_width="250dp"
                 android:layout_height="250dp"
@@ -44,7 +51,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="36dp">
+                    app:cardCornerRadius="34dp">
 
                     <VideoView
                         android:id="@+id/videoView_tovush"
@@ -54,7 +61,7 @@
                         android:visibility="visible" />
 
                     <ProgressBar
-                        android:id="@+id/progressBar_articulation"
+                        android:id="@+id/progressBar_tovush"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -66,14 +73,26 @@
 
         <TextView
             android:id="@+id/startmashq"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:text="Iltimos videodars tugashini kuting."
+            android:text=" "
+            android:layout_gravity="center"
             android:gravity="center"
-            android:textStyle="italic"
-            android:fontFamily="@font/fonnn"
-            android:textColor="@color/bordercolor"
+            android:textStyle="bold"
+
+            android:fontFamily="@font/asosiy_fon"
+            android:textColor="#0A0B0A"
              />
+<!--        <TextView-->
+<!--            android:id="@+id/startmashq2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Iltimos "-->
+<!--            android:gravity="center"-->
+<!--            android:textStyle="italic"-->
+<!--            android:fontFamily="@font/fonnn"-->
+<!--            android:textColor="@color/bordercolor"-->
+<!--            />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,7 +109,8 @@
                 android:id="@+id/responseData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Natija:"
+                android:text="@string/natija"
+                android:visibility="gone"
                 android:textSize="24sp"
 
                 android:gravity="center"
@@ -114,9 +134,10 @@
             <!--        android:textStyle="bold"-->
             <!--        />-->
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView_tovush"
                 android:layout_width="250dp"
                 android:layout_height="200dp"
+
                 android:background="@drawable/oval_camera"
                 android:src="@drawable/loading"
                 android:layout_marginTop="16dp"
@@ -129,9 +150,9 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/img_41"
+
                 android:clickable="true"
                 android:foreground="?selectableItemBackground"
-                android:text="Start Record"
                 android:layout_marginTop="50dp"
 
                 android:layout_gravity="center"

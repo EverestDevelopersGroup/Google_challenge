@@ -3,6 +3,7 @@ package com.example.samandar_demo;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -16,7 +17,7 @@ import com.example.samandar_demo.Activities.PinWheel;
 
 public class Sigh_Fragment extends Fragment {
 
-    ImageView sham , parrak;
+    CardView sham , parrak;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

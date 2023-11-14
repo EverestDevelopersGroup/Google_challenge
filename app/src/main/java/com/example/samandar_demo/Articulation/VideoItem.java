@@ -1,15 +1,15 @@
 package com.example.samandar_demo.Articulation;
 
 public class VideoItem {
-    private String name;
+    private int name;
     private String resourceId;
 
-    public VideoItem(String name, String resourceId) {
+    public VideoItem(int name, String resourceId) {
         this.name = name;
         this.resourceId = resourceId;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 

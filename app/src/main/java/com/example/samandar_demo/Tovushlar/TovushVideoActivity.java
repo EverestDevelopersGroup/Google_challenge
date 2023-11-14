@@ -11,7 +11,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -35,23 +37,24 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class TovushVideoActivity extends AppCompatActivity  {
 
 
-
     private VideoView videoView;
+    ProgressBar tovushbar;
 
     private static final int RECORD_AUDIO_PERMISSION_CODE = 123;
 
     AudioRecorder audioRecorder;
 
-    private ImageView imageView;
-    private String[] words = {"randa", "arra", "qor", "sariq", "rano", "kaptar", "xayr", "sayr", "burgut", "darra"};
-    private int[] imageResources = {R.drawable.img_1, R.drawable.img_2, R.drawable.img_3, R.drawable.img_4, R.drawable.img_5, R.drawable.img_6, R.drawable.img_7, R.drawable.img_8, R.drawable.img_9, R.drawable.img_10};
+    private ImageView imageView , restart;
+    private String[] words = {"randa","ramda", "arra", "qor", "sariq", "ra'no", "kaptar", "xayr", "sayr", "burgut" , "e'lon" , "alo" , "olim" , "uzum" , "o'rdak"  , "ilon" , "malina" , "muz" , "mashina" , "maymun"};
+    private int[] imageResources = {R.drawable.randa,R.drawable.randa, R.drawable.arra, R.drawable.qor, R.drawable.yellow, R.drawable.rano, R.drawable.kaptar, R.drawable.xayr, R.drawable.sayr, R.drawable.burgut , R.drawable.elon , R.drawable.alo , R.drawable.olim , R.drawable.uzum , R.drawable.ordak , R.drawable.ilon , R.drawable.malina ,R.drawable.muz, R.drawable.mashina , R.drawable.maymun};
 
     private Map<String, Integer> wordImageMap;
-    private MediaPlayer mediaPlayer1, mediaPlayer2;
+    private MediaPlayer eslatma , correct , incorrect;
 
 
 
-    //    TextView startstop;
+
+    TextView startstop ;
     AudioRepository audioRepository = new AudioRepository();
 
     private static final int CAMERA_PERMISSION_CODE = 101;
@@ -67,10 +70,84 @@ public class TovushVideoActivity extends AppCompatActivity  {
         videoView = findViewById(R.id.videoView_tovush);
         CircleImageView btn = findViewById(R.id.StartRecord);
         TextView responseTxt = findViewById(R.id.responseData);
+        tovushbar = findViewById(R.id.progressBar_tovush);
+        startstop = findViewById(R.id.startmashq);
+//        startstop2 = findViewById(R.id.startmashq2);
+        restart = findViewById(R.id.restart);
 
 
 
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageView_tovush);
+
+        String videoName = getIntent().getStringExtra("videoName");
+        String videoUrl = getIntent().getStringExtra("videoUrl");
+
+        Intent receivedIntent = getIntent();
+
+        if (receivedIntent != null) {
+            if (receivedIntent.hasExtra("Unlilar")) {
+                String unliLar = receivedIntent.getStringExtra("Unlilar");
+                startstop.setText(unliLar);
+
+                // 'Unlilar' deb nomlangan matn boshqacha aktivitetdan kelgan ma'lumot
+                // uni foydalanish
+            } else if (receivedIntent.hasExtra("M")) {
+                String mWords = receivedIntent.getStringExtra("M");
+                startstop.setText(mWords);
+                // 'M' deb nomlangan matn boshqacha aktivitetdan kelgan ma'lumot
+                // uni foydalanish
+            } else if (receivedIntent.hasExtra("R")) {
+                String rWords = receivedIntent.getStringExtra("R");
+                startstop.setText(rWords);
+                // 'R' deb nomlangan matn boshqacha aktivitetdan kelgan ma'lumot
+                // uni foydalanish
+            }}
+
+
+
+        setTitle(videoName); // Activity başlığını değiştirme
+        String videoPath = videoUrl;
+        videoView.setZOrderMediaOverlay(true);
+        videoView.setVideoURI(Uri.parse(videoPath));
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                // Video tayyor bo'lganda ProgressBar'ni yashirish
+                tovushbar.setVisibility(View.INVISIBLE);
+                videoView.start();
+
+
+
+            }
+        });
+
+        videoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+
+                tovushbar.setVisibility(View.INVISIBLE);
+                return false;
+            }
+
+        });
+
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Video tugaganida, MediaPlayer orqali musiqa boshlash
+                eslatma = MediaPlayer.create(getApplicationContext(), R.raw.mikrofonnibos); // O'zgarish kiritilsin
+                eslatma.start();
+
+            }
+        });
+
+
+restart.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        videoView.start();
+    }
+});
 
         // So'zlar va rasmlar o'rtasidagi aloqani saqlash uchun HashMap yaratamiz
         wordImageMap = new HashMap<>();
@@ -117,9 +194,13 @@ public class TovushVideoActivity extends AppCompatActivity  {
                                     // Agar so'z topilsa, mos rasmni imageviewga joylashtir
                                     int imageResource = wordImageMap.get(currentWord);
                                     imageView.setImageResource(imageResource);
+                                    correct = MediaPlayer.create(getApplicationContext(), R.raw.yaxhi2); // O'zgarish kiritilsin
+                                    correct.start();
                                 } else {
                                     // Agar topilmagan so'z bo'lsa, "wrong" nomli rasmni imageviewga joylashtir
-                                    imageView.setImageResource(R.drawable.img_40);
+                                    imageView.setImageResource(R.drawable.cross);
+                                    incorrect = MediaPlayer.create(getApplicationContext(), R.raw.wrong); // O'zgarish kiritilsin
+                                    incorrect.start();
                                 }
 //                                startstop.setText("Ovoz yozish boshlandi");
                                 audioRecorder.deleteRecording();
@@ -163,15 +244,9 @@ public class TovushVideoActivity extends AppCompatActivity  {
 //        }
 
         // VideoView ayarları
-        String videoName = getIntent().getStringExtra("videoName");
-        String videoUrl = getIntent().getStringExtra("videoUrl");
 
-        setTitle(videoName); // Activity başlığını değiştirme
-        String videoPath = videoUrl;
-        videoView.setZOrderMediaOverlay(true);
-        videoView.setVideoURI(Uri.parse(videoPath));
-        videoView.start();
     }
+
 
 //    @Override
 //    public void surfaceCreated(SurfaceHolder holder) {

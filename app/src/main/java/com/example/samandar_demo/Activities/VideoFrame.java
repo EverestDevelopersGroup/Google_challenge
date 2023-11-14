@@ -1,9 +1,11 @@
 package com.example.samandar_demo.Activities;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.hardware.Camera;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -15,6 +17,7 @@ import android.os.Vibrator;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -38,10 +41,11 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
     Timer timer = new Timer();
 
             CountDownTimer mCountDownTimer;
-    int time = 10000;
+    int time = 21000;
 
 
-    private MediaPlayer mediaPlayer;
+
+    private MediaPlayer attention;
     private Button3d playButton;
 //    private KonfettiView celebrate;
     private Camera camera;
@@ -50,10 +54,12 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
     TextView startmashq;
     ProgressBar bar;
     boolean isUserWaited = false; // Boshlang'ich holati
+    ImageView restart_nashq;
     long waitingTime = 45000;
     private SurfaceHolder surfaceHolder;
     private VideoView videoView;
     private static final int CAMERA_PERMISSION_CODE = 101;
+    private static final int YOUR_REQUEST_CODE = 120;
 
 
     private int[] musicResources = {R.raw.yaxhi2}; // Musiqa resurslari
@@ -65,11 +71,12 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
 
         playButton = findViewById(R.id.btnplay);
 //        celebrate = findViewById(R.id.play);
-        mediaPlayer = new MediaPlayer();
+
         surfaceView = findViewById(R.id.surfaceView);
         bar = findViewById(R.id.progressBar_articulation);
         surfaceHolder = surfaceView.getHolder();
         startmashq = findViewById(R.id.startmashq);
+        restart_nashq = findViewById(R.id.restart_articulation);
         surfaceHolder.addCallback(this);
         videoView = findViewById(R.id.videoView);
 
@@ -124,6 +131,27 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
         });
 
 
+        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // Video tugaganida, MediaPlayer orqali musiqa boshlash
+                attention = MediaPlayer.create(getApplicationContext(), R.raw.tayyormisan); // O'zgarish kiritilsin
+                attention.start();
+                playButton.setButtonColor(Color.GREEN);
+
+            }
+        });
+
+
+        restart_nashq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView.start();
+
+            }
+        });
+
+
 
 //
 //        Button pauseProcess = findViewById(R.id.pausemashq);
@@ -152,8 +180,8 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
             public void onClick(View v) {
                 Vibrate();
                 randomBackgroundWithMusic();
-                start.start();
-                startmashq.setText("Kameraga qarab mashqni boshlang!");
+//                start.start();
+                startmashq.setText(R.string.kameraga_qarab_mashq);
 
 //               startAutomaticCelebrate();
 
@@ -190,12 +218,13 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
     private void randomBackgroundWithMusic() {
         LinearLayout yourLinearLayout = findViewById(R.id.colorful_linear);
 
-        int[] backgrounds = {R.drawable.oval_shape, R.drawable.oval_shape2};
+        int[] backgrounds = {R.drawable.oval_shape, R.drawable.oval_shape2 , R.drawable.oval_shape3};
         final int[] currentIndex = {0};
-        int randomInterval = new Random().nextInt(3000) + 1000; // 1-16 sekund oralig'ida tasodifiy intervalida
+        int randomInterval = new Random().nextInt(9000) + 1000; // 1-7 sekund oralig'ida tasodifiy intervalida
 
-        int[] musicResources = {R.raw.yaxhi2}; // Musiqa resurslari
+        int[] musicResources = {R.raw.yaxhi2 , R.raw.wrong}; // Musiqa resurslari
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, musicResources[0]);
+        final MediaPlayer mediaPlayer2 = MediaPlayer.create(this, musicResources[1]);
 
 
 
@@ -213,15 +242,16 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
 
                         if (nextBackground == R.drawable.oval_shape2) {
                             mediaPlayer.start(); // Musiqa ijro etish
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mediaPlayer.stop(); // Musiqa to'xtatish
-                                }
-                            }, 35000);
 
-                            // 25 soniyadan so'ng musiqa to'xtatiladi
+
+
+
+
                         }
+                         if (nextBackground == R.drawable.oval_shape3){
+                            mediaPlayer2.start();
+                        }
+
                     }
                 });
             }
@@ -233,6 +263,14 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
 
     }
 
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == YOUR_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+//            // Your logic after returning from the Success activity
+//            finish(); // To close this activity and return to the previous one
+//        }
+//    }
 
 
 
@@ -268,8 +306,9 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
 
 
     private void pauseTime() {
-        mCountDownTimer.cancel();
-
+        if (mCountDownTimer != null) {
+            mCountDownTimer.cancel();
+        }
     }
 
 
@@ -278,13 +317,12 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         final VibrationEffect vibrationEffect5;
 
-        // this type of vibration requires API 29
+
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
 
-            // create vibrator effect with the constant EFFECT_HEAVY_CLICK
+
             vibrationEffect5 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK);
 
-            // it is safe to cancel other vibrations currently taking place
             vibrator.cancel();
 
             vibrator.vibrate(vibrationEffect5);
@@ -293,21 +331,29 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
     }
 
 
+
+
+
     @Override
     protected void onPause() {
         super.onPause();
-        pauseTime();
-
-
-       timer.cancel();
+        if (mCountDownTimer != null) {
+            pauseTime();
+        }
+        if (timer != null) {
+            timer.cancel();
+        }
     }
+
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-       timer.cancel();
+        if (timer != null) {
+            timer.cancel();
+        }
         pauseTime();
-
     }
 
 

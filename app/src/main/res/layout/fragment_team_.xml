@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="20dp"
-    android:background="#88D758"
+    android:background="@color/white"
     android:layout_marginBottom="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Team_Fragment">
@@ -37,7 +37,7 @@
                 android:layout_weight="1"
                 app:cardElevation="20dp"
                 android:elevation="20dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#98DEFD"
                 >
 
 
@@ -54,7 +54,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="@string/dilbar_shukurullayevna"/>
+                    android:text="@string/fayoza"/>
 
 
 
@@ -75,6 +75,7 @@
                 android:layout_weight="1"
                 app:cardElevation="20dp"
                 android:elevation="20dp"
+                app:cardBackgroundColor="#98DEFD"
                 android:textColor="@color/black"
                 >
 
@@ -92,7 +93,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="@string/samandar_khasanov"/>
+                    android:text="@string/islomxoja"/>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -107,6 +108,7 @@
                 app:cardCornerRadius="20dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
+                app:cardBackgroundColor="#98DEFD"
                 android:elevation="20dp"
                 android:textColor="@color/black"
                 >
@@ -125,7 +127,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="@string/sagdiana_azimova"/>
+                    android:text="@string/egambergan"/>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -138,6 +140,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#98DEFD"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
                 android:layout_marginBottom="10dp"
@@ -160,7 +163,7 @@
                     android:textSize="18sp"
 
 
-                    android:text="@string/bobur_yo_ldoshev"/>
+                    android:text="@string/islomxoja"/>
 
             </com.google.android.material.card.MaterialCardView>
 

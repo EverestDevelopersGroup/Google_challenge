@@ -103,7 +103,7 @@ public class Team_Fragment extends Fragment {
         MaterialButton okButton = dialog.findViewById(R.id.btn_okay);
 
         // Elementlarga ma'lumotlarini joylash
-        textView.setText("Dilbar Shukurullayevna\n \nDoctor of Philosophy, Specialist of Social media marketing!\n \nBog`lanish: +998901234567\n Telegram: @Anonym_logoped");
+        textView.setText(R.string.logoped);
         imageView.setImageResource(R.drawable.img_9);
 
         // OK tugmasini bosganda dialogni yopish
@@ -134,7 +134,7 @@ public class Team_Fragment extends Fragment {
         MaterialButton okButton2 = dialog2.findViewById(R.id.btn_okay);
 
         // Elementlarga ma'lumotlarini joylash
-        textView2.setText("Samandar Khasanov\n \nAndroid Dasturchi\n \nBog`lanish: +998901234567\n Telegram: @Anonym_android");
+        textView2.setText(R.string.android);
         imageView2.setImageResource(R.drawable.img_10);
 
         // OK tugmasini bosganda dialogni yopish
@@ -163,7 +163,7 @@ public class Team_Fragment extends Fragment {
         MaterialButton okButton3 = dialog3.findViewById(R.id.btn_okay);
 
         // Elementlarga ma'lumotlarini joylash
-        textView3.setText("Sagdiana Azimova\n \nMotion dizayner\n \nBog`lanish: +998901234567\n Telegram: @Anonym_motion");
+        textView3.setText(R.string.AI);
         imageView3.setImageResource(R.drawable.img_12);
 
         // OK tugmasini bosganda dialogni yopish
@@ -191,7 +191,7 @@ public class Team_Fragment extends Fragment {
         MaterialButton okButton4 = dialog4.findViewById(R.id.btn_okay);
 
         // Elementlarga ma'lumotlarini joylash
-        textView4.setText("Bobur Yo`ldoshev\n \nSun`iy Intellekt dasturchisi\n \nBog`lanish: +998901234567\n Telegram: @Anonym_intelligence");
+        textView4.setText(R.string.Backend);
         imageView4.setImageResource(R.drawable.img_11);
 
         // OK tugmasini bosganda dialogni yopish

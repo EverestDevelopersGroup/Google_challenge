@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.VideoView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -20,7 +21,7 @@ import com.example.samandar_demo.R;
 
 import java.io.IOException;
 
-public class HarakatVideoActivity extends AppCompatActivity  {
+public class HarakatVideoActivity extends AppCompatActivity {
 
 
     private VideoView videoView;
@@ -48,5 +49,5 @@ public class HarakatVideoActivity extends AppCompatActivity  {
     }
 
 
-    }
+}
 
