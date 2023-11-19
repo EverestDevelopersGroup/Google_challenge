@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"
-    android:background="#6077FA"
+    android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".VideoLesson.VideoLessonActivity">
 

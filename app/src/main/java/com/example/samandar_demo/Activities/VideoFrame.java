@@ -39,12 +39,11 @@ import java.util.TimerTask;
 
 public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callback  {
     Timer timer = new Timer();
-
-            CountDownTimer mCountDownTimer;
+    CountDownTimer mCountDownTimer;
     int time = 21000;
 
 
-
+    private boolean isPaused = false;
     private MediaPlayer attention;
     private Button3d playButton;
 //    private KonfettiView celebrate;
@@ -54,7 +53,7 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
     TextView startmashq;
     ProgressBar bar;
     boolean isUserWaited = false; // Boshlang'ich holati
-    ImageView restart_nashq;
+    ImageView restart_nashq , playpause_artic;
     long waitingTime = 45000;
     private SurfaceHolder surfaceHolder;
     private VideoView videoView;
@@ -74,6 +73,7 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
 
         surfaceView = findViewById(R.id.surfaceView);
         bar = findViewById(R.id.progressBar_articulation);
+        playpause_artic = findViewById(R.id.playpause_articulation);
         surfaceHolder = surfaceView.getHolder();
         startmashq = findViewById(R.id.startmashq);
         restart_nashq = findViewById(R.id.restart_articulation);
@@ -135,18 +135,41 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
             @Override
             public void onCompletion(MediaPlayer mp) {
                 // Video tugaganida, MediaPlayer orqali musiqa boshlash
-                attention = MediaPlayer.create(getApplicationContext(), R.raw.tayyormisan); // O'zgarish kiritilsin
+                attention = MediaPlayer.create(getApplicationContext(), R.raw.tayyormisan);
+                playButton.setEnabled(true);
+                // O'zgarish kiritilsin
                 attention.start();
                 playButton.setButtonColor(Color.GREEN);
+
 
             }
         });
 
+        playpause_artic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isPaused) {
+                    // Agar video pause bo'lsa, uning davom etishini boshlash
+                    videoView.start();
+                    playButton.setEnabled(false);
+                    isPaused = false;
+                    playpause_artic.setImageResource(R.drawable.pause);
 
+                } else {
+                    // Agar video davom etmoqda bo'lsa, uningni pause qilish
+                    videoView.pause();
+                    isPaused = true;
+                    playButton.setEnabled(true);
+                    playpause_artic.setImageResource(R.drawable.play);
+
+                }
+            }
+        });
         restart_nashq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 videoView.start();
+                playpause_artic.setImageResource(R.drawable.pause);
 
             }
         });
@@ -220,7 +243,7 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
 
         int[] backgrounds = {R.drawable.oval_shape, R.drawable.oval_shape2 , R.drawable.oval_shape3};
         final int[] currentIndex = {0};
-        int randomInterval = new Random().nextInt(9000) + 1000; // 1-7 sekund oralig'ida tasodifiy intervalida
+        int randomInterval = new Random().nextInt(6000) + 1000; // 1-7 sekund oralig'ida tasodifiy intervalida
 
         int[] musicResources = {R.raw.yaxhi2 , R.raw.wrong}; // Musiqa resurslari
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, musicResources[0]);

@@ -93,7 +93,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
 
-                    android:text="@string/islomxoja"/>
+                    android:text="@string/samandar"/>
 
             </com.google.android.material.card.MaterialCardView>
 

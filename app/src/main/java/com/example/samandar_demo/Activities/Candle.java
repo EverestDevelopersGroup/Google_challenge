@@ -28,10 +28,10 @@ public class Candle extends AppCompatActivity {
 
     private static final int RECORD_AUDIO_PERMISSION_CODE = 1;
     private static final int AMPLITUDE_1_THRESHOLD = 5000;
-    private static final int AMPLITUDE_2_THRESHOLD = 6500;
-    private static final int AMPLITUDE_3_THRESHOLD = 6000;
-    private static final int AMPLITUDE_4_THRESHOLD = 5500;
-    private static final int AMPLITUDE_5_THRESHOLD = 5000;
+//    private static final int AMPLITUDE_2_THRESHOLD = 6500;
+//    private static final int AMPLITUDE_3_THRESHOLD = 6000;
+//    private static final int AMPLITUDE_4_THRESHOLD = 5500;
+//    private static final int AMPLITUDE_5_THRESHOLD = 5000;
     private static final int AMPLITUDE_6_THRESHOLD = 4500;
     private static final int AMPLITUDE_7_THRESHOLD = 4000;
     private static final int AMPLITUDE_8_THRESHOLD = 3500;
@@ -40,15 +40,11 @@ public class Candle extends AppCompatActivity {
     //    private static final int AMPLITUDE_11_THRESHOLD = 10000;
     private static final int AMPLITUDE_off_THRESHOLD = 2700;
 
-    private AudioRecord audioRecord;
     private Thread thread;
     private int bufferSize;
-
+    AudioRecord audioRecord;
     private ImageView candleImageView;
     private boolean isCandleOn = true;
-
-
-
 
 
     @SuppressLint("MissingInflatedId")
@@ -61,11 +57,8 @@ public class Candle extends AppCompatActivity {
         candleImageView = findViewById(R.id.shamust);
 
 
-
-
-
         bufferSize = AudioRecord.getMinBufferSize(44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
-        audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
+
 
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, RECORD_AUDIO_PERMISSION_CODE);
@@ -84,13 +77,25 @@ public class Candle extends AppCompatActivity {
     }
 
     private void startBlowingDetection() {
-        thread=new Thread(new Runnable() {
+        thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 short[] audioBuffer = new short[bufferSize];
+                if (ActivityCompat.checkSelfPermission(Candle.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                 audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
                 audioRecord.startRecording();
 
                 while (!Thread.currentThread().isInterrupted()) {
+
                     int numRead = audioRecord.read(audioBuffer, 0, bufferSize);
                     if (numRead > 0) {
                         double amplitude = calculateAmplitude(audioBuffer, numRead);
@@ -100,14 +105,6 @@ public class Candle extends AppCompatActivity {
                             public void run() {
                                 if (amplitude > AMPLITUDE_1_THRESHOLD) {
                                     extinguishCandle();
-                                } else if (amplitude > AMPLITUDE_2_THRESHOLD) {
-                                    flickerCandle();}
-                                else if (amplitude > AMPLITUDE_3_THRESHOLD) {
-                                    flickerCandle();
-                                } else if (amplitude > AMPLITUDE_4_THRESHOLD) {
-                                    flickerCandle();}
-                                else if (amplitude > AMPLITUDE_5_THRESHOLD) {
-                                    flickerCandle();
                                 } else if (amplitude > AMPLITUDE_6_THRESHOLD) {
                                     flickerCandle();}
                                 else if (amplitude > AMPLITUDE_7_THRESHOLD) {
@@ -118,11 +115,6 @@ public class Candle extends AppCompatActivity {
                                     flickerCandle();
                                 } else if (amplitude > AMPLITUDE_10_THRESHOLD) {
                                     flickerCandle();}
-                                else if (amplitude > AMPLITUDE_off_THRESHOLD) {
-                                    extinguishCandle();
-
-                                }
-
                                 else {
                                     burnCandle();
                                 }
@@ -191,6 +183,7 @@ public class Candle extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
 
 
     @Override

@@ -21,7 +21,7 @@ public class TanaHarakatActivity extends AppCompatActivity implements HarakatAda
 
     private RecyclerView recyclerView;
     private HarakatAdapter adapter;
-    AlertDialog.Builder alertDialog;
+//    AlertDialog.Builder alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,41 +49,41 @@ public class TanaHarakatActivity extends AppCompatActivity implements HarakatAda
     @Override
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
-//        Intent intent = new Intent(this, HarakatVideoActivity.class);
-//        VideoItem videoItem = adapter.getItem(position);
-//        intent.putExtra("videoName", videoItem.getName());
-//        intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili
-//        startActivity(intent);
+        Intent intent = new Intent(this, HarakatVideoActivity.class);
+        VideoItem videoItem = adapter.getItem(position);
+        intent.putExtra("videoName", videoItem.getName());
+        intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili
+        startActivity(intent);
 
-        DialogOption();
-        alertDialog.show();
-
-    }
-
-    private void DialogOption(){
-
-
-        alertDialog = new AlertDialog.Builder(TanaHarakatActivity.this);
-        alertDialog.setTitle(R.string.diqqat);
-        alertDialog.setMessage(R.string.mashqlar_dialog);
-        // follow Step number 3 for adding image...
-        alertDialog.setIcon(R.drawable.img_15);
-
-        alertDialog.setPositiveButton(R.string.ha, new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(TanaHarakatActivity.this , MainActivity.class);
-                startActivity(intent);
-                Toast.makeText(TanaHarakatActivity.this, R.string.kerakli_bolim, Toast.LENGTH_SHORT).show();
-            }
-        });
-        alertDialog.setNegativeButton(R.string.yoq ,new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(TanaHarakatActivity.this, R.string.uzr, Toast.LENGTH_SHORT).show();
-            }
-        });
-
+//        DialogOption();
+//        alertDialog.show();
 
     }
+
+//    private void DialogOption(){
+//
+//
+//        alertDialog = new AlertDialog.Builder(TanaHarakatActivity.this);
+//        alertDialog.setTitle(R.string.diqqat);
+//        alertDialog.setMessage(R.string.mashqlar_dialog);
+//        // follow Step number 3 for adding image...
+//        alertDialog.setIcon(R.drawable.img_15);
+//
+//        alertDialog.setPositiveButton(R.string.ha, new DialogInterface.OnClickListener(){
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                Intent intent = new Intent(TanaHarakatActivity.this , MainActivity.class);
+//                startActivity(intent);
+//                Toast.makeText(TanaHarakatActivity.this, R.string.kerakli_bolim, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        alertDialog.setNegativeButton(R.string.yoq ,new DialogInterface.OnClickListener(){
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                Toast.makeText(TanaHarakatActivity.this, R.string.uzr, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//    }
 }

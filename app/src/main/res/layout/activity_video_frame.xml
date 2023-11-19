@@ -1,30 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".Activities.VideoFrame">
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img_8"
+    tools:context=".Articulation.VideoActivity">
 
 
-    <nl.dionsegijn.konfetti.KonfettiView
-        android:id="@+id/celebrate"
+
+    <!--    <nl.dionsegijn.konfetti.KonfettiView-->
+    <!--        android:id="@+id/play"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        />-->
+
+
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:orientation="vertical">
 
-
-
-    <Button
-        android:id="@+id/playButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play Music"
-        android:layout_centerInParent="true" />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+          android:layout_margin="20dp"
+            android:orientation="vertical">
 
 
 
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:background="@drawable/button_default"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="34dp">
+
+                    <VideoView
+                        android:id="@+id/videoView_video"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+
+       >
+            <LinearLayout
+                android:id="@+id/colorful_linear"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:background="@drawable/oval_shape"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/face_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="36dp">
+                    <LinearLayout
+
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/oval_shape2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <SurfaceView
+                            android:id="@+id/surfaceView_video"
+                            android:layout_width="310dp"
+                            android:layout_height="310dp"
+                            android:scaleX="1.4"
+
+                            android:rotation="90"
+                            android:layout_centerHorizontal="true" />
+                    </LinearLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </LinearLayout>
+
+
+
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+
+<!--                <com.ahmedteleb.buttons3d.Button3d-->
+<!--                    android:id="@+id/btnplay"-->
+<!--                    android:layout_width="170dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    app:buttonColor="#FF0000"-->
+<!--                    android:shadowColor="#FF0000"-->
+<!--                    app:shadowEnabled="true"-->
+<!--                    android:text="@string/mashqni_boshladik"-->
+<!--                    android:textColor = "@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:longClickable="true"-->
+<!--                    android:clickable="true"-->
+
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/font2"-->
+<!--                    android:layout_marginLeft="120dp"-->
+
+<!--                    app:shadowHeight="@dimen/_7sdp"-->
+<!--                    app:cornerRadius="@dimen/_10sdp"-->
+
+
+
+<!--                    />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/restart_articulation"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="50dp"-->
+<!--                    android:src="@drawable/restart"-->
+
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/playpause_main"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pause"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/restart_main"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/restart"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

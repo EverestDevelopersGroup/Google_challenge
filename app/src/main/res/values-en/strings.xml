@@ -6,6 +6,41 @@
     <string name="Royxatdan_otish">Registration</string>
     <string name="Raqamingiz">Your number:</string>
 
+    <string name="tafarq5">Find 5 differences</string>
+
+
+
+
+
+    <string name="barcha_farqlar">You have successfully found all the differences!</string>
+    <string name="ta_farq">you found a difference!</string>
+    <string name="Mashqlarni_bajarish">Return to the main section to complete the exercises</string>
+    <string name="Iltimos_malumotlarni">Please enter the information completely</string>
+    <string name="Siz_oyinni_muvaffaqiyatli">You have successfully completed the game!!</string>
+    <string name="iltimos_kut">Please wait</string>
+    <string name="Siz_barcha_rasmlarni">You have successfully found all the images!</string>
+    <string name="asosiy_bolimga_qaytish">return to the main section</string>
+    <string name="diqqatni_jamlash">Concentration game</string>
+    <string name="Sizga_2ta_birxil_rasm">You will be presented with 2 identical pictures and you have to find 4 differences!</string>
+    <string name="boshladik">Start!</string>
+    <string name="keyin">Later</string>
+    <string name="asosiy_bolimdasiz">You are in the main section</string>
+    <string name="keyingi_bosqich"> Next level</string>
+    <string name="Suratda_keltirilgan_narsaning">Say the name of the object in the picture by pressing the microphone!</string>
+    <string name="bosqich1">Stage 1</string>
+    <string name="bosqich2">Stage 2</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string name="lessons1">Lesson 1. Pronouncing the "S" sound</string>

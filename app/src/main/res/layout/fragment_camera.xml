@@ -34,9 +34,9 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="290dp"
-                android:layout_height="290dp"
-                android:background="@drawable/oval_camera"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:background="@drawable/button_default"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -47,8 +47,8 @@
 
                     <VideoView
                         android:id="@+id/videoView"
-                        android:layout_width="280dp"
-                        android:layout_height="280dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerInParent="true"
                         android:visibility="visible" />
 
@@ -94,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:cardCornerRadius="36dp">
+                    app:cardCornerRadius="33dp">
                     <LinearLayout
 
                         android:layout_width="300dp"
@@ -120,25 +120,35 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
 
+                <ImageView
+                    android:id="@+id/playpause_articulation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pause"
 
+                    />
                 <com.ahmedteleb.buttons3d.Button3d
                     android:id="@+id/btnplay"
                     android:layout_width="170dp"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     app:buttonColor="#FF0000"
                     android:shadowColor="#FF0000"
                     app:shadowEnabled="true"
+
                     android:text="@string/mashqni_boshladik"
                     android:textColor = "@color/white"
                     android:textSize="12sp"
+                    android:enabled="false"
                     android:longClickable="true"
                     android:clickable="true"
-
-                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/font2"
-                    android:layout_marginLeft="120dp"
+
 
                     app:shadowHeight="@dimen/_7sdp"
                     app:cornerRadius="@dimen/_10sdp"
@@ -152,7 +162,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="20dp"
                     android:src="@drawable/restart"
 
                     />

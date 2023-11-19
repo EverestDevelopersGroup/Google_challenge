@@ -142,7 +142,7 @@ public class Register extends AppCompatActivity {
                     } else {
                         saveUserRegistrationStatus(true); // Set the user as registered
                         startMainActivity();
-                        Toast.makeText(Register.this, "Iltimos ma'lumotlarni to'liq kiriting", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, R.string.Iltimos_malumotlarni, Toast.LENGTH_SHORT).show();
                     }
                 }
             });

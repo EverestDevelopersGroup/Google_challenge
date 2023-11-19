@@ -1,29 +1,16 @@
 package com.example.samandar_demo.Activities;
 
-import static android.os.Build.VERSION_CODES.O;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.samandar_demo.Articulation.Artikulatsiya;
-import com.example.samandar_demo.Gift_Fragment;
 import com.example.samandar_demo.R;
 
 import java.util.Timer;

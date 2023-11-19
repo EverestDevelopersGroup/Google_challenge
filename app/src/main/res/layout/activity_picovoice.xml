@@ -1,71 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activities.Picovoice"
-    tools:ignore="HardcodedText">
+    android:background="@color/white"
+    tools:context=".Activities.Picovoice">
 
-    <!--Button to generate normal vibration-->
-    <Button
-        android:id="@+id/normalVibrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="NORMAL VIBRATION"
-        android:textColor="@android:color/white" />
 
-    <!--Button to generate click vibration-->
-    <Button
-        android:id="@+id/clickVibrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/normalVibrationButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="CLICK VIBRATION"
-        android:textColor="@android:color/white" />
+    <ImageView
+        android:id="@+id/stage1_pico"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    <!--Button to generate double click vibration-->
-    <Button
-        android:id="@+id/doubleClickVibrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/clickVibrationButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="DOUBLE CLICK VIBRATION"
-        android:textColor="@android:color/white" />
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/farqbor6" />
 
-    <!--Button to generate tick vibration-->
-    <Button
-        android:id="@+id/tickVibrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/doubleClickVibrationButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="TICK VIBRATION"
-        android:textColor="@android:color/white" />
+    <ImageView
+        android:id="@+id/ans54_pico2"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
 
-    <!--Button to generate heavy click vibration-->
-    <Button
-        android:id="@+id/heavyClickVibrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tickVibrationButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="HEAVY CLICK EFFECT VIBRATION"
-        android:textColor="@android:color/white" />
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752"
+        app:srcCompat="@drawable/invisible" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/ans53_pico2"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778"
+        app:srcCompat="@drawable/invisible" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/ans31_pico"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans32_pico"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans41_pico"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans42_pico"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans51_pico"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans52_pico"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans53_pico"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269"
+        app:srcCompat="@drawable/invisible" />
+
+    <ImageView
+        android:id="@+id/ans54_pico"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244"
+        app:srcCompat="@drawable/invisible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

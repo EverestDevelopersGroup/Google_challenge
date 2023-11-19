@@ -9,6 +9,44 @@
     <string name="Royxatdan_otish">Регистрация</string>
     <string name="Raqamingiz">Твой номер</string>
 
+    <string name="tafarq5">Найдите 5 отличий</string>
+
+
+
+    <string name="barcha_farqlar">Вы успешно нашли все различия!</string>
+    <string name="ta_farq">ты нашел разницу!</string>
+    <string name="Mashqlarni_bajarish">Вернитесь в основной раздел, чтобы выполнить упражнения.</string>
+    <string name="Iltimos_malumotlarni">Пожалуйста, введите информацию полностью</string>
+    <string name="Siz_oyinni_muvaffaqiyatli">Вы успешно прошли игру!!</string>
+    <string name="iltimos_kut">пожалуйста, подождите</string>
+    <string name="Siz_barcha_rasmlarni">Вы успешно нашли все фотографии!</string>
+    <string name="asosiy_bolimga_qaytish">вернуться в основной раздел</string>
+    <string name="diqqatni_jamlash">Игра на концентрацию</string>
+    <string name="Sizga_2ta_birxil_rasm">Вам представлены 2 одинаковые картинки и вам нужно найти между ними 4 отличия.!</string>
+    <string name="boshladik">Мы начали</string>
+    <string name="keyin">Позже</string>
+    <string name="asosiy_bolimdasiz">Вы находитесь в основном разделе</string>
+    <string name="keyingi_bosqich">Следующий этап</string>
+    <string name="Suratda_keltirilgan_narsaning">Произнесите название объекта на картинке, нажав на микрофон!</string>
+    <string name="bosqich1">Этап 1</string>
+    <string name="bosqich2">Этап 2</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string name="lessons1">Урок 1. Произнесение звука «С»</string>
@@ -40,7 +78,7 @@
     <string name="lablar">Губы</string>
     <string name="dars_1">Урок 1. Физическая культура</string>
     <string name="dars_2">Урок 2. Физическая культура</string>
-    <string name="dars_3">3-dars. Badantarbiya</string>
+    <string name="dars_3">Урок 3. Физическая культура</string>
     <string name="otcha">Лошадь</string>
     <string name="murabbo">Варенье</string>
     <string name="quymoq">Чугун</string>

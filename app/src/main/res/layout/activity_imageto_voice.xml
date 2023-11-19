@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color_50"
+    tools:context=".Tovushlar.ImagetoVoice">
+
+
+    <!--    <nl.dionsegijn.konfetti.KonfettiView-->
+    <!--        android:id="@+id/play"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        />-->
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_voice"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+
+
+            android:layout_height="50dp" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/startmashq2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Iltimos "-->
+        <!--            android:gravity="center"-->
+        <!--            android:textStyle="italic"-->
+        <!--            android:fontFamily="@font/fonnn"-->
+        <!--            android:textColor="@color/bordercolor"-->
+        <!--            />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+
+
+
+            <TextView
+                android:id="@+id/responseData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/natija"
+                android:visibility="gone"
+                android:fontFamily="@font/blownormal"
+                android:textSize="28sp"
+
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StartRecord" />
+
+                <TextView
+                    android:id="@+id/startstop"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Suratda_keltirilgan_narsaning"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+            <ImageView
+                android:id="@+id/imageView_voice"
+                android:layout_width="370dp"
+                android:layout_height="400dp"
+
+                android:background="@drawable/button_default"
+                android:src="@drawable/car"
+                android:layout_marginTop="6dp"
+                android:padding="15dp"
+                android:layout_gravity="center_horizontal" />
+
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/StartRecord_voice"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/microphone"
+
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

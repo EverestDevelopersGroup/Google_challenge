@@ -24,7 +24,7 @@ public class BarmoqActvity extends AppCompatActivity implements BarmoqAdapter.On
 
     private RecyclerView recyclerView;
     private BarmoqAdapter adapter;
-    AlertDialog.Builder alertDialog;
+//    AlertDialog.Builder alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +57,13 @@ public class BarmoqActvity extends AppCompatActivity implements BarmoqAdapter.On
     @Override
     public void onItemClick(int position) {
         // Itemga bosinganda VideoActivityga o'tish
-//        Intent intent = new Intent(this, VideoActivity.class);
-//        VideoItem videoItem = adapter.getItem(position);
-//        intent.putExtra("videoName", videoItem.getName());
-//        intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili
-//        startActivity(intent);
-DialogOption();
-alertDialog.show();
+        Intent intent = new Intent(this, VideoActivity.class);
+        VideoItem videoItem = adapter.getItem(position);
+        intent.putExtra("videoName", videoItem.getName());
+        intent.putExtra("videoUrl", videoItem.getResourceId()); // URL manzili
+        startActivity(intent);
+//DialogOption();
+//alertDialog.show();
 
 
     }
@@ -71,35 +71,35 @@ alertDialog.show();
 
 
 
-private void DialogOption(){
-
-
-    alertDialog = new AlertDialog.Builder(BarmoqActvity.this);
-    alertDialog.setTitle(R.string.diqqat);
-    alertDialog.setMessage(R.string.mashqlar_dialog);
-    // follow Step number 3 for adding image...
-    alertDialog.setIcon(R.drawable.img_15);
-
-    alertDialog.setPositiveButton(R.string.ha, new DialogInterface.OnClickListener(){
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            Intent intent = new Intent(BarmoqActvity.this , MainActivity.class);
-            startActivity(intent);
-            Toast.makeText(BarmoqActvity.this, R.string.kerakli_bolim, Toast.LENGTH_SHORT).show();
-        }
-    });
-    alertDialog.setNegativeButton(R.string.yoq, new DialogInterface.OnClickListener(){
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            Toast.makeText(BarmoqActvity.this, R.string.uzr, Toast.LENGTH_SHORT).show();
-        }
-    });
-
-
-}
-
-
-
+//private void DialogOption(){
+//
+//
+//    alertDialog = new AlertDialog.Builder(BarmoqActvity.this);
+//    alertDialog.setTitle(R.string.diqqat);
+//    alertDialog.setMessage(R.string.mashqlar_dialog);
+//    // follow Step number 3 for adding image...
+//    alertDialog.setIcon(R.drawable.img_15);
+//
+//    alertDialog.setPositiveButton(R.string.ha, new DialogInterface.OnClickListener(){
+//        @Override
+//        public void onClick(DialogInterface dialog, int which) {
+//            Intent intent = new Intent(BarmoqActvity.this , MainActivity.class);
+//            startActivity(intent);
+//            Toast.makeText(BarmoqActvity.this, R.string.kerakli_bolim, Toast.LENGTH_SHORT).show();
+//        }
+//    });
+//    alertDialog.setNegativeButton(R.string.yoq, new DialogInterface.OnClickListener(){
+//        @Override
+//        public void onClick(DialogInterface dialog, int which) {
+//            Toast.makeText(BarmoqActvity.this, R.string.uzr, Toast.LENGTH_SHORT).show();
+//        }
+//    });
+//
+//
+//}
+//
+//
+//
 
 
 

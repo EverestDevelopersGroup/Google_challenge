@@ -3,14 +3,10 @@ package com.example.samandar_demo.Tovushlar;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.hardware.Camera;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -39,6 +35,8 @@ public class TovushVideoActivity extends AppCompatActivity  {
 
     private VideoView videoView;
     ProgressBar tovushbar;
+    ImageView playpause_tovush;
+    private boolean isPaused = false;
 
     private static final int RECORD_AUDIO_PERMISSION_CODE = 123;
 
@@ -46,7 +44,7 @@ public class TovushVideoActivity extends AppCompatActivity  {
 
     private ImageView imageView , restart;
     private String[] words = {"randa","ramda", "arra", "qor", "sariq", "ra'no", "kaptar", "xayr", "sayr", "burgut" , "e'lon" , "alo" , "olim" , "uzum" , "o'rdak"  , "ilon" , "malina" , "muz" , "mashina" , "maymun"};
-    private int[] imageResources = {R.drawable.randa,R.drawable.randa, R.drawable.arra, R.drawable.qor, R.drawable.yellow, R.drawable.rano, R.drawable.kaptar, R.drawable.xayr, R.drawable.sayr, R.drawable.burgut , R.drawable.elon , R.drawable.alo , R.drawable.olim , R.drawable.uzum , R.drawable.ordak , R.drawable.ilon , R.drawable.malina ,R.drawable.muz, R.drawable.mashina , R.drawable.maymun};
+    private int[] imageResources = {R.drawable.randa,R.drawable.randa, R.drawable.arra, R.drawable.snowflake, R.drawable.sariq, R.drawable.girl, R.drawable.freedom, R.drawable.wave, R.drawable.river, R.drawable.eagle , R.drawable.loudspeaker , R.drawable.excellence , R.drawable.scientist , R.drawable.grape , R.drawable.ordak, R.drawable.snake , R.drawable.raspberry ,R.drawable.thaw, R.drawable.car , R.drawable.monkey};
 
     private Map<String, Integer> wordImageMap;
     private MediaPlayer eslatma , correct , incorrect;
@@ -68,6 +66,7 @@ public class TovushVideoActivity extends AppCompatActivity  {
 
 
         videoView = findViewById(R.id.videoView_tovush);
+        playpause_tovush = findViewById(R.id.playpause_tovush);
         CircleImageView btn = findViewById(R.id.StartRecord);
         TextView responseTxt = findViewById(R.id.responseData);
         tovushbar = findViewById(R.id.progressBar_tovush);
@@ -141,13 +140,30 @@ public class TovushVideoActivity extends AppCompatActivity  {
             }
         });
 
+        playpause_tovush.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isPaused) {
+                    // Agar video pause bo'lsa, uning davom etishini boshlash
+                    videoView.start();
+                    isPaused = false;
+                    playpause_tovush.setImageResource(R.drawable.pause);
 
-restart.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        videoView.start();
-    }
-});
+                } else {
+                    // Agar video davom etmoqda bo'lsa, uningni pause qilish
+                    videoView.pause();
+                    isPaused = true;
+                    playpause_tovush.setImageResource(R.drawable.play);
+
+                }
+            }
+        });
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView.start();
+            }
+        });
 
         // So'zlar va rasmlar o'rtasidagi aloqani saqlash uchun HashMap yaratamiz
         wordImageMap = new HashMap<>();
@@ -210,7 +226,7 @@ restart.setOnClickListener(new View.OnClickListener() {
                         e.printStackTrace();
                     }
 
-                }, 3000);
+                }, 5000);
             }
 
         });

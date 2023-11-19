@@ -13,8 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.ahmedteleb.buttons3d.Button3d;
-import com.example.samandar_demo.Sqlite_KinderGarden.SqlActivity;
+
 import com.google.android.material.card.MaterialCardView;
 
 

@@ -34,6 +34,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Tovushlar.ImagetoVoice"
+            android:exported="false" />
+        <activity
+            android:name=".FindDifference"
+            android:exported="false" />
+        <activity
             android:name=".Tovushlar.TovushVideoActivity"
             android:exported="false" />
         <activity
@@ -63,13 +69,15 @@
         <activity
             android:name=".Activities.Succes"
             android:exported="false"
-            android:parentActivityName=".Activities.MainActivity"
-            />
+            android:parentActivityName=".Activities.MainActivity" />
         <activity
             android:name=".Activities.Picovoice"
             android:exported="false" />
         <activity
-            android:name=".Activities.OptionActivity"
+            android:name=".Puzzle_Games.OptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Puzzle_Games.PuzzleActivity"
             android:exported="false" />
         <activity android:name=".Sqlite_KinderGarden.activity.FoodListActivity" />
         <activity

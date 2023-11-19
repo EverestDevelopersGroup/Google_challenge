@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:opencv="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="@color/background_color"
     tools:context=".Tovushlar.TovushVideoActivity">
 
 
@@ -33,19 +33,14 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/restart"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/restart"
-                android:layout_marginLeft="160dp"
-                />
+
 
             <LinearLayout
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:background="@drawable/oval_camera"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:background="@drawable/button_default"
                 android:gravity="center"
+
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
@@ -55,8 +50,8 @@
 
                     <VideoView
                         android:id="@+id/videoView_tovush"
-                        android:layout_width="240dp"
-                        android:layout_height="240dp"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
                         android:layout_centerInParent="true"
                         android:visibility="visible" />
 
@@ -82,17 +77,17 @@
 
             android:fontFamily="@font/asosiy_fon"
             android:textColor="#0A0B0A"
-             />
-<!--        <TextView-->
-<!--            android:id="@+id/startmashq2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Iltimos "-->
-<!--            android:gravity="center"-->
-<!--            android:textStyle="italic"-->
-<!--            android:fontFamily="@font/fonnn"-->
-<!--            android:textColor="@color/bordercolor"-->
-<!--            />-->
+            />
+        <!--        <TextView-->
+        <!--            android:id="@+id/startmashq2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Iltimos "-->
+        <!--            android:gravity="center"-->
+        <!--            android:textStyle="italic"-->
+        <!--            android:fontFamily="@font/fonnn"-->
+        <!--            android:textColor="@color/bordercolor"-->
+        <!--            />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,30 +130,62 @@
             <!--        />-->
             <ImageView
                 android:id="@+id/imageView_tovush"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
+                android:layout_width="290dp"
+                android:layout_height="280dp"
 
-                android:background="@drawable/oval_camera"
+                android:background="@drawable/button_default"
                 android:src="@drawable/loading"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="6dp"
+                android:padding="15dp"
                 android:layout_gravity="center_horizontal" />
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                >
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/StartRecord"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/img_41"
+                <ImageView
+                    android:id="@+id/playpause_tovush"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pause"
 
-                android:clickable="true"
-                android:foreground="?selectableItemBackground"
-                android:layout_marginTop="50dp"
+                    />
 
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/StartRecord"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/microphone"
+
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:id="@+id/restart"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/restart"
+
+                    />
+
+
+            </LinearLayout>
+
+
 
 
 
@@ -170,3 +197,4 @@
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+

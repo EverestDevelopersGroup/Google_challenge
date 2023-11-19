@@ -6,6 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activities.HarakatVideoActivity"
     android:background="@drawable/img_8"
+
+
     android:orientation="vertical">
 
 
@@ -16,14 +18,24 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="36dp"
-            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+
+
+
 
             android:layout_gravity="center"
 
             >
+
+
+            <ProgressBar
+                android:id="@+id/progressBar_harakat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
 
 
 
@@ -31,12 +43,45 @@
 
             <VideoView
                 android:id="@+id/videoView_harakat_video"
-                android:layout_width="380dp"
-                android:layout_height="400dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
 
                 />
 
         </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/playpause_harakat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="50dp"
+
+            android:src="@drawable/pause"
+
+            />
+
+        <ImageView
+            android:id="@+id/restart_harakat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/restart"
+
+            />
+    </LinearLayout>
 
 
 

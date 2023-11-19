@@ -1,133 +1,149 @@
 package com.example.samandar_demo.Activities;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.samandar_demo.Activities.MainActivity;
 import com.example.samandar_demo.R;
 
 public class Picovoice extends AppCompatActivity {
-
-    // buttons for all the types of the vibration effects
-    Button bNormalVibration, bClickVibration, bDoubleClickVibration, bTickVibration, bHeavyClickVibration;
+    private int foundDifferencesCount = 0;
+    MediaPlayer tabrik;
+    private static final int TOTAL_DIFFERENCES = 5; // Umumiy farqlar soni
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picovoice);
 
-        // get the VIBRATOR_SERVICE system service
-        final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-        // register all of the buttons with their IDs
-        bNormalVibration = findViewById(R.id.normalVibrationButton);
-        bClickVibration = findViewById(R.id.clickVibrationButton);
-        bDoubleClickVibration = findViewById(R.id.doubleClickVibrationButton);
-        bTickVibration = findViewById(R.id.tickVibrationButton);
-        bHeavyClickVibration = findViewById(R.id.heavyClickVibrationButton);
 
-        // handle normal vibration button
-        bNormalVibration.setOnClickListener(new View.OnClickListener() {
+        ImageView ans31 = findViewById(R.id.ans31_pico);
+        ImageView ans32 = findViewById(R.id.ans32_pico);
+        ImageView ans41 = findViewById(R.id.ans41_pico);
+        ImageView ans42 = findViewById(R.id.ans42_pico);
+        ImageView ans51 = findViewById(R.id.ans51_pico);
+        ImageView ans52 = findViewById(R.id.ans52_pico);
+        ImageView ans53 = findViewById(R.id.ans53_pico);
+        ImageView ans54 = findViewById(R.id.ans54_pico);
+        ImageView ans532 = findViewById(R.id.ans53_pico2);
+        ImageView ans542 = findViewById(R.id.ans54_pico2);
+
+
+
+
+        //region 1st
+        setClickListenerForDifferences(ans542, ans54);
+        setClickListenerForDifferences(ans532, ans53);
+        //endregion
+
+        //region 2nd
+
+        //endregion
+
+        //region 3rd
+        setClickListenerForDifferences(ans31, ans32);
+        //endregion
+
+        //region 4th
+        setClickListenerForDifferences(ans41, ans42);
+        //endregion
+
+        //region 5th
+        setClickListenerForDifferences(ans51, ans52);
+        //endregion
+    }
+
+    private void setClickListenerForDifferences(ImageView img1, ImageView img2) {
+        img1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect1;
-
-                // this is the only type of the vibration which requires system version Oreo (API 26)
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-
-                    // this effect creates the vibration of default amplitude for 1000ms(1 sec)
-                    vibrationEffect1 = VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-                    vibrator.vibrate(vibrationEffect1);
-                }
+            public void onClick(View view) {
+                img1.setImageResource(R.drawable.circlestyle3);
+                img2.setImageResource(R.drawable.circlestyle3);
+                foundDifferencesCount++;
+                checkAllDifferencesFound();
             }
         });
 
-        // handle click vibration button
-        bClickVibration.setOnClickListener(new View.OnClickListener() {
+        img2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                img1.setImageResource(R.drawable.circlestyle3);
+                img2.setImageResource(R.drawable.circlestyle3);
+                foundDifferencesCount++;
+                checkAllDifferencesFound();
+            }
+        });
+    }
 
-                // this type of vibration requires API 29
-                final VibrationEffect vibrationEffect2;
+    private void checkAllDifferencesFound() {
+        if (foundDifferencesCount == TOTAL_DIFFERENCES) {
+            // Barcha farqlar topilgan bo'lsa, tabriknoma chiqaring
+            tabrik = MediaPlayer.create(getApplicationContext(), R.raw.ajoyib); // O'zgarish kiritilsin
+            tabrik.start();
+            showCongratulationsDialog();
+        } else {
+            // Har bir farq topilganda yangi Toast chiqarib borish
+            Toast.makeText(this, foundDifferencesCount + R.string.ta_farq, Toast.LENGTH_SHORT).show();
+            tabrik = MediaPlayer.create(getApplicationContext(), R.raw.yaxhi2); // O'zgarish kiritilsin
+            tabrik.start();
+        }
+    }
 
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+    private void showCongratulationsDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.tabriklaymiz);
+        builder.setMessage(R.string.barcha_farqlar);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(Picovoice.this, R.string.Mashqlarni_bajarish, Toast.LENGTH_SHORT).show();
+                resetGame();
+                finish();
 
-                    // create vibrator effect with the constant EFFECT_CLICK
-                    vibrationEffect2 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect2);
-                }
             }
         });
 
-        // handle double click vibration button
-        bDoubleClickVibration.setOnClickListener(new View.OnClickListener() {
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void showErrorDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Xato!");
+        builder.setMessage( foundDifferencesCount + "ta farqni topdingiz");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                final VibrationEffect vibrationEffect3;
-
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_DOUBLE_CLICK
-                    vibrationEffect3 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect3);
-                }
+            public void onClick(DialogInterface dialog, int which) {
+                // O'yinni qayta boshlash
+                resetGame();
+                dialog.dismiss();
             }
         });
 
-        // handle tick effect vibration button
-        bTickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect4;
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        finish();
+    }
 
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+    private void resetGame() {
+        // Barcha farqlarni topish statusini nolga qaytarish
+        foundDifferencesCount = 0;
 
-                    // create vibrator effect with the constant EFFECT_TICK
-                    vibrationEffect4 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK);
+        // Barcha rasmlarning ko'rinishini boshlang'ich holatga qaytarish
+        // Masalan, shu kod orqali:
+        // ans11.setImageResource(R.drawable.bosh_pictures_style);
+        // ans12.setImageResource(R.drawable.bosh_pictures_style);
+        // ...
 
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect4);
-                }
-            }
-        });
-
-        // handle heavy click vibration button
-        bHeavyClickVibration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final VibrationEffect vibrationEffect5;
-
-                // this type of vibration requires API 29
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-
-                    // create vibrator effect with the constant EFFECT_HEAVY_CLICK
-                    vibrationEffect5 = VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK);
-
-                    // it is safe to cancel other vibrations currently taking place
-                    vibrator.cancel();
-
-                    vibrator.vibrate(vibrationEffect5);
-                }
-            }
-        });
+        // (sizning boshqa loyihalar)
     }
 }

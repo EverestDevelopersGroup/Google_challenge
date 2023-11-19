@@ -2,8 +2,12 @@ package com.example.samandar_demo.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.samandar_demo.R;
@@ -13,10 +17,14 @@ public class SplashScreen extends AppCompatActivity {
     private static final String PREFS_NAME = "MyPrefsFile";
     private static final String FIRST_TIME_KEY = "firstTime";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+
 
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         boolean firstTime = preferences.getBoolean(FIRST_TIME_KEY, true);
@@ -35,4 +43,8 @@ public class SplashScreen extends AppCompatActivity {
             finish();
         }, 3000);
     }
+
+
+
+
 }

@@ -78,6 +78,7 @@ public class Team_Fragment extends Fragment {
             }
         });
 
+
         return view;
     }
 
@@ -206,6 +207,7 @@ public class Team_Fragment extends Fragment {
         dialog4.show();
 
     }
+
 
 
 

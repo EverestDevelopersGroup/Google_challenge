@@ -6,6 +6,43 @@
     <string name="Royxatdan_otish">Ro`yxatdan o`tish</string>
 
     <string name="asosiy_bolimga">Asosiy bo`limga o`tishni xohlaysizmi?</string>
+<string name="tafarq5">5ta farqni toping</string>
+
+    <string name="barcha_farqlar">Siz barcha farqlarni muvaffaqiyatli topdingiz!</string>
+    <string name="ta_farq">ta farq topdingiz!</string>
+    <string name="Mashqlarni_bajarish">Mashqlarni bajarish uchun asosiy bo`limga qayting</string>
+    <string name="Iltimos_malumotlarni">Iltimos ma\'lumotlarni to\'liq kiriting</string>
+    <string name="Siz_oyinni_muvaffaqiyatli">Siz o\'yinni muvaffaqiyatli tugatdingiz!!</string>
+    <string name="iltimos_kut">Iltimos kuting</string>
+    <string name="Siz_barcha_rasmlarni">Siz barcha rasmlarni muvaffaqiyatli topdingiz!</string>
+    <string name="asosiy_bolimga_qaytish">asosiy bo`limga qaytish</string>
+    <string name="diqqatni_jamlash">Diqqatni jamlash o`yini</string>
+    <string name="Sizga_2ta_birxil_rasm">Sizga 2ta birxil rasm taqdim etiladi va siz undan 4ta farqni topishingiz kerak!</string>
+    <string name="boshladik">Boshladik</string>
+    <string name="keyin">Keyinroq</string>
+    <string name="asosiy_bolimdasiz">Asosiy bo`limdasiz</string>
+    <string name="keyingi_bosqich">Keyingi bosqich</string>
+    <string name="Suratda_keltirilgan_narsaning">Suratda keltirilgan narsaning nomini mikrofonni bosib ayting!</string>
+    <string name="bosqich1">1-bosqich</string>
+    <string name="bosqich2">2-bosqich</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string name="lessons1">1-dars. "S" tovushini talaffuz qilish</string>
@@ -14,13 +51,8 @@
     <string name="lessons4">4-dars. "R" tovushini talaffuz jarayoni </string>
     <string name="lessons5">5-dars. Uy sharoitida nutq rivojlanishi</string>
 
-<string name="agree">Men foydalanish shartlariga roziman</string>
+    <string name="agree">Men foydalanish shartlariga roziman</string>
     <string name="not_agree">Men foydalanish shartlariga rozi emasman</string>
-
-
-
-
-
 
 
     <string name="mashqlar_dialog">Ushbu bo`lim ustida ish olib borilmoqda.Boshqa mashqni bajarishni xohlaysizmi?</string>
@@ -50,16 +82,13 @@
     <string name="argimchoq">Arg\'imchoq</string>
     <string name="unlilar">Unlilarni kuylash</string>
     <string name="m_harf">M harfi</string>
-    <string name="maxsus_sozlar">Maxus so`zlar</string>
+    <string name="maxsus_sozlar">Maxsus so`zlar</string>
     <string name="kameraga_qarab_mashq">Kameraga qarab mashqni boshlang</string>
 
     <string name="xato_yuklash_rasm">Rasm yuklanishda xatolik</string>
 
 
     <string name="uzr">Noqulayliklar uchun uzr so`raymiz.</string>
-
-
-
 
 
     <string name="description_info">Ma`lumot</string>
