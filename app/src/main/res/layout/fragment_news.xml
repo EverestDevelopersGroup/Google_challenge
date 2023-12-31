@@ -3,19 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/button3d_color_amethyst"
     tools:context=".NewsFragment">
 
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_rawRes="@raw/loading"
-        app:lottie_autoPlay="true"
-        android:layout_gravity="center"
-        app:lottie_loop="true" />
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/animationView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:lottie_rawRes="@raw/loading"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:lottie_loop="true" />-->
 
+
+
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="@drawable/tridibutton"
+            android:layout_gravity="center"
+            >
+
+
+        </LinearLayout>
 
 
 

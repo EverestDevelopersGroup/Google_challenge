@@ -34,6 +34,11 @@ public class TovushActivity extends AppCompatActivity implements TovushAdapter.O
         videoList.add(new TovushItem(R.string.m_harf, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftovush2_GFTERAy9.mp4?alt=media&token=3ca1c647-62d6-4ac1-8321-4e7e0daf0839"));
         videoList.add(new TovushItem(R.string.maxsus_sozlar , "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fsozlarr.mp4?alt=media&token=136f05a6-98c2-4ba4-b7af-3edbe5869e54"));
         // URL manzili
+
+        videoList.add(new TovushItem(R.string.undosh_tovushlar, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Funlilar_bw5tNfxA.mp4?alt=media&token=9329e513-8868-4194-b1bf-d8fbf5d77deb"));
+        videoList.add(new TovushItem(R.string.Murakkab, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftovush2_GFTERAy9.mp4?alt=media&token=3ca1c647-62d6-4ac1-8321-4e7e0daf0839"));
+        videoList.add(new TovushItem(R.string.Til_rivoj , "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fsozlarr.mp4?alt=media&token=136f05a6-98c2-4ba4-b7af-3edbe5869e54"));
+        // URL manzili
         // Boshqa URL manzili
 //  unli tovushlar  i, e, a, o, u, o`
         // Boshqa video manzillarini qo'shish...

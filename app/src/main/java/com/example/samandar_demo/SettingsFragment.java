@@ -10,8 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.samandar_demo.Activities.LanguageActivity;
+import com.google.android.material.card.MaterialCardView;
 
 
 public class SettingsFragment extends Fragment {
@@ -21,35 +23,36 @@ public class SettingsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+
+//      TextView button = view.findViewById(R.id.changeTil);
 //
-//        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button button = view.findViewById(R.id.langugaee);
-
-
-
+//
+//
+//
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                language();
 //            }
 //        });
-
-
-
-
+//
+//
+//
+//
         return view;
+//    }
+//
+//    public void language(){
+//
+//        Intent intent = new Intent(getActivity(), LanguageActivity.class);
+//        startActivity(intent);
+//
+//
+//
+//
+//
+//    }
     }
-
-    public void language(){
-
-        Intent intent = new Intent(getActivity(), LanguageActivity.class);
-        startActivity(intent);
-
-
-
-
-
-    }
-
 
 
 }

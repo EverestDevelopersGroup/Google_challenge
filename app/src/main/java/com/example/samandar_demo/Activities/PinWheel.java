@@ -4,11 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -18,107 +15,86 @@ import android.os.Handler;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.samandar_demo.ChildFragment;
 import com.example.samandar_demo.R;
 
 import pl.droidsonroids.gif.GifImageView;
 
 public class PinWheel extends AppCompatActivity {
 
-
     private static final int RECORD_AUDIO_PERMISSION_CODE = 1;
     private static final int AMPLITUDE_1_THRESHOLD = 5000;
-//    private static final int AMPLITUDE_2_THRESHOLD = 3500;
+    private Thread thread;
 
     private AudioRecord audioRecord;
+    private boolean isRecording = false;
     private int bufferSize;
 
     private GifImageView candleImageView;
-    private boolean isCandleOn = true;
-    TextView amplituda_result;
+    TextView amplitudeResult;
 
-    @Override
-    public void onBackPressed() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        ChildFragment mainFragment = new ChildFragment(); // MainFragment ning o'rniga yangi fragment
-        FragmentTransaction transaction = fragmentManager.beginTransaction() .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        transaction.replace(R.id.framelayout_container, mainFragment); // fragment_container ID sini o'zgartiring
-        transaction.addToBackStack(null); // Fragment o'zgarishlarini yo'zish
-        transaction.commit();
-    }
-
-
-
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin_wheel);
 
-
-
-
-
-
         candleImageView = findViewById(R.id.pinwheel);
-        amplituda_result = findViewById(R.id.amplituda_result);
-
+        amplitudeResult = findViewById(R.id.amplituda_result);
 
         bufferSize = AudioRecord.getMinBufferSize(44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
-        audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
 
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, RECORD_AUDIO_PERMISSION_CODE);
         } else {
             startBlowingDetection();
         }
-
-        // Set an OnClickListener to the layout so that when the user clicks on the screen,
-        // the app will reset and everything starts again.
-
     }
 
     private void startBlowingDetection() {
-        new Thread(new Runnable() {
+        thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 short[] audioBuffer = new short[bufferSize];
-                audioRecord.startRecording();
+                if (ActivityCompat.checkSelfPermission(PinWheel.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling ActivityCompat#requestPermissions here
+                    return;
+                }
+
+                if (audioRecord == null) {
+                    audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
+                    audioRecord.startRecording();
+                }
 
                 while (!Thread.currentThread().isInterrupted()) {
                     int numRead = audioRecord.read(audioBuffer, 0, bufferSize);
-                    if (numRead > 0) {
+                    if (numRead >= 0) {
                         double amplitude = calculateAmplitude(audioBuffer, numRead);
 
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                if (amplitude >= AMPLITUDE_1_THRESHOLD) {
-                                    amplituda_result.setText(String.valueOf(amplitude));
+                                if (amplitude > AMPLITUDE_1_THRESHOLD) {
                                     startPinWheel();
-
                                 }
-
                             }
                         });
                     }
                 }
             }
-        }).start();
+        });
+        thread.start();
     }
+
 
     private double calculateAmplitude(short[] audioBuffer, int numRead) {
         int amplitude = 0;
 
         for (int i = 0; i < numRead; i++) {
             amplitude += Math.abs(audioBuffer[i]);
-
         }
 
         if (numRead > 0) {
             amplitude /= numRead;
-
         }
 
         return amplitude;
@@ -130,33 +106,18 @@ public class PinWheel extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-
                 candleImageView.setImageResource(R.drawable.fir10_prev_ui);
-
-
-
             }
         }, 7000);
-
-
-
-        isCandleOn = false;
     }
-
-
-
-
-
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         if (audioRecord != null) {
             audioRecord.stop();
             audioRecord.release();
-            audioRecord = null;
         }
+        super.onDestroy();
     }
 
     @Override
@@ -170,6 +131,4 @@ public class PinWheel extends AppCompatActivity {
             }
         }
     }
-
-
 }

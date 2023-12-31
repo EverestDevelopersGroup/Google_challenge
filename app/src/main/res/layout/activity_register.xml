@@ -55,7 +55,7 @@
         android:layout_width="@dimen/_265sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/forget"
-        android:hint="@string/ismingiz"
+        android:hint="@string/Maxsus_parol"
         android:textColor="#FFFFFF"
         android:typeface="normal"
         android:textStyle="bold"
@@ -63,72 +63,72 @@
         android:textColorHint="#FFFFFF"
         android:imeOptions="actionNext"
         android:textSize="@dimen/_12ssp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:paddingLeft="@dimen/_20sdp"/>
 
-    <EditText
-        android:id="@+id/number"
-        android:layout_width="@dimen/_265sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@drawable/forget"
-        android:hint="@string/raqamingiz"
-        android:textColor="#FFFFFF"
-        android:typeface="normal"
-        android:textStyle="bold"
-        android:imeOptions="actionNext"
-        android:fontFamily = "@font/viga"
-        android:textColorHint="#FFFFFF"
-        android:textSize="@dimen/_12ssp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:paddingLeft="@dimen/_20sdp"/>
+<!--    <EditText-->
+<!--        android:id="@+id/number"-->
+<!--        android:layout_width="@dimen/_265sdp"-->
+<!--        android:layout_height="@dimen/_40sdp"-->
+<!--        android:background="@drawable/forget"-->
+<!--        android:hint="@string/raqamingiz"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:typeface="normal"-->
+<!--        android:textStyle="bold"-->
+<!--        android:imeOptions="actionNext"-->
+<!--        android:fontFamily = "@font/viga"-->
+<!--        android:textColorHint="#FFFFFF"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        android:layout_marginTop="@dimen/_15sdp"-->
+<!--        android:paddingLeft="@dimen/_20sdp"/>-->
 
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="@dimen/_265sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@drawable/forget"
-        android:hint="@string/parolingiz"
-        android:textColor="#FFFFFF"
-        android:typeface="normal"
-        android:imeOptions="actionDone"
-        android:textStyle="bold"
-        android:fontFamily = "@font/viga"
-        android:textColorHint="#FFFFFF"
-        android:textSize="@dimen/_12ssp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:paddingLeft="@dimen/_20sdp"/>
+<!--    <EditText-->
+<!--        android:id="@+id/password"-->
+<!--        android:layout_width="@dimen/_265sdp"-->
+<!--        android:layout_height="@dimen/_40sdp"-->
+<!--        android:background="@drawable/forget"-->
+<!--        android:hint="@string/parolingiz"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:typeface="normal"-->
+<!--        android:imeOptions="actionDone"-->
+<!--        android:textStyle="bold"-->
+<!--        android:fontFamily = "@font/viga"-->
+<!--        android:textColorHint="#FFFFFF"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        android:layout_marginTop="@dimen/_15sdp"-->
+<!--        android:paddingLeft="@dimen/_20sdp"/>-->
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:gravity="center"
-    android:orientation="horizontal"
-    >
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:gravity="center"-->
+<!--    android:orientation="horizontal"-->
+<!--    >-->
 
-    <CheckBox
-        android:id="@+id/agree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
+<!--    <CheckBox-->
+<!--        android:id="@+id/agree"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
 
-        />
+<!--        />-->
 
-    <TextView
-        android:id="@+id/privacy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:text="Men maxfiylik shartlariga rozi emasman."
+<!--    <TextView-->
+<!--        android:id="@+id/privacy"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:text="Men maxfiylik shartlariga rozi emasman."-->
 
-        />
+<!--        />-->
 
-</LinearLayout>
+<!--</LinearLayout>-->
 
 
 
@@ -141,7 +141,7 @@
         app:buttonColor="#FFFFFF"
         android:shadowColor="#8BC34A"
         app:shadowEnabled="true"
-        android:enabled="false"
+        android:enabled="true"
 
         android:text="@string/tasdiqlash"
         android:textColor = "@color/black"
@@ -150,7 +150,7 @@
         android:clickable="true"
 
         android:fontFamily="@font/font2"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         app:shadowHeight="@dimen/_7sdp"
         app:cornerRadius="@dimen/_10sdp"
 

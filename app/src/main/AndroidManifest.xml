@@ -36,6 +36,11 @@
         <activity
             android:name=".Tovushlar.ImagetoVoice"
             android:exported="false" />
+        <activity android:name=".Mouth_Demo.Artikulatsiya1"/>
+<!--        <activity android:name=".Mouth_Demo.VideoActivity1"/>-->
+
+        <activity android:name="com.example.liveness.LivenessActivity"/>
+        <activity android:name=".core.MainActivity22"/>
         <activity
             android:name=".FindDifference"
             android:exported="false" />
@@ -79,10 +84,7 @@
         <activity
             android:name=".Puzzle_Games.PuzzleActivity"
             android:exported="false" />
-        <activity android:name=".Sqlite_KinderGarden.activity.FoodListActivity" />
-        <activity
-            android:name=".Sqlite_KinderGarden.SqlActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Activities.Register"
             android:exported="false"
@@ -111,8 +113,8 @@
         <activity
             android:name=".Activities.Candle"
             android:exported="false"
-            android:parentActivityName=".Activities.MainActivity"
-            android:theme="@style/Candle" />
+
+         />
         <activity
             android:name=".Activities.LanguageActivity"
             android:exported="true">

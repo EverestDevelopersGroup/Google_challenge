@@ -87,7 +87,7 @@ public class FindDifference extends AppCompatActivity {
             showCongratulationsDialog();
         } else {
             // Har bir farq topilganda yangi Toast chiqarib borish
-            Toast.makeText(this, foundDifferencesCount + R.string.ta_farq, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, foundDifferencesCount + R.string.ta_farq, Toast.LENGTH_SHORT).show();
             tabrik = MediaPlayer.create(getApplicationContext(), R.raw.yaxhi2); // O'zgarish kiritilsin
             tabrik.start();
         }
@@ -102,7 +102,7 @@ public class FindDifference extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(FindDifference.this , Picovoice.class);
                 startActivity(intent);
-                Toast.makeText(FindDifference.this, R.string.tafarq5, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(FindDifference.this, R.string.tafarq5, Toast.LENGTH_SHORT).show();
                 resetGame();
                 finish();
 

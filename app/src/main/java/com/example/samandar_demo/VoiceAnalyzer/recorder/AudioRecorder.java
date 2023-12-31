@@ -14,6 +14,14 @@ public class AudioRecorder {
         this.outputFile = outputFile;
     }
 
+
+
+
+
+
+
+
+
     public void startRecording() {
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);

@@ -23,7 +23,8 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:clickable="true"
-
+            app:strokeColor="#2BE833"
+            app:strokeWidth="1dp"
             android:foreground="?selectableItemBackground"
 
             app:cardCornerRadius="24dp"
@@ -38,7 +39,7 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#587BF9"
+                android:textColor="#2DBD34"
                 android:text="@string/list_mutaxasis"
                 />
 
@@ -52,6 +53,8 @@
             android:layout_height="100dp"
             app:cardCornerRadius="24dp"
             android:clickable="true"
+            app:strokeColor="#2BE833"
+            app:strokeWidth="1dp"
             android:foreground="?selectableItemBackground"
             app:cardElevation="24dp"
             android:layout_marginTop="30dp"
@@ -65,7 +68,7 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#587BF9"
+                android:textColor="#2DBD34"
                 android:text="@string/oquvmarkaz_list"
                 />
 
@@ -82,6 +85,8 @@
             android:foreground="?selectableItemBackground"
             app:cardCornerRadius="24dp"
             app:cardElevation="24dp"
+            app:strokeColor="#2BE833"
+            app:strokeWidth="1dp"
             android:layout_marginTop="30dp"
 
             >
@@ -93,7 +98,7 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#587BF9"
+                android:textColor="#2DBD34"
                 android:text="@string/bogcha_list"
                 />
 
@@ -107,6 +112,8 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:clickable="true"
+            app:strokeColor="#2BE833"
+            app:strokeWidth="1dp"
             android:foreground="?selectableItemBackground"
             app:cardCornerRadius="24dp"
             app:cardElevation="24dp"
@@ -121,7 +128,7 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="#587BF9"
+                android:textColor="#2DBD34"
                 android:text="@string/maktab_list"
                 />
 

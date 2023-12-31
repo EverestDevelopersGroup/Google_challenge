@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.samandar_demo.Activities.MainActivity;
 import com.example.samandar_demo.Barmoqlar.BarmoqActvity;
 import com.example.samandar_demo.Activities.MimikaActivity;
@@ -100,11 +101,13 @@ public class ChildFragment extends Fragment {
                 Sigh_Fragment fragment = new Sigh_Fragment();
 
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
 
 
                         .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+
+                Animatoo.INSTANCE.animateDiagonal(getContext());
 
             }
         });
@@ -419,6 +422,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), Artikulatsiya.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateCard(getContext());
 
 
     }
@@ -428,7 +432,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), TovushActivity.class);
         startActivity(intent);
-
+        Animatoo.INSTANCE.animateSlideDown(getContext());
 
     }
 
@@ -437,6 +441,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), BarmoqActvity.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateInAndOut(getContext());
 
 
     }
@@ -445,6 +450,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), MimikaActivity.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateSlideUp(getContext());
 
 
     }
@@ -453,7 +459,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), TanaHarakatActivity.class);
         startActivity(intent);
-
+        Animatoo.INSTANCE.animateSplit(getContext());
 
     }
 
@@ -461,6 +467,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), OptionActivity.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateShrink(getContext());
 
 
     }
@@ -469,6 +476,7 @@ public class ChildFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), ImagetoVoice.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateShrink(getContext());
         imagevoice = MediaPlayer.create(getActivity(), R.raw.imagetovoice); // O'zgarish kiritilsin
         imagevoice.start();
 
@@ -487,9 +495,10 @@ public class ChildFragment extends Fragment {
                 DifferenceFragment fragment = new DifferenceFragment();
 
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .setCustomAnimations(R.anim.windmill_enter, R.anim.windmill_exit)
+
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .replace(R.id.framelayout_container, fragment).addToBackStack(null).commit();
+                Animatoo.INSTANCE.animateCard(getContext());
 
 
             }

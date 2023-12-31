@@ -33,6 +33,7 @@ import com.squareup.picasso.Picasso;
 
 public class Register extends AppCompatActivity {
 
+    private static final String CORRECT_PASSWORD = "LOGO_SMART";
     private static final String PREFS_NAME = "MyPrefsFile";
     private static final String USER_REGISTERED_KEY = "userRegistered";
 //   AlertDialog.Builder alertDialog = new AlertDialog.Builder(this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
@@ -41,7 +42,7 @@ public class Register extends AppCompatActivity {
     SharedPreferences preferences;
     Button3d button;
     ImageView view;
-    EditText ism, number, password;
+    EditText ism;
     TextView privacy;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -65,40 +66,42 @@ public class Register extends AppCompatActivity {
             shimmerContainer2 = findViewById(R.id.shimmer_register);
 
             ism = findViewById(R.id.name);
-            number = findViewById(R.id.number);
-            password = findViewById(R.id.password);
-            privacy = findViewById(R.id.privacy);
+//            number = findViewById(R.id.number);
+//            password = findViewById(R.id.password);
+//            privacy = findViewById(R.id.privacy);
 
 
-            CheckBox checkBox = findViewById(R.id.agree);
+//            CheckBox checkBox = findViewById(R.id.agree);
+
+            String userEnteredPassword = "LOGO_SMART";
 
 
-            privacy.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String url = "https://telegra.ph/Privacy-Policy-11-04-31"; // O'zgartiring, kerakli manzilni yozing
+//            privacy.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    String url = "https://telegra.ph/Privacy-Policy-11-04-31"; // O'zgartiring, kerakli manzilni yozing
+//
+//                    // Manzilga yo'naltirish uchun Intent yaratish
+//                    Intent intent = new Intent(Intent.ACTION_VIEW);
+//                    intent.setData(Uri.parse(url));
+//                    startActivity(intent);
+//                }
+//            });
 
-                    // Manzilga yo'naltirish uchun Intent yaratish
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
-                }
-            });
 
-
-            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        privacy.setText(R.string.agree);
-                        button.setEnabled(true);
-                    } else {
-                        // CheckBox belgilanmagan bo'lsa, o'chirish uchun amal
-                        privacy.setText(R.string.not_agree);
-                        button.setEnabled(false);
-                    }
-                }
-            });
+//            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    if (isChecked) {
+//                        privacy.setText(R.string.agree);
+//                        button.setEnabled(true);
+//                    } else {
+//                        // CheckBox belgilanmagan bo'lsa, o'chirish uchun amal
+//                        privacy.setText(R.string.not_agree);
+//                        button.setEnabled(false);
+//                    }
+//                }
+//            });
 
 
             // Permission checks
@@ -127,21 +130,13 @@ public class Register extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String name = ism.getText().toString();
-                    String nomer = number.getText().toString();
-                    String pasword = password.getText().toString();
+//                    String nomer = number.getText().toString();
+//                    String pasword = password.getText().toString();
 
-                    if (!name.isEmpty() && !nomer.isEmpty() && !pasword.isEmpty()) {
-                        // Intent orqali MainActivityga o'tish
-                        Intent intent = new Intent(Register.this, MainActivity.class);
-                        startActivity(intent);
-                        Animatoo.INSTANCE.animateSwipeLeft(Register.this);
-                        finish();
-
-                        // SharedPreferences orqali ma'lumotlarni saqlash
-                        saveData(name, nomer, pasword);
-                    } else {
-                        saveUserRegistrationStatus(true); // Set the user as registered
+                    if (CORRECT_PASSWORD.equals(name)) {
+                        saveUserRegistrationStatus(true);
                         startMainActivity();
+                    } else {
                         Toast.makeText(Register.this, R.string.Iltimos_malumotlarni, Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -169,12 +164,12 @@ public class Register extends AppCompatActivity {
     }
 
 
-    private void saveData(String name, String nomer, String pasword) {
+    private void saveData(String name) {
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("ism", name);
-        editor.putString("raqam", nomer);
-        editor.putString("parol", pasword);
+//        editor.putString("raqam", nomer);
+//        editor.putString("parol", pasword);
         editor.apply();
     }
 

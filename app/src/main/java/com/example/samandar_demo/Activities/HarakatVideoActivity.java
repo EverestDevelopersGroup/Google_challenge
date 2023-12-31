@@ -33,6 +33,7 @@ public class HarakatVideoActivity extends AppCompatActivity {
     ProgressBar bar_harakat;
     ImageView restart_harakat;
     ImageView play_pause;
+
     private boolean isPaused = false;
 
     @Override

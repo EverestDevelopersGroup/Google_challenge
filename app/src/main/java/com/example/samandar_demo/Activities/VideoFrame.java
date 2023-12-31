@@ -29,6 +29,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.ahmedteleb.buttons3d.Button3d;
+import com.example.liveness.LivenessActivity;
 import com.example.samandar_demo.R;
 
 import java.io.IOException;
@@ -40,8 +41,7 @@ import java.util.TimerTask;
 public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callback  {
     Timer timer = new Timer();
     CountDownTimer mCountDownTimer;
-    int time = 21000;
-
+    int time = 51000;
 
     private boolean isPaused = false;
     private MediaPlayer attention;
@@ -67,6 +67,11 @@ public class VideoFrame extends AppCompatActivity implements SurfaceHolder.Callb
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_camera);
+
+
+        LivenessActivity livenessActivity = new LivenessActivity();
+
+        // Kameraga murojaat qilish
 
         playButton = findViewById(R.id.btnplay);
 //        celebrate = findViewById(R.id.play);
@@ -203,6 +208,7 @@ MediaPlayer start = MediaPlayer.create(this , R.raw.tayyormisan);
             public void onClick(View v) {
                 Vibrate();
                 randomBackgroundWithMusic();
+                playButton.setEnabled(false);
 //                start.start();
                 startmashq.setText(R.string.kameraga_qarab_mashq);
 

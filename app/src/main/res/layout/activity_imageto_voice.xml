@@ -62,8 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/natija"
-                android:visibility="gone"
-                android:fontFamily="@font/blownormal"
+                android:visibility="invisible"
+                android:fontFamily="@font/fonnn"
                 android:textSize="28sp"
 
                 android:gravity="center"
@@ -81,16 +81,16 @@
                     android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:text="@string/Suratda_keltirilgan_narsaning"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     />
             <ImageView
                 android:id="@+id/imageView_voice"
                 android:layout_width="370dp"
-                android:layout_height="400dp"
+                android:layout_height="330dp"
 
                 android:background="@drawable/button_default"
                 android:src="@drawable/car"

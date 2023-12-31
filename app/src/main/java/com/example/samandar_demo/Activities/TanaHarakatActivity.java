@@ -38,6 +38,14 @@ public class TanaHarakatActivity extends AppCompatActivity implements HarakatAda
         videoList.add(new VideoItem(R.string.dars_2, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-2_hZQ1sYJ5.mp4?alt=media&token=400f5c31-f186-4543-99e2-d91d26b4c433"));
         videoList.add(new VideoItem(R.string.dars_3, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-3_DTIRP6C6.mp4?alt=media&token=8ec843b6-25f2-4546-befe-0da7ddf2a7aa"));
         // URL manzili
+        videoList.add(new VideoItem(R.string.dars_1, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-1_DX2EaY4c.mp4?alt=media&token=cac3e69a-5004-4229-b4bd-88a7b1d51183"));
+        videoList.add(new VideoItem(R.string.dars_2, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-2_hZQ1sYJ5.mp4?alt=media&token=400f5c31-f186-4543-99e2-d91d26b4c433"));
+        videoList.add(new VideoItem(R.string.dars_3, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-3_DTIRP6C6.mp4?alt=media&token=8ec843b6-25f2-4546-befe-0da7ddf2a7aa"));
+        // URL manzili
+        videoList.add(new VideoItem(R.string.dars_1, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-1_DX2EaY4c.mp4?alt=media&token=cac3e69a-5004-4229-b4bd-88a7b1d51183"));
+        videoList.add(new VideoItem(R.string.dars_2, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-2_hZQ1sYJ5.mp4?alt=media&token=400f5c31-f186-4543-99e2-d91d26b4c433"));
+        videoList.add(new VideoItem(R.string.dars_3, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fmashq-3_DTIRP6C6.mp4?alt=media&token=8ec843b6-25f2-4546-befe-0da7ddf2a7aa"));
+        // URL manzili
         // Boshqa URL manzili
 
         // Boshqa video manzillarini qo'shish...

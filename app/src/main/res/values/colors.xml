@@ -17,7 +17,9 @@
 
     <color name="strokecolor">#D48BE1</color>
 
-
+    <color name="clay_base">#E0E5EC</color>
+    <color name="clay_shadow">#CBD5E1</color>
+    <color name="clay_light">#FFFFFF</color>
 
     <color name = "bgcolor">#474D71</color>
     <color name = "textcolor">#FDFCFF</color>

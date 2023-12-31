@@ -28,10 +28,7 @@ public class Candle extends AppCompatActivity {
 
     private static final int RECORD_AUDIO_PERMISSION_CODE = 1;
     private static final int AMPLITUDE_1_THRESHOLD = 5000;
-//    private static final int AMPLITUDE_2_THRESHOLD = 6500;
-//    private static final int AMPLITUDE_3_THRESHOLD = 6000;
-//    private static final int AMPLITUDE_4_THRESHOLD = 5500;
-//    private static final int AMPLITUDE_5_THRESHOLD = 5000;
+
     private static final int AMPLITUDE_6_THRESHOLD = 4500;
     private static final int AMPLITUDE_7_THRESHOLD = 4000;
     private static final int AMPLITUDE_8_THRESHOLD = 3500;
@@ -82,20 +79,16 @@ public class Candle extends AppCompatActivity {
             public void run() {
                 short[] audioBuffer = new short[bufferSize];
                 if (ActivityCompat.checkSelfPermission(Candle.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
+                    // TODO: Consider calling ActivityCompat#requestPermissions here
                     return;
                 }
-                 audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
-                audioRecord.startRecording();
+
+                if (audioRecord == null) {
+                    audioRecord = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
+                    audioRecord.startRecording();
+                }
 
                 while (!Thread.currentThread().isInterrupted()) {
-
                     int numRead = audioRecord.read(audioBuffer, 0, bufferSize);
                     if (numRead > 0) {
                         double amplitude = calculateAmplitude(audioBuffer, numRead);
@@ -106,16 +99,16 @@ public class Candle extends AppCompatActivity {
                                 if (amplitude > AMPLITUDE_1_THRESHOLD) {
                                     extinguishCandle();
                                 } else if (amplitude > AMPLITUDE_6_THRESHOLD) {
-                                    flickerCandle();}
-                                else if (amplitude > AMPLITUDE_7_THRESHOLD) {
+                                    flickerCandle();
+                                } else if (amplitude > AMPLITUDE_7_THRESHOLD) {
                                     flickerCandle();
                                 } else if (amplitude > AMPLITUDE_8_THRESHOLD) {
-                                    flickerCandle(); }
-                                else  if (amplitude > AMPLITUDE_9_THRESHOLD) {
+                                    flickerCandle();
+                                } else if (amplitude > AMPLITUDE_9_THRESHOLD) {
                                     flickerCandle();
                                 } else if (amplitude > AMPLITUDE_10_THRESHOLD) {
-                                    flickerCandle();}
-                                else {
+                                    flickerCandle();
+                                } else {
                                     burnCandle();
                                 }
                             }
@@ -126,6 +119,7 @@ public class Candle extends AppCompatActivity {
         });
         thread.start();
     }
+
 
     private double calculateAmplitude(short[] audioBuffer, int numRead) {
         double amplitude = 0;
@@ -179,10 +173,10 @@ public class Candle extends AppCompatActivity {
         if (audioRecord != null) {
             audioRecord.stop();
             audioRecord.release();
-            audioRecord = null;
         }
         super.onDestroy();
     }
+
 
 
 

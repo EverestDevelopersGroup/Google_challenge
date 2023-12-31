@@ -40,10 +40,14 @@ public class BarmoqActvity extends AppCompatActivity implements BarmoqAdapter.On
         List<VideoItem> videoList = new ArrayList<>();
 
         videoList.add(new VideoItem(R.string.kozaynak, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq2_okXdKdKN.mp4?alt=media&token=be53ff4c-f6f7-4f87-a720-45328832e233"));
-        videoList.add(new VideoItem(R.string.kapalak, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq2_okXdKdKN.mp4?alt=media&token=be53ff4c-f6f7-4f87-a720-45328832e233"));
-        videoList.add(new VideoItem(R.string.baliqcha, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq2_okXdKdKN.mp4?alt=media&token=be53ff4c-f6f7-4f87-a720-45328832e233"));
-        videoList.add(new VideoItem(R.string.panjara, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq2_okXdKdKN.mp4?alt=media&token=be53ff4c-f6f7-4f87-a720-45328832e233"));
-        videoList.add(new VideoItem(R.string.argimchoq, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq2_okXdKdKN.mp4?alt=media&token=be53ff4c-f6f7-4f87-a720-45328832e233"));
+        videoList.add(new VideoItem(R.string.kapalak, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq1_PdSHk7ac.mp4?alt=media&token=4d975474-ba5a-4647-830f-5e06f9f44cd8"));
+        videoList.add(new VideoItem(R.string.baliqcha, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq3_43sdzsAx.mp4?alt=media&token=2797f011-b6ed-4c04-a050-10fa7aaae784"));
+        videoList.add(new VideoItem(R.string.panjara, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq4_Gf62fn9F.mp4?alt=media&token=eea58dd9-c06f-48e3-ae8b-54edd0e50a1d"));
+        videoList.add(new VideoItem(R.string.argimchoq, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq1_PdSHk7ac.mp4?alt=media&token=4d975474-ba5a-4647-830f-5e06f9f44cd8"));
+
+        videoList.add(new VideoItem(R.string.bargcha, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq3_43sdzsAx.mp4?alt=media&token=2797f011-b6ed-4c04-a050-10fa7aaae784"));
+        videoList.add(new VideoItem(R.string.kaktus, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq4_Gf62fn9F.mp4?alt=media&token=eea58dd9-c06f-48e3-ae8b-54edd0e50a1d"));
+        videoList.add(new VideoItem(R.string.maymuncha, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Fbarmoq1_PdSHk7ac.mp4?alt=media&token=4d975474-ba5a-4647-830f-5e06f9f44cd8"));
 
         // URL manzili
         // Boshqa URL manzili

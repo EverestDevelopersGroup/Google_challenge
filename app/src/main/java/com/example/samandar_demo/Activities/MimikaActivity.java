@@ -41,6 +41,14 @@ public class MimikaActivity extends AppCompatActivity implements MimikaAdapter.O
         videoList.add(new VideoItem(R.string.tabassum, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftabassum_INiHCfbk.mp4?alt=media&token=93b4cc1f-cd71-43b9-babf-fabc81953c3a"));
         videoList.add(new VideoItem(R.string.lablar, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ffilcha_BxZTqqm6.mp4?alt=media&token=bbd408f0-1344-4496-b518-ecf3a46e6768"));
         // URL manzili
+        videoList.add(new VideoItem(R.string.zarba, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Femotsiyalar_RkdGkuj8.mp4?alt=media&token=0289faa1-6355-4c22-9b9d-cd5151032dbe"));
+        videoList.add(new VideoItem(R.string.gulxan, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftabassum_INiHCfbk.mp4?alt=media&token=93b4cc1f-cd71-43b9-babf-fabc81953c3a"));
+        videoList.add(new VideoItem(R.string.qushcha, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ffilcha_BxZTqqm6.mp4?alt=media&token=bbd408f0-1344-4496-b518-ecf3a46e6768"));
+        // URL manzili
+        videoList.add(new VideoItem(R.string.parovoz, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Femotsiyalar_RkdGkuj8.mp4?alt=media&token=0289faa1-6355-4c22-9b9d-cd5151032dbe"));
+        videoList.add(new VideoItem(R.string.dubulga, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ftabassum_INiHCfbk.mp4?alt=media&token=93b4cc1f-cd71-43b9-babf-fabc81953c3a"));
+        videoList.add(new VideoItem(R.string.karvonc, "https://firebasestorage.googleapis.com/v0/b/yangiliklar-ee745.appspot.com/o/Video%20articulation%2Ffilcha_BxZTqqm6.mp4?alt=media&token=bbd408f0-1344-4496-b518-ecf3a46e6768"));
+        // URL manzili
         // Boshqa URL manzili
 
         // Boshqa video manzillarini qo'shish...

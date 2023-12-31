@@ -66,6 +66,47 @@
     <string name="yuz_mimika">Yuz mimikasi</string>
     <string name="tabassum">Tabassum</string>
     <string name="lablar">Lablar</string>
+
+
+
+    <string name="zarba">zarba</string>
+    <string name="gulxan">gulxan</string>
+    <string name="qushcha">qushcha</string>
+    <string name="parovoz">parovoz</string>
+    <string name="dubulga">dubulg`a</string>
+    <string name="karvonc">karvoncha</string>
+    <string name="iloncha">iloncha</string>
+    <string name="argimchiq">arg`imchoq</string>
+    <string name="kozmunchoq">ko`zmunchoq</string>
+
+    quvnoq piyola bargcha kaktus maymuncha aylana
+    <string name="quvnoq">quvnoq</string>
+    <string name="piyola">piyola`a</string>
+    <string name="bargcha">bargcha</string>
+    <string name="kaktus">kaktus</string>
+    <string name="maymuncha">maymuncha</string>
+    <string name="aylana">aylana</string>
+
+
+
+    <string name="undosh_tovushlar">Undoshlar ketma-ketligi</string>
+    <string name="Murakkab">Murakkabroq so`zlar</string>
+    <string name="Til_rivoj">Talaffuz uchun iboralar</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <string name="dars_1">1-dars. Badantarbiya</string>
     <string name="dars_2">2-dars. Badantarbiya</string>
     <string name="dars_3">3-dars. Badantarbiya</string>
@@ -82,7 +123,7 @@
     <string name="argimchoq">Arg\'imchoq</string>
     <string name="unlilar">Unlilarni kuylash</string>
     <string name="m_harf">M harfi</string>
-    <string name="maxsus_sozlar">Maxsus so`zlar</string>
+    <string name="maxsus_sozlar">R tovushiga oid so`zlar</string>
     <string name="kameraga_qarab_mashq">Kameraga qarab mashqni boshlang</string>
 
     <string name="xato_yuklash_rasm">Rasm yuklanishda xatolik</string>
@@ -101,7 +142,7 @@
     <string name="mutaxassislar_bo_limi">Mutaxassislar bo\'limi</string>
     <string name="ota_onalar_bo_limi">Ota-onalar bo\'limi</string>
     <string name="ro_yxatdan_o_tish">Ro`yxatdan o`tish</string>
-    <string name="ismingiz">Ismingiz:</string>
+    <string name="Maxsus_parol">Maxsus parolni kiriting:</string>
     <string name="raqamingiz">Raqamingiz:</string>
     <string name="parolingiz">Parolingiz:</string>
     <string name="tasdiqlash">Tasdiqlash</string>
@@ -188,7 +229,9 @@
     <string name="natija">Natija:</string>
     <string name="mashqni_boshladik">Mashqni boshladik</string>
     <string name="mashq_bajarish_boshlanmagan">Пожалуйста, подождите, пока видео закончится!\n Затем нажмите кнопку ниже, чтобы начать упражнение..</string>
-    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shahnoza Tohtiyarova \n Logoped , Defektolog</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shukurova Dilbar \n Logoped , Defektolog ,PhD</string>
     <string name="nodira_aripova_defektolog_n_logoped_psixolog">Nodira Aripova - Defektolog\n Logoped, Psixolog!</string>
     <string name="bepul_darsliklar">Bepul darsliklar</string>
+
+
 </resources>

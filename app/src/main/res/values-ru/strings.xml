@@ -33,11 +33,29 @@
 
 
 
+    <string name="zarba">zarba</string>
+    <string name="gulxan">gulxan</string>
+    <string name="qushcha">qushcha</string>
+    <string name="parovoz">parovoz</string>
+    <string name="dubulga">dubulg`a</string>
+    <string name="karvonc">karvoncha</string>
+    <string name="iloncha">iloncha</string>
+    <string name="argimchiq">arg`imchoq</string>
+    <string name="kozmunchoq">ko`zmunchoq</string>
+
+    quvnoq piyola bargcha kaktus maymuncha aylana
+    <string name="quvnoq">quvnoq</string>
+    <string name="piyola">piyola`a</string>
+    <string name="bargcha">bargcha</string>
+    <string name="kaktus">kaktus</string>
+    <string name="maymuncha">maymuncha</string>
+    <string name="aylana">aylana</string>
 
 
 
-
-
+    <string name="undosh_tovushlar">Undoshlar ketma-ketligi</string>
+    <string name="Murakkab">Murakkabroq so`zlar</string>
+    <string name="Til_rivoj">Talaffuz uchun iboralar</string>
 
 
 
@@ -92,7 +110,7 @@
     <string name="argimchoq">Аргимчак</string>
     <string name="unlilar">Пение гласных</string>
     <string name="m_harf">Буква М</string>
-    <string name="maxsus_sozlar">Специальные слова</string>
+    <string name="maxsus_sozlar">Слова со звуком Р.</string>
 
     <string name="xato_yuklash_rasm">Ошибка загрузки изображения.</string>
 
@@ -115,7 +133,7 @@
     <string name="mutaxassislar_bo_limi">Отдел специалистов</string>
     <string name="ota_onalar_bo_limi">Родительский отдел</string>
     <string name="ro_yxatdan_o_tish">Регистрация</string>
-    <string name="ismingiz">Ваше имя:</string>
+    <string name="Maxsus_parol">Введите специальный пароль:</string>
     <string name="raqamingiz">Твой номер:</string>
     <string name="parolingiz">Ваш пароль:</string>
     <string name="tasdiqlash">Подтверждение</string>
@@ -171,7 +189,7 @@
     <string name="tilni_o_zgartirish" >Изменить язык</string>
     <string name="to">TODO</string>
     <string name="qani_boshladikmi">С чего мы начали?</string>
-    <string name="tabriklaymiz" >Разочарование! Пожалуйста, попробуйте еще раз.</string>
+    <string name="tabriklaymiz" >Поздравляем!</string>
     <string name="mutaxassis_portfoilosini_yaratish" >Создание экспертного портфолио</string>
     <string name="xususiy_maktab_qo_shish">Добавить частную школу</string>
     <string name="xususiy_bog_cha_qo_shish">Добавить частный сад</string>
@@ -197,9 +215,8 @@
     <string name="natija">Результат:</string>
     <string name="mashqni_boshladik">Начинать</string>
     <string name="mashq_bajarish_boshlanmagan">Упражнение не началось</string>
-    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Шахноза Тохтиярова Логопед, дефектолог</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Шукурова Дильбар  Логопед, дефектолог ,PhD </string>
     <string name="nodira_aripova_defektolog_n_logoped_psixolog">Нодира Арипова - Дефектолог Логопед, Психолог!</string>
     <string name="bepul_darsliklar">Бесплатные учебники</string>
-
 
 </resources>

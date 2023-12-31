@@ -226,7 +226,7 @@ public class TovushVideoActivity extends AppCompatActivity  {
                         e.printStackTrace();
                     }
 
-                }, 5000);
+                }, 3000);
             }
 
         });

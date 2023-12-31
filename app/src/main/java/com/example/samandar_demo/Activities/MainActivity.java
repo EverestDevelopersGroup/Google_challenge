@@ -31,14 +31,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.samandar_demo.ChildFragment;
 import com.example.samandar_demo.ExpertFragment;
-import com.example.samandar_demo.LanguageFragment;
+
+import com.example.samandar_demo.Mouth_Demo.Artikulatsiya1;
+
+
 import com.example.samandar_demo.NewsFragment;
 import com.example.samandar_demo.ParentFragment;
 import com.example.samandar_demo.R;
 import com.example.samandar_demo.SettingsFragment;
 import com.example.samandar_demo.Team_Fragment;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import me.ibrahimsn.lib.OnItemSelectedListener;
@@ -65,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
 
 
@@ -166,8 +171,12 @@ public class MainActivity extends AppCompatActivity {
         user_data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this , ActivityOpenCv.class);
-                startActivity(intent);
+
+                Toast.makeText(MainActivity.this, "Siz ro'yxatdan o`tmagansiz", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this , Artikulatsiya1.class);
+//                startActivity(intent);
+
+
             }
         });
 
@@ -199,12 +208,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.dismiss();
-                FragmentManager manager1 = getSupportFragmentManager();
-                FragmentTransaction transaction1 = manager1.beginTransaction();
-                transaction1.replace(R.id.framelayout_container, new LanguageFragment());
-                transaction1.addToBackStack(null);
-                transaction1.commit();
+                Toast.makeText(MainActivity.this, "Ushbu sahifa vaqtincha mavjud emas", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -214,12 +218,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.dismiss();
-                FragmentManager manager1 = getSupportFragmentManager();
-                FragmentTransaction transaction1 = manager1.beginTransaction();
-                transaction1.replace(R.id.framelayout_container, new SettingsFragment());
-                transaction1.addToBackStack(null);
-                transaction1.commit();
+                Intent intent = new Intent(MainActivity.this, LanguageActivity.class);
+                startActivity(intent);
+//                finish();
+//                Toast.makeText(MainActivity.this, "Ushbu sahifa vaqtincha mavjud emas", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -229,12 +231,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.dismiss();
-                FragmentManager manager1 = getSupportFragmentManager();
-                FragmentTransaction transaction1 = manager1.beginTransaction();
-                transaction1.replace(R.id.framelayout_container, new NewsFragment());
-                transaction1.addToBackStack(null);
-                transaction1.commit();
+                Toast.makeText(MainActivity.this, "Ushbu sahifa vaqtincha mavjud emas", Toast.LENGTH_SHORT).show();
 
 
 

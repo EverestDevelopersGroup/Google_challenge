@@ -10,6 +10,29 @@
 
 
 
+    <string name="zarba">blow</string>
+    <string name="gulxan">bonfire</string>
+    <string name="qushcha">little bird</string>
+    <string name="parovoz">steam train</string>
+    <string name="dubulga">helmet</string>
+    <string name="karvonc">caravan</string>
+    <string name="iloncha">snake</string>
+    <string name="argimchiq">armychok</string>
+    <string name="kozmunchoq">glasses</string>
+
+    quvnoq piyola bargcha kaktus maymuncha aylana
+    <string name="quvnoq">happy</string>
+    <string name="piyola">bowl</string>
+    <string name="bargcha">leaf</string>
+    <string name="kaktus">cactus</string>
+    <string name="maymuncha">like a monkey</string>
+    <string name="aylana">circle</string>
+
+    <string name="undosh_tovushlar">Consecutive consonants</string>
+    <string name="Murakkab">Compound words</string>
+    <string name="Til_rivoj">Phrase pronunciation</string>
+
+
 
 
     <string name="barcha_farqlar">You have successfully found all the differences!</string>
@@ -88,7 +111,7 @@
     <string name="argimchoq">Flip-flop</string>
     <string name="unlilar">Singing vowels</string>
     <string name="m_harf">The letter M</string>
-    <string name="maxsus_sozlar">Special words</string>
+    <string name="maxsus_sozlar">Words for "R" sound</string>
 
     <string name="xato_yuklash_rasm">Error loading image</string>
 
@@ -112,7 +135,7 @@
     <string name="mutaxassislar_bo_limi">Specialists category</string>
     <string name="ota_onalar_bo_limi">Parents category</string>
     <string name="ro_yxatdan_o_tish">Registration</string>
-    <string name="ismingiz">Your name:</string>
+    <string name="Maxsus_parol">Enter a special password:</string>
     <string name="raqamingiz">Your number:</string>
     <string name="parolingiz">Your password:</string>
     <string name="tasdiqlash">Confirm</string>
@@ -193,7 +216,7 @@
     <string name="natija">Natija:</string>
     <string name="mashqni_boshladik">Start</string>
     <string name="mashq_bajarish_boshlanmagan">Please wait for the video to end!\n Then click the button below to start the exercise.</string>
-    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shahnoza Tohtiyarova \n Logoped , Defektolog</string>
+    <string name="shahnoza_tohtiyarova_n_logoped_defektolog">Shukurova Dilbar \n Logoped , Defektolog , PhD</string>
     <string name="nodira_aripova_defektolog_n_logoped_psixolog">Nodira Aripova - Defektolog\n Logoped, Psixolog!</string>
     <string name="bepul_darsliklar">Free lessons</string>
-</resources>
+    </resources>

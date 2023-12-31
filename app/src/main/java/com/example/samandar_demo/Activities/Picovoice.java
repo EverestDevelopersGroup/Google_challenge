@@ -92,7 +92,7 @@ public class Picovoice extends AppCompatActivity {
             showCongratulationsDialog();
         } else {
             // Har bir farq topilganda yangi Toast chiqarib borish
-            Toast.makeText(this, foundDifferencesCount + R.string.ta_farq, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, foundDifferencesCount + R.string.ta_farq, Toast.LENGTH_SHORT).show();
             tabrik = MediaPlayer.create(getApplicationContext(), R.raw.yaxhi2); // O'zgarish kiritilsin
             tabrik.start();
         }

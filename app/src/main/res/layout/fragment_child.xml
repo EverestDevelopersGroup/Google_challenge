@@ -117,6 +117,185 @@
 
 
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/nafas"
+                android:layout_width="340dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                android:clickable="true"
+                app:rippleColor="#31D1C0"
+                app:strokeWidth="1dp"
+
+                tools:targetApi="p">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFE0B2"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shim2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+
+
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="start"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="100dp"
+
+                            android:background="@drawable/general_img_background"
+                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                            android:padding="25dp"
+                            app:cardCornerRadius="55dp"
+                            app:cardElevation="3dp"
+                            app:rippleColor="@color/colorAccent"
+                            app:strokeWidth="1dp"
+
+                            tools:targetApi="p">
+
+                            <ImageView
+                                android:id="@+id/child2"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/general_img_background"
+                                android:padding="25dp" />
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/fonnn"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/nafas_mashqlari"
+
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="jelly_bean" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/daktil"
+
+                android:layout_width="340dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:rippleColor="#31D1C0"
+                app:strokeWidth="1dp"
+
+                tools:targetApi="p">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#AFD2A7"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shim7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+
+
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="start"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="100dp"
+
+                            android:background="@drawable/general_img_background"
+                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                            android:padding="25dp"
+                            app:cardCornerRadius="55dp"
+                            app:cardElevation="3dp"
+                            app:rippleColor="@color/colorAccent"
+                            app:strokeWidth="1dp"
+
+                            tools:targetApi="p">
+
+                            <ImageView
+                                android:id="@+id/child7"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/general_img_background"
+                                android:padding="25dp" />
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/fonnn"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/daktil_alifbosi_va_imo_ishoralar"
+
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="jelly_bean" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
 
 
             <com.google.android.material.card.MaterialCardView
@@ -203,6 +382,179 @@
 
 
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fonematik"
+
+                android:layout_width="340dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:rippleColor="#31D1C0"
+                app:strokeWidth="1dp"
+
+                tools:targetApi="p">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFE0B2"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shim8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+
+
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="start"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="100dp"
+
+                            android:background="@drawable/general_img_background"
+                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                            android:padding="25dp"
+                            app:cardCornerRadius="55dp"
+                            app:cardElevation="3dp"
+                            app:rippleColor="@color/colorAccent"
+                            app:strokeWidth="1dp"
+
+                            tools:targetApi="p">
+
+                            <ImageView
+                                android:id="@+id/child8"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/general_img_background"
+                                android:padding="25dp" />
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/fonnn"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/fonematik_idrok"
+
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="jelly_bean" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/diqqat_rivoj"
+                android:layout_width="340dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:rippleColor="#31D1C0"
+                app:strokeWidth="1dp"
+
+                tools:targetApi="p">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFB6B1"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shim10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+
+
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="start"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="100dp"
+
+                            android:background="@drawable/general_img_background"
+                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
+                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
+                            android:padding="25dp"
+                            app:cardCornerRadius="55dp"
+                            app:cardElevation="3dp"
+                            app:rippleColor="@color/colorAccent"
+                            app:strokeWidth="1dp"
+
+                            tools:targetApi="p">
+
+                            <ImageView
+                                android:id="@+id/child10"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/general_img_background"
+                                android:padding="25dp" />
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/fonnn"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/diqqatni_rivojlantirish"
+
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        tools:targetApi="jelly_bean" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
 
 
             <com.google.android.material.card.MaterialCardView
@@ -463,178 +815,8 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/daktil"
-
-                android:layout_width="340dp"
-                android:layout_height="170dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                app:rippleColor="#31D1C0"
-                app:strokeWidth="1dp"
-
-                tools:targetApi="p">
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#AFD2A7"
-                    android:gravity="center"
-
-                    android:orientation="horizontal">
-
-                    <com.facebook.shimmer.ShimmerFrameLayout
-                        android:id="@+id/shim7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-
-
-                        >
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="start"
-                            android:layout_margin="10dp"
-                            android:layout_marginTop="100dp"
-
-                            android:background="@drawable/general_img_background"
-                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                            android:padding="25dp"
-                            app:cardCornerRadius="55dp"
-                            app:cardElevation="3dp"
-                            app:rippleColor="@color/colorAccent"
-                            app:strokeWidth="1dp"
-
-                            tools:targetApi="p">
-
-                            <ImageView
-                                android:id="@+id/child7"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:layout_margin="10dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/general_img_background"
-                                android:padding="25dp" />
-
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </com.facebook.shimmer.ShimmerFrameLayout>
-
-                    <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/fonnn"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="@string/daktil_alifbosi_va_imo_ishoralar"
-
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"
-                        android:textSize="14sp"
-                        tools:ignore="SmallSp"
-                        tools:targetApi="jelly_bean" />
-                </LinearLayout>
-
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/fonematik"
-
-                android:layout_width="340dp"
-                android:layout_height="170dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:layout_marginTop="20dp"
-                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                app:rippleColor="#31D1C0"
-                app:strokeWidth="1dp"
-
-                tools:targetApi="p">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FFE0B2"
-                    android:gravity="center"
-
-                    android:orientation="horizontal">
-
-                    <com.facebook.shimmer.ShimmerFrameLayout
-                        android:id="@+id/shim8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-
-
-                        >
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="start"
-                            android:layout_margin="10dp"
-                            android:layout_marginTop="100dp"
-
-                            android:background="@drawable/general_img_background"
-                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                            android:padding="25dp"
-                            app:cardCornerRadius="55dp"
-                            app:cardElevation="3dp"
-                            app:rippleColor="@color/colorAccent"
-                            app:strokeWidth="1dp"
-
-                            tools:targetApi="p">
-
-                            <ImageView
-                                android:id="@+id/child8"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:layout_margin="10dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/general_img_background"
-                                android:padding="25dp" />
-
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </com.facebook.shimmer.ShimmerFrameLayout>
-
-                    <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/fonnn"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="@string/fonematik_idrok"
-
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"
-                        android:textSize="14sp"
-                        tools:ignore="SmallSp"
-                        tools:targetApi="jelly_bean" />
-                </LinearLayout>
-
-
-            </com.google.android.material.card.MaterialCardView>
 
 
 
@@ -726,176 +908,6 @@
 
 
 
-            <com.google.android.material.card.MaterialCardView
-android:id="@+id/diqqat_rivoj"
-                android:layout_width="340dp"
-                android:layout_height="170dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                app:rippleColor="#31D1C0"
-                app:strokeWidth="1dp"
-
-                tools:targetApi="p">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FFB6B1"
-                    android:gravity="center"
-
-                    android:orientation="horizontal">
-
-                    <com.facebook.shimmer.ShimmerFrameLayout
-                        android:id="@+id/shim10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-
-
-                        >
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="start"
-                            android:layout_margin="10dp"
-                            android:layout_marginTop="100dp"
-
-                            android:background="@drawable/general_img_background"
-                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                            android:padding="25dp"
-                            app:cardCornerRadius="55dp"
-                            app:cardElevation="3dp"
-                            app:rippleColor="@color/colorAccent"
-                            app:strokeWidth="1dp"
-
-                            tools:targetApi="p">
-
-                            <ImageView
-                                android:id="@+id/child10"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:layout_margin="10dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/general_img_background"
-                                android:padding="25dp" />
-
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </com.facebook.shimmer.ShimmerFrameLayout>
-
-                    <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/fonnn"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="@string/diqqatni_rivojlantirish"
-
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"
-                        android:textSize="14sp"
-                        tools:ignore="SmallSp"
-                        tools:targetApi="jelly_bean" />
-                </LinearLayout>
-
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/nafas"
-                android:layout_width="340dp"
-                android:layout_height="170dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="20dp"
-                android:clickable="true"
-                app:rippleColor="#31D1C0"
-                app:strokeWidth="1dp"
-
-                tools:targetApi="p">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FFE0B2"
-                    android:gravity="center"
-
-                    android:orientation="horizontal">
-
-                    <com.facebook.shimmer.ShimmerFrameLayout
-                        android:id="@+id/shim2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-
-
-                        >
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="start"
-                            android:layout_margin="10dp"
-                            android:layout_marginTop="100dp"
-
-                            android:background="@drawable/general_img_background"
-                            android:outlineAmbientShadowColor="@color/button3d_color_pomegranate"
-                            android:outlineSpotShadowColor="@color/button3d_color_pomegranate"
-                            android:padding="25dp"
-                            app:cardCornerRadius="55dp"
-                            app:cardElevation="3dp"
-                            app:rippleColor="@color/colorAccent"
-                            app:strokeWidth="1dp"
-
-                            tools:targetApi="p">
-
-                            <ImageView
-                                android:id="@+id/child2"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:layout_margin="10dp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/general_img_background"
-                                android:padding="25dp" />
-
-
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </com.facebook.shimmer.ShimmerFrameLayout>
-
-                    <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/fonnn"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="@string/nafas_mashqlari"
-
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"
-                        android:textSize="14sp"
-                        tools:ignore="SmallSp"
-                        tools:targetApi="jelly_bean" />
-                </LinearLayout>
-
-
-            </com.google.android.material.card.MaterialCardView>
 
 
 
