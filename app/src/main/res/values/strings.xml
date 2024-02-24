@@ -6,7 +6,7 @@
     <string name="Royxatdan_otish">Ro`yxatdan o`tish</string>
 
     <string name="asosiy_bolimga">Asosiy bo`limga o`tishni xohlaysizmi?</string>
-<string name="tafarq5">5ta farqni toping</string>
+    <string name="tafarq5">5ta farqni toping</string>
 
     <string name="barcha_farqlar">Siz barcha farqlarni muvaffaqiyatli topdingiz!</string>
     <string name="ta_farq">ta farq topdingiz!</string>
@@ -27,22 +27,47 @@
     <string name="bosqich2">2-bosqich</string>
 
 
+    <string name="media_pipe">MediaPipe</string>
+
+    <string name="alt_bottom_sheet_chevron">Bottom sheet expandable indicator</string>
+
+    <string name="alt_bottom_sheet_max_results_button_minus">Decreasing
+        maximum hand results button</string>
+    <string name="alt_bottom_sheet_max_results_button_plus">Increasing
+        maximum hand results button</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decreasing
+        threshold of hand detect results button</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">Increasing
+        threshold of hand detect results button</string>
+    <string name="menu_camera">Camera</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="tv_gallery_placeholder">Click + to add an image or a video
+        to begin running the hand landmarker.</string>
+
+    <string name="label_inference_time">Inference Time</string>
+    <string name="label_fps">Frames per Second</string>
+    <string name="label_hand_detection_confidence_threshold">Detection
+        Threshold</string>
+    <string name="label_hand_tracking_confidence_threshold">Tracking
+        Threshold</string>
+    <string name="label_hand_presence_confidence_threshold">Presence
+        Threshold</string>
+    <string name="label_num_hands">Number of Hands</string>
+    <string name="label_delegate">Delegate</string>
+
+    <string-array name="delegate_spinner_titles">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <string name="label_face_detection_confidence_threshold">Detection
+        Threshold</string>
+    <string name="label_face_tracking_confidence_threshold">Tracking
+        Threshold</string>
+    <string name="label_face_presence_confidence_threshold">Presence
+        Threshold</string>
+    <string name="label_num_faces">Number of Faces</string>
 
 
     <string name="lessons1">1-dars. "S" tovushini talaffuz qilish</string>
@@ -68,7 +93,6 @@
     <string name="lablar">Lablar</string>
 
 
-
     <string name="zarba">zarba</string>
     <string name="gulxan">gulxan</string>
     <string name="qushcha">qushcha</string>
@@ -88,23 +112,9 @@
     <string name="aylana">aylana</string>
 
 
-
     <string name="undosh_tovushlar">Undoshlar ketma-ketligi</string>
     <string name="Murakkab">Murakkabroq so`zlar</string>
     <string name="Til_rivoj">Talaffuz uchun iboralar</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <string name="dars_1">1-dars. Badantarbiya</string>

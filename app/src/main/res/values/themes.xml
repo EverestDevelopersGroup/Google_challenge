@@ -28,6 +28,14 @@
 
 
 
+    <style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+    </style>
+
+    <style name="AppThemeProgressStyle">
+        <item name="colorAccent">@color/mp_color_primary_variant</item>
+    </style>
+
 
     <style name="Candle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -52,4 +60,7 @@
         <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
+
+
+
 </resources>

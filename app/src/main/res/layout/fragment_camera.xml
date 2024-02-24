@@ -10,26 +10,6 @@
 
 
 
-<!--    <nl.dionsegijn.konfetti.KonfettiView-->
-<!--        android:id="@+id/play"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
-<!--    <androidx.camera.view.PreviewView-->
-<!--        android:id="@+id/camera_preview"-->
-<!--        android:layout_width="310dp"-->
-<!--        android:layout_height="310dp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintDimensionRatio="1:1"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHeight_max="240dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.3"-->
-<!--        app:layout_constraintWidth_max="240dp"-->
-<!--        app:layout_constraintWidth_percent="0.6" />-->
-
 
 
 

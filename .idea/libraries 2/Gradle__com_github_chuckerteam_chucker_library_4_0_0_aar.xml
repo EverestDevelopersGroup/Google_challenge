@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.chuckerteam.chucker:library:4.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/gradle-4.8/caches/transforms-3/2481f16bfda389f7f294ce89f5e53eea/transformed/jetified-library-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/gradle-4.8/caches/transforms-3/2481f16bfda389f7f294ce89f5e53eea/transformed/jetified-library-4.0.0/res" />
+      <root url="file://$USER_HOME$/Desktop/gradle-4.8/caches/transforms-3/2481f16bfda389f7f294ce89f5e53eea/transformed/jetified-library-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Desktop/gradle-4.8/caches/modules-2/files-2.1/com.github.chuckerteam.chucker/library/4.0.0/92d00437f8adf46aa3f129934d46c64b489bfb00/library-4.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/gradle-4.8/caches/modules-2/files-2.1/com.github.chuckerteam.chucker/library/4.0.0/8783e4de9bb95fefb6f7f2b507067a2a42059389/library-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,13 +1,27 @@
 buildscript {
+
+    ext.kotlin_version = '1.7.10' // Make sure this matches the required version
+
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        classpath 'de.undercouch:gradle-download-task:3.4.3'
 
         // ...
     }
+    repositories {
+        mavenCentral()
+
+    }
 }
+
+
 plugins {
     id 'com.android.application' version '7.2.2' apply false
     id 'com.android.library' version '7.2.2' apply false
+    id 'org.jetbrains.kotlin.android' version '2.0.0-Beta1' apply false
+
 
 }
 

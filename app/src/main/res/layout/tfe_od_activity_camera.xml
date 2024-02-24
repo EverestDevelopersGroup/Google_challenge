@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+   >
+
+
+
+    <!--    <nl.dionsegijn.konfetti.KonfettiView-->
+    <!--        android:id="@+id/play"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        />-->
+    <!--    <androidx.camera.view.PreviewView-->
+    <!--        android:id="@+id/camera_preview"-->
+    <!--        android:layout_width="310dp"-->
+    <!--        android:layout_height="310dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHeight_max="240dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.3"-->
+    <!--        app:layout_constraintWidth_max="240dp"-->
+    <!--        app:layout_constraintWidth_percent="0.6" />-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:background="@drawable/button_default"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="34dp">
+
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
+
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_articulation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/startmashq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mashq_bajarish_boshlanmagan"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/fonnn"
+            android:textColor="@color/bordercolor"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/colorful_linear"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:background="@drawable/oval_shape"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:id="@+id/face_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="33dp">
+                    <LinearLayout
+
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/oval_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                            android:layout_width="310dp"
+                            android:layout_height="310dp"
+                            android:background="@color/teal_200">
+
+                            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:tools="http://schemas.android.com/tools"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:orientation="vertical">
+
+
+                                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:id="@+id/container"
+                                    android:layout_width="360dp"
+                                    android:layout_height="360dp"
+                                    tools:context="org.tensorflow.demo.CameraActivity" />
+
+                                <androidx.appcompat.widget.Toolbar
+                                    android:id="@+id/toolbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_alignParentTop="true"
+                                    android:visibility="gone"
+                                    android:background="@color/tfe_semi_transparent">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/tfl2_logo" />
+                                </androidx.appcompat.widget.Toolbar>
+
+                            </RelativeLayout>
+
+                            <include
+                                android:id="@+id/bottom_sheet_layout"
+                                layout="@layout/tfe_od_layout_bottom_sheet"
+                                android:visibility="visible"
+                                />
+
+                        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+                    </LinearLayout>
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/playpause_articulation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pause"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/restart_articulation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/restart"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

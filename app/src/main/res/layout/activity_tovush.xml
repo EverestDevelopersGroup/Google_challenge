@@ -9,6 +9,9 @@
     tools:context=".Tovushlar.TovushActivity">
 
 
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_tovush"
         android:layout_width="match_parent"

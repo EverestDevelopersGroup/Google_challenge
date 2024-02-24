@@ -3,9 +3,17 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-       
+        gradlePluginPortal()
+        flatDir {
+            dirs 'lib'
+        }
 
-        maven { url 'https://jitpack.io' }
+
+        maven { url 'https://jitpack.io'
+
+        }
+
+
         jcenter()
 
 
@@ -16,6 +24,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        flatDir {
+            dirs 'lib'
+        }
 
         maven { url 'https://jitpack.io' }
 
@@ -25,4 +37,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Samandar_Demo"
 include ':app'
-include ':OpenCv'
+
+
+
+
+
